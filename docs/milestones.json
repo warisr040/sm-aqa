@@ -1,0 +1,365 @@
+{
+ "note": "Card milestones (Pack, Revise#093/#094). Order agreed: Characters → Break → Permanent / Project / Fast, from Saga 3 1st series. Edit status / order here; the card counts are worked out by build.py from the compiled rules.",
+ "milestones": [
+  {
+   "id": "M1a",
+   "title": "Characters · A3-01 … A3-25",
+   "types": [
+    "Character"
+   ],
+   "series": [
+    "A3-01",
+    "A3-02",
+    "A3-03",
+    "A3-04",
+    "A3-05",
+    "A3-06",
+    "A3-07",
+    "A3-08",
+    "A3-09",
+    "A3-10",
+    "A3-11",
+    "A3-12",
+    "A3-13",
+    "A3-14",
+    "A3-15",
+    "A3-16",
+    "A3-17",
+    "A3-18",
+    "A3-19",
+    "A3-20",
+    "A3-21",
+    "A3-22",
+    "A3-23",
+    "A3-24",
+    "A3-25",
+    "A3-04.5"
+   ],
+   "status": "done",
+   "released": "Revise#093 (2026-11-05)"
+  },
+  {
+   "id": "M1b",
+   "title": "Characters · Saga 3 specials (BS2, EP, EX, PP, PR)",
+   "types": [
+    "Character"
+   ],
+   "series": [
+    "A3-BS2",
+    "A3-EP",
+    "A3-EX01",
+    "A3-EX02",
+    "A3-EX03",
+    "A3-EX04",
+    "A3-EX05",
+    "A3-EXPP",
+    "A3-EXPR",
+    "A3-EXPV",
+    "A3-PP",
+    "A3-PR",
+    "A3-SIGN"
+   ],
+   "status": "done",
+   "released": "Revise#100 (2026-11-05)"
+  },
+  {
+   "id": "M1c",
+   "title": "Characters · Saga 4 (A4-…)",
+   "types": [
+    "Character"
+   ],
+   "series": [
+    "A4-01",
+    "A4-02",
+    "A4-03",
+    "A4-04",
+    "A4-05",
+    "A4-EP",
+    "A4-EX01",
+    "A4-EX02",
+    "A4-PP",
+    "A4-PR",
+    "A4-PV"
+   ],
+   "status": "done",
+   "released": "Revise#101 (2026-11-05)"
+  },
+  {
+   "id": "M2a",
+   "title": "Break · A3-01 … A3-05",
+   "types": [
+    "Break"
+   ],
+   "series": [
+    "A3-01",
+    "A3-02",
+    "A3-03",
+    "A3-04",
+    "A3-05",
+    "A3-04.5"
+   ],
+   "status": "doing"
+  },
+  {
+   "id": "M2b",
+   "title": "Break · A3-06 … A3-10",
+   "types": [
+    "Break"
+   ],
+   "series": [
+    "A3-06",
+    "A3-07",
+    "A3-08",
+    "A3-09",
+    "A3-10"
+   ],
+   "status": "doing"
+  },
+  {
+   "id": "M2c",
+   "title": "Break · A3-11 … A3-15",
+   "types": [
+    "Break"
+   ],
+   "series": [
+    "A3-11",
+    "A3-12",
+    "A3-13",
+    "A3-14",
+    "A3-15"
+   ],
+   "status": "doing"
+  },
+  {
+   "id": "M2d",
+   "title": "Break · A3-16 … A3-19",
+   "types": [
+    "Break"
+   ],
+   "series": [
+    "A3-16",
+    "A3-17",
+    "A3-18",
+    "A3-19"
+   ],
+   "status": "planned"
+  },
+  {
+   "id": "M2e",
+   "title": "Break · A3-20 … A3-22",
+   "types": [
+    "Break"
+   ],
+   "series": [
+    "A3-20",
+    "A3-21",
+    "A3-22"
+   ],
+   "status": "planned"
+  },
+  {
+   "id": "M2f",
+   "title": "Break · A3-23 … A3-25",
+   "types": [
+    "Break"
+   ],
+   "series": [
+    "A3-23",
+    "A3-24",
+    "A3-25"
+   ],
+   "status": "planned"
+  },
+  {
+   "id": "M2g",
+   "title": "Break · Saga 3 specials (BS2, EP, EX, PP, PR, SIGN)",
+   "types": [
+    "Break"
+   ],
+   "series": [
+    "A3-BS2",
+    "A3-EP",
+    "A3-EX01",
+    "A3-EX02",
+    "A3-EX03",
+    "A3-EX04",
+    "A3-EX05",
+    "A3-EXPP",
+    "A3-EXPR",
+    "A3-EXPV",
+    "A3-PP",
+    "A3-PR",
+    "A3-SIGN"
+   ],
+   "status": "planned",
+   "released": "v4.03 (Revise#161)"
+  },
+  {
+   "id": "M2h",
+   "title": "Break · Saga 4 (A4-…)",
+   "types": [
+    "Break"
+   ],
+   "series": [
+    "A4-01",
+    "A4-02",
+    "A4-03",
+    "A4-04",
+    "A4-05",
+    "A4-EP",
+    "A4-EX01",
+    "A4-EX02",
+    "A4-PP",
+    "A4-PR",
+    "A4-PV"
+   ],
+   "status": "planned"
+  },
+  {
+   "id": "M3a",
+   "title": "Permanent / Project / Fast · A3-01 … A3-05",
+   "types": [
+    "Permanent",
+    "Project",
+    "Fast"
+   ],
+   "series": [
+    "A3-01",
+    "A3-02",
+    "A3-03",
+    "A3-04",
+    "A3-05",
+    "A3-04.5"
+   ],
+   "status": "doing"
+  },
+  {
+   "id": "M3b",
+   "title": "Permanent / Project / Fast · A3-06 … A3-10",
+   "types": [
+    "Permanent",
+    "Project",
+    "Fast"
+   ],
+   "series": [
+    "A3-06",
+    "A3-07",
+    "A3-08",
+    "A3-09",
+    "A3-10"
+   ],
+   "status": "planned"
+  },
+  {
+   "id": "M3c",
+   "title": "Permanent / Project / Fast · A3-11 … A3-15",
+   "types": [
+    "Permanent",
+    "Project",
+    "Fast"
+   ],
+   "series": [
+    "A3-11",
+    "A3-12",
+    "A3-13",
+    "A3-14",
+    "A3-15"
+   ],
+   "status": "planned"
+  },
+  {
+   "id": "M3d",
+   "title": "Permanent / Project / Fast · A3-16 … A3-19",
+   "types": [
+    "Permanent",
+    "Project",
+    "Fast"
+   ],
+   "series": [
+    "A3-16",
+    "A3-17",
+    "A3-18",
+    "A3-19"
+   ],
+   "status": "planned"
+  },
+  {
+   "id": "M3e",
+   "title": "Permanent / Project / Fast · A3-20 … A3-22",
+   "types": [
+    "Permanent",
+    "Project",
+    "Fast"
+   ],
+   "series": [
+    "A3-20",
+    "A3-21",
+    "A3-22"
+   ],
+   "status": "planned"
+  },
+  {
+   "id": "M3f",
+   "title": "Permanent / Project / Fast · A3-23 … A3-25",
+   "types": [
+    "Permanent",
+    "Project",
+    "Fast"
+   ],
+   "series": [
+    "A3-23",
+    "A3-24",
+    "A3-25"
+   ],
+   "status": "planned"
+  },
+  {
+   "id": "M3g",
+   "title": "Permanent / Project / Fast · Saga 3 specials (BS2, EP, EX, PP, PR, SIGN)",
+   "types": [
+    "Permanent",
+    "Project",
+    "Fast"
+   ],
+   "series": [
+    "A3-BS2",
+    "A3-EP",
+    "A3-EX01",
+    "A3-EX02",
+    "A3-EX03",
+    "A3-EX04",
+    "A3-EX05",
+    "A3-EXPP",
+    "A3-EXPR",
+    "A3-EXPV",
+    "A3-PP",
+    "A3-PR",
+    "A3-SIGN"
+   ],
+   "status": "planned"
+  },
+  {
+   "id": "M3h",
+   "title": "Permanent / Project / Fast · Saga 4 (A4-…)",
+   "types": [
+    "Permanent",
+    "Project",
+    "Fast"
+   ],
+   "series": [
+    "A4-01",
+    "A4-02",
+    "A4-03",
+    "A4-04",
+    "A4-05",
+    "A4-EP",
+    "A4-EX01",
+    "A4-EX02",
+    "A4-PP",
+    "A4-PR",
+    "A4-PV"
+   ],
+   "status": "planned"
+  }
+ ]
+}
