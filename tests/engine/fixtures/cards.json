@@ -1,0 +1,458 @@
+[
+ {
+  "key": "T 001",
+  "type": "Character",
+  "faction": "E.G.O.",
+  "jp": "テスト生徒A",
+  "en": "Test Student A",
+  "icons": [
+   "スチューデント"
+  ],
+  "se": 2,
+  "at": 2,
+  "de": 2
+ },
+ {
+  "key": "T 002",
+  "type": "Character",
+  "faction": "Arayashiki",
+  "jp": "テスト巫女",
+  "en": "Test Shrine Maiden",
+  "icons": [
+   "霊能者"
+  ],
+  "se": 1,
+  "at": 1,
+  "de": 1,
+  "skills": {
+   "aggressive": true
+  }
+ },
+ {
+  "key": "T 003",
+  "type": "Character",
+  "faction": "WIZ-DOM",
+  "jp": "テスト魔術師",
+  "en": "Test Magician",
+  "icons": [
+   "スカラー"
+  ],
+  "se": 3,
+  "at": 3,
+  "de": 2,
+  "skills": {
+   "charge": 1
+  }
+ },
+ {
+  "key": "T 004",
+  "type": "Character",
+  "faction": "Darklore",
+  "jp": "テスト吸血鬼",
+  "en": "Test Vampire",
+  "icons": [
+   "ヴァンパイア"
+  ],
+  "se": 2,
+  "at": 2,
+  "atMental": true,
+  "de": 3,
+  "skills": {
+   "aggressive": true,
+   "initiative": true
+  }
+ },
+ {
+  "key": "T 005",
+  "type": "Character",
+  "faction": "Polestar Empire",
+  "jp": "テスト騎士",
+  "en": "Test Knight",
+  "icons": [
+   "ウォリアー"
+  ],
+  "se": 2,
+  "at": 3,
+  "de": 3,
+  "skills": {
+   "intercept": true,
+   "shield": true
+  }
+ },
+ {
+  "key": "T 006",
+  "type": "Character",
+  "faction": "Eraser",
+  "jp": "テストイレイザー",
+  "en": "Test Eraser",
+  "icons": [
+   "イレイザー"
+  ],
+  "se": 1,
+  "at": 2,
+  "de": 1,
+  "skills": {
+   "draw": 1,
+   "capacity": -1
+  }
+ },
+ {
+  "key": "T 007",
+  "type": "Character",
+  "faction": "E.G.O.",
+  "jp": "女帝竜“テスト”",
+  "en": "Empress Dragon \"Test\"",
+  "name": "テスト",
+  "icons": [
+   "ドラグーン"
+  ],
+  "se": 3,
+  "at": 4,
+  "de": 4,
+  "skills": {
+   "bind": 1
+  }
+ },
+ {
+  "key": "T 008",
+  "type": "Character",
+  "faction": "E.G.O.",
+  "jp": "テスト射手",
+  "en": "Test Shooter",
+  "icons": [
+   "ワーカー"
+  ],
+  "se": 3,
+  "at": 1,
+  "de": 2,
+  "effects": [
+   {
+    "cost": 1,
+    "text": "1：≪キャラクター1人≫に1ダメージを与える。",
+    "target": {
+     "kind": "char",
+     "sel": {},
+     "count": 1
+    },
+    "steps": [
+     {
+      "a": "damage",
+      "to": "t",
+      "n": 1
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "key": "T 009",
+  "type": "Character",
+  "faction": "E.G.O.",
+  "jp": "テスト探索者",
+  "en": "Test Seeker",
+  "icons": [
+   "スチューデント"
+  ],
+  "se": 1,
+  "at": 1,
+  "de": 1,
+  "skills": {
+   "search": {
+    "name": "テスト",
+    "label": "“テスト”"
+   }
+  }
+ },
+ {
+  "key": "T 010",
+  "type": "Character",
+  "faction": "WIZ-DOM",
+  "jp": "テスト召喚士",
+  "en": "Test Summoner",
+  "icons": [
+   "スカラー"
+  ],
+  "se": 2,
+  "at": 1,
+  "de": 1,
+  "abilities": [
+   {
+    "kind": "trigger",
+    "when": {
+     "event": "enter",
+     "self": true
+    },
+    "text": "登場時、1ドロー",
+    "effect": {
+     "steps": [
+      {
+       "a": "draw",
+       "to": "you",
+       "n": 1
+      }
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "key": "T 011",
+  "type": "Character",
+  "faction": "Polestar Empire",
+  "jp": "テスト将軍",
+  "en": "Test General",
+  "icons": [
+   "ウォリアー"
+  ],
+  "se": 3,
+  "at": 2,
+  "de": 2,
+  "abilities": [
+   {
+    "kind": "always",
+    "text": "≪あなたの支配キャラクター全て≫は攻撃力+1",
+    "mod": {
+     "to": {
+      "all": {
+       "owner": "you",
+       "area": "controlled"
+      }
+     },
+     "key": "at",
+     "value": 1
+    },
+    "cond": {
+     "self": "controlled"
+    }
+   }
+  ]
+ },
+ {
+  "key": "T 012",
+  "type": "Character",
+  "faction": "Eraser",
+  "jp": "テスト天使",
+  "en": "Test Angel",
+  "icons": [
+   "イレイザー"
+  ],
+  "se": 2,
+  "at": 2,
+  "de": 2,
+  "skills": {
+   "remove": 1,
+   "charge": 2
+  }
+ },
+ {
+  "key": "T 013",
+  "type": "Character",
+  "faction": "Darklore",
+  "jp": "テスト死霊術師",
+  "en": "Test Necromancer",
+  "icons": [
+   "ゴースト"
+  ],
+  "se": 2,
+  "at": 1,
+  "de": 1,
+  "abilities": [
+   {
+    "kind": "trigger",
+    "when": {
+     "event": "enter",
+     "self": true
+    },
+    "optional": true,
+    "text": "登場時、2ドローしてもよい",
+    "effect": {
+     "steps": [
+      {
+       "a": "draw",
+       "to": "you",
+       "n": 2
+      }
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "key": "T 101",
+  "type": "Break",
+  "faction": "E.G.O.",
+  "jp": "テストブレイク",
+  "en": "Test Break",
+  "cost": 1,
+  "factor": {
+   "E.G.O.": 1
+  },
+  "icons": [
+   "スチューデント",
+   "ドラグーン"
+  ],
+  "se": 2,
+  "at": 3,
+  "de": 3,
+  "skills": {
+   "offensive": true
+  }
+ },
+ {
+  "key": "T 102",
+  "type": "Break",
+  "faction": "Darklore",
+  "jp": "テストブレイク闇",
+  "en": "Test Break Dark",
+  "cost": 2,
+  "factor": {
+   "Darklore": 2
+  },
+  "icons": [
+   "ヴァンパイア",
+   "スチューデント"
+  ],
+  "se": 3,
+  "at": 4,
+  "de": 4,
+  "skills": {
+   "dual": true,
+   "breakthrough": true
+  }
+ },
+ {
+  "key": "T 103",
+  "type": "Break",
+  "faction": "E.G.O.",
+  "jp": "竜皇“テスト”",
+  "en": "Dragon Emperor \"Test\"",
+  "name": "テスト",
+  "cost": 1,
+  "factor": {
+   "E.G.O.": 1
+  },
+  "icons": [
+   "ドラグーン"
+  ],
+  "se": 4,
+  "at": 5,
+  "de": 5,
+  "breakRule": {
+   "onlyName": "テスト"
+  }
+ },
+ {
+  "key": "T 201",
+  "type": "Permanent",
+  "faction": "WIZ-DOM",
+  "jp": "テストパーマネント",
+  "en": "Test Permanent",
+  "cost": 1,
+  "factor": {
+   "WIZ-DOM": 1
+  },
+  "statMods": {
+   "at": 1,
+   "de": 1
+  }
+ },
+ {
+  "key": "T 301",
+  "type": "Fast",
+  "faction": "Arayashiki",
+  "jp": "テストファスト",
+  "en": "Test Fast",
+  "cost": 1,
+  "play": {
+   "target": {
+    "kind": "char",
+    "sel": {},
+    "count": 1
+   },
+   "steps": [
+    {
+     "a": "damage",
+     "to": "t",
+     "n": 2
+    }
+   ]
+  }
+ },
+ {
+  "key": "T 302",
+  "type": "Fast",
+  "faction": "Arayashiki",
+  "jp": "テスト取消",
+  "en": "Test Cancel",
+  "cost": 0,
+  "play": {
+   "target": {
+    "kind": "char",
+    "sel": {
+     "inBattle": true
+    },
+    "count": 1
+   },
+   "steps": [
+    {
+     "a": "cancelBattle",
+     "to": "t"
+    }
+   ]
+  }
+ },
+ {
+  "key": "T 401",
+  "type": "Project",
+  "faction": "Polestar Empire",
+  "jp": "テストプロジェクト",
+  "en": "Test Project",
+  "cost": 1,
+  "factor": {},
+  "play": {
+   "target": {
+    "kind": "char",
+    "sel": {
+     "owner": "you",
+     "area": "controlled"
+    },
+    "count": 1
+   },
+   "steps": [
+    {
+     "a": "stat",
+     "to": "t",
+     "key": "at",
+     "n": 2,
+     "until": "turn"
+    }
+   ]
+  }
+ },
+ {
+  "key": "T 402",
+  "type": "Project",
+  "faction": "Eraser",
+  "jp": "テスト封印",
+  "en": "Test Seal",
+  "cost": 0,
+  "factor": {},
+  "play": {
+   "steps": [
+    {
+     "a": "ban",
+     "to": "opp",
+     "decl": "attack",
+     "until": "turn"
+    }
+   ]
+  }
+ },
+ {
+  "key": "T 900",
+  "type": "Area Marker",
+  "faction": "",
+  "jp": "エリアマーカー",
+  "en": "Area Marker"
+ }
+]

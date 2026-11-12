@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Card Rule Coverage</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&family=IBM+Plex+Mono:wght@500;700&display=swap">
+<style>
+:root{--bg:#f6f7fb;--panel:#fff;--ink:#1a1d33;--muted:#5e6488;--line:#dfe2ef;--auto:#1b8a5a;--part:#b7791f;--man:#c0392b;--acc:#3557d6;
+  --f:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",system-ui,sans-serif;--m:"IBM Plex Mono",ui-monospace,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0e2a;--panel:#141a46;--ink:#eef0ff;--muted:#a7aedc;--line:#2b3270;--auto:#4fe3a6;--part:#ffc75a;--man:#ff7a86;--acc:#7cc4ff}}
+:root[data-theme="dark"]{--bg:#0b0e2a;--panel:#141a46;--ink:#eef0ff;--muted:#a7aedc;--line:#2b3270;--auto:#4fe3a6;--part:#ffc75a;--man:#ff7a86;--acc:#7cc4ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 var(--f)}
+main{max-width:1100px;margin:0 auto;padding:20px 16px 60px}h1{font-size:22px;margin:0 0 4px}p.sub{color:var(--muted);margin:0 0 18px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:18px}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.tile b{display:block;font:700 12px var(--m);color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.tile .n{font:700 22px var(--m)}.bar{display:flex;height:6px;border-radius:3px;overflow:hidden;margin-top:6px;background:var(--line)}
+.bar i{display:block}.a{background:var(--auto)}.p{background:var(--part)}.m{background:var(--man)}
+.tile small{color:var(--muted);font:12px var(--m)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}.filters input,.filters select{font:14px var(--f);padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink)}
+.filters input{flex:1;min-width:180px}.count{color:var(--muted);font:12px var(--m);margin:0 0 8px}
+.row{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px 12px;margin-bottom:6px}
+.row h3{margin:0;font-size:14px;display:flex;gap:8px;flex-wrap:wrap;align-items:baseline}.row h3 .k{font:12px var(--m);color:var(--muted)}
+.st{font:700 11px var(--m);padding:1px 7px;border-radius:999px;color:#fff}.st.auto{background:var(--auto)}.st.partial{background:var(--part)}.st.manual{background:var(--man)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .st{color:#0b0e2a}}:root[data-theme="dark"] .st{color:#0b0e2a}
+.row ul{margin:4px 0 0;padding-left:18px}.row li{color:var(--muted);font-size:13px}.row li .st{margin-right:6px}
+.more{display:block;margin:10px auto;font:700 13px var(--f);padding:8px 14px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer}
+</style><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+</head><body><main>
+<h1>Card rule coverage</h1>
+<p class="sub">How much of each card the v4 table runs by itself. <b>auto</b> = every line runs; <b>partial</b> = some lines are "✋ do by hand"; <b>manual</b> = the card's text is done by hand. Built from data/cardlist.xlsx by build.py (Revise#049).</p>
+<div class="tiles" id="tiles"></div>
+<div class="filters">
+  <input id="q" placeholder="Search name, card no. or text" autocomplete="off">
+  <select id="ty"><option value="">All types</option></select>
+  <select id="st"><option value="">All statuses</option><option>auto</option><option>partial</option><option>manual</option></select>
+  <select id="fa"><option value="">All factions</option></select>
+</div>
+<p class="count" id="count"></p><div id="list"></div><button class="more" id="more" hidden>Show more</button>
+</main>
+<script src="assets/data.js?v=@VER"></script><script src="assets/rules.js?v=@VER"></script>
+<script>
+(function(){
+  "use strict";
+  const D = window.AA_DATA, R = window.AA_RULES, $ = id => document.getElementById(id);
+  const norm = k => String(k).toUpperCase().replace(/\s+/g, " ").trim(), esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const cards = [], seen = new Set();
+  for (const r of D.c) {
+    let key = norm(D.s[r[4]][0] + " " + r[0]); if (seen.has(key)) key += "#2"; seen.add(key);
+    const c = R.cards[key]; if (!c) continue;
+    const lines = [];
+    for (const e of c.effects || []) if (e.status !== "auto") lines.push([e.status, e.text]);
+    if (c.play && c.play.status !== "auto") lines.push([c.play.status, "Card text (use)"]);
+    for (const a of c.abilities || []) if (a.status && a.status !== "auto") lines.push([a.status, a.text || "Ability"]);
+    for (const t of c.manualText || []) lines.push(["manual", t]);
+    if (c.breakRule && c.breakRule.manual) lines.push(["manual", "Break condition"]);
+    cards.push({ key, no: D.s[r[4]][0] + " " + r[0], jp: r[1], en: r[2], type: c.type, faction: D.f[r[5]] || "", status: c.status, lines,
+      hay: (key + " " + r[1] + " " + r[2] + " " + lines.map(l => l[1]).join(" ")).toLowerCase() });
+  }
+  const types = ["Character", "Break", "Permanent", "Project", "Fast"];
+  const rep = R.report, tiles = [];
+  const tile = (label, o) => { const t = (o.auto||0)+(o.partial||0)+(o.manual||0) || 1, pc = x => (100*(x||0)/t).toFixed(1);
+    return `<div class="tile"><b>${label}</b><span class="n">${pc(o.auto)}%</span> <small>auto</small><div class="bar"><i class="a" style="width:${pc(o.auto)}%"></i><i class="p" style="width:${pc(o.partial)}%"></i><i class="m" style="width:${pc(o.manual)}%"></i></div><small>${o.auto||0} auto · ${o.partial||0} partial · ${o.manual||0} manual</small></div>`; };
+  for (const t of types) if (rep.cards[t]) tiles.push(tile(t + " cards", rep.cards[t]));
+  tiles.push(tile("Effect lines", rep.effectLines)); tiles.push(tile("Fast / Project text", rep.fastProject));
+  $("tiles").innerHTML = tiles.join("");
+  $("ty").innerHTML += types.map(t => `<option>${t}</option>`).join("");
+  $("fa").innerHTML += [...new Set(cards.map(c => c.faction).filter(Boolean))].sort().map(f => `<option>${esc(f)}</option>`).join("");
+  let shown = 100;
+  try { const s = JSON.parse(localStorage.getItem("aa4-cov") || "{}"); for (const k of ["q","ty","st","fa"]) if (s[k]) $(k).value = s[k]; } catch (e) {}
+  function draw() {
+    const q = $("q").value.trim().toLowerCase(), ty = $("ty").value, st = $("st").value, fa = $("fa").value;
+    try { localStorage.setItem("aa4-cov", JSON.stringify({ q, ty, st, fa })); } catch (e) {}
+    const hit = cards.filter(c => (!ty || c.type === ty) && (!st || c.status === st) && (!fa || c.faction === fa) && (!q || c.hay.includes(q)));
+    $("count").textContent = `${hit.length} cards`;
+    $("list").innerHTML = hit.slice(0, shown).map(c => `<div class="row"><h3><span class="st ${c.status}">${c.status}</span>${esc(c.jp)}<span class="k">${esc(c.no)} · ${c.type}${c.faction ? " · " + esc(c.faction) : ""}</span></h3>${c.en ? `<div style="color:var(--muted);font-size:12px">${esc(c.en)}</div>` : ""}${c.lines.length ? `<ul>${c.lines.map(l => `<li><span class="st ${l[0]}">${l[0]}</span>${esc(l[1])}</li>`).join("")}</ul>` : ""}</div>`).join("");
+    $("more").hidden = hit.length <= shown;
+  }
+  for (const k of ["q","ty","st","fa"]) $(k).addEventListener("input", () => { shown = 100; draw(); });
+  $("more").onclick = () => { shown += 200; draw(); };
+  draw();
+})();
+</script></body></html>

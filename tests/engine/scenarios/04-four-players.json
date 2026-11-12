@@ -1,0 +1,23 @@
+{
+  "name": "Four players: seats in join order, coin toss gives a full turn order, solo-only rules refused",
+  "steps": [
+    { "t": "create", "by": "A", "seed": "four", "mode": "online", "seats": 5, "refuse": "Seats: 2 to 4" },
+    { "t": "create", "by": "A", "seed": "four", "mode": "online", "seats": 4 },
+    { "t": "join", "by": "A", "name": "Pack", "deck": { "repeat": ["T 001"], "n": 20 } },
+    { "t": "join", "by": "B", "name": "B", "deck": { "repeat": ["T 002"], "n": 20 } },
+    { "t": "join", "by": "C", "name": "C", "deck": { "repeat": ["T 003"], "n": 20 } },
+    { "expect": "stage", "eq": "lobby" },
+    { "t": "watch", "by": "E", "name": "Eve" },
+    { "t": "join", "by": "D", "name": "  D  ", "deck": { "repeat": ["T 004"], "n": 20 } },
+    { "expect": "players.3.name", "eq": "D" },
+    { "expect": "spectators.E", "eq": "Eve" },
+    { "expect": "stage", "eq": "mulligan" },
+    { "expect": "turn.order", "len": 4 },
+    { "expect": "players.2.zones.hand", "len": 7 },
+    { "t": "chat", "by": "E", "text": "good luck" },
+    { "events": { "e": "chat", "seat": -1, "text": "good luck" } },
+    { "t": "keep", "by": "E", "refuse": "not playing" },
+    { "t": "rename", "by": "C", "name": "Carol" },
+    { "expect": "players.2.name", "eq": "Carol" }
+  ]
+}

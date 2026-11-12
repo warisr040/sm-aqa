@@ -1,0 +1,96 @@
+<template id="helpTpl">
+  <nav class="hnav" aria-label="How to use sections">
+    <a href="#h-overview" data-hjump>ภาพรวม</a><a href="#h-export" data-hjump>Export</a><a href="#h-import" data-hjump>Import</a><a href="#h-rules" data-hjump>กฎของเด็ค</a>
+  </nav>
+
+  <section class="hsec" id="h-overview">
+    <div class="hhead"><span class="hk">01</span><div><h3>ภาพรวมหน้าจอ</h3><p>ส่วนประกอบหลักของ Deck Builder ตามหมายเลขในภาพ</p></div></div>
+    <figure class="fig">
+      <img src="help/overview.jpg" alt="หน้าจอ Deck Builder พร้อมหมายเลขกำกับ" loading="lazy" width="1214" height="798">
+      <span class="pin" style="left:24.6%;top:6%">1</span>
+      <span class="pin" style="left:45%;top:12%">2</span>
+      <span class="pin" style="left:27%;top:40.5%">3</span>
+      <span class="pin" style="left:52%;top:25%">4</span>
+      <span class="pin" style="left:60%;top:56%">5</span>
+      <span class="pin" style="left:83%;top:31%">6</span>
+      <span class="pin" style="left:87%;top:19.6%">7</span>
+      <span class="pin" style="left:95%;top:31%">8</span>
+    </figure>
+    <ol class="legend">
+      <li><b>แท็บ Deck Builder</b><span>เปิดหน้าจัดเด็คจากแท็บ “2. Deck Builder” ตัวเลขข้างแท็บคือจำนวนการ์ดในเด็คตอนนี้</span></li>
+      <li><b>ค้นหาการ์ด</b><span>พิมพ์ชื่อภาษาญี่ปุ่น ภาษาอังกฤษ หรือรหัสการ์ด เช่น <code>A3-01 0035</code> และกรองตามซีรีส์ได้</span></li>
+      <li><b>เลือกประเภทและจำนวน</b><span>กดปุ่มประเภท <em>Char · Break · Fast · Proj · Perm</em> เพื่อใส่การ์ด แล้วใช้ <em>− / +</em> ปรับจำนวน 1–4 ใบ ปุ่มสีทึบคือประเภทของการ์ดตามฐานข้อมูล (กดปุ่มอื่นได้ถ้าต้องการ)</span></li>
+      <li><b>ตั้งชื่อเด็ค</b><span>ชื่อนี้จะแสดงในรูปภาพและไฟล์ข้อความตอน Export</span></li>
+      <li><b>จัดเรียงการ์ด</b><span>ลาก (Drag &amp; Drop) เพื่อเปลี่ยนลำดับ หรือลากไปคอลัมน์อื่นเพื่อเปลี่ยนประเภท คลิกที่การ์ดเพื่อแก้จำนวนหรือประเภท บนมือถือให้กดค้างสักครู่ก่อนลาก</span></li>
+      <li><b>Deck Summary</b><span>จำนวนการ์ดทั้งหมดเทียบกับ 60 ใบ และจำนวนแยกตามประเภท</span></li>
+      <li><b>Import / Export</b><span>บันทึกเด็คออกเป็นรูปภาพหรือข้อความ และโหลดเด็คกลับเข้ามาแก้ไข</span></li>
+      <li><b>New</b><span>เริ่มเด็คใหม่ ต้องกด 2 ครั้งเพื่อยืนยันการล้างเด็ค</span></li>
+    </ol>
+    <div class="tipbar"><span><b>Fit / Original</b> สลับขนาดการ์ด: Fit พอดีความกว้างจอ, Original ขนาดใหญ่และเลื่อนซ้าย–ขวาได้</span><span><b>บันทึกอัตโนมัติ</b> เด็คปัจจุบันถูกเก็บไว้ในเบราว์เซอร์นี้ เปิดหน้าใหม่ก็ยังอยู่</span></div>
+  </section>
+
+  <section class="hsec" id="h-export">
+    <div class="hhead"><span class="hk">02</span><div><h3>Export ได้ 2 รูปแบบ</h3><p>กดปุ่ม <em>Export</em> แล้วเลือกรูปแบบด้านบนของหน้าต่าง</p></div></div>
+    <div class="hgrid two">
+      <div class="hcard">
+        <figure class="fig"><img src="help/export-jpg.jpg" alt="Export แบบรูปภาพ" loading="lazy" width="562" height="654">
+          <span class="hl" style="left:4%;top:8.8%;width:13.5%;height:4.6%"></span><span class="hl" style="left:4%;top:91.5%;width:16%;height:5.5%"></span></figure>
+        <h4><span class="tagc">ค่าเริ่มต้น</span>Image (.jpg)</h4>
+        <p>รูปทั้งเด็คพร้อมชื่อเด็คและจำนวนแต่ละประเภท กด <em>Download .jpg</em> หรือคลิกขวาที่ภาพตัวอย่างแล้วเลือก <em>Copy image</em> เพื่อนำไปวางในแชตได้ทันที</p>
+      </div>
+      <div class="hcard">
+        <figure class="fig"><img src="help/export-txt.jpg" alt="Export แบบข้อความ" loading="lazy" width="568" height="406">
+          <span class="hl" style="left:16%;top:16.5%;width:12%;height:7.5%"></span><span class="hl" style="left:4%;top:81.5%;width:26%;height:9%"></span></figure>
+        <h4>List (text)</h4>
+        <p>รายการการ์ดแบบข้อความ ใช้เก็บไว้เพื่อ <em>Import</em> กลับมาแก้เด็คภายหลัง กด <em>Copy</em> หรือ <em>Download .txt</em></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="hsec" id="h-import">
+    <div class="hhead"><span class="hk">03</span><div><h3>Import เด็คกลับมาแก้ไข</h3><p>สร้างเด็คใหม่จากรายการที่ Export ไว้ในแบบ List (text)</p></div></div>
+    <ol class="steps">
+      <li><figure class="fig"><img src="help/import-1.jpg" alt="ปุ่ม Import" loading="lazy" width="756" height="234"><span class="hl" style="left:75.2%;top:10.5%;width:9.1%;height:16.1%"></span></figure>
+        <div><b>กดปุ่ม Import</b><span>อยู่ข้างปุ่ม Export ด้านบนของเด็ค</span></div></li>
+      <li><figure class="fig"><img src="help/import-2.jpg" alt="วางข้อความหรือเลือกไฟล์" loading="lazy" width="614" height="386"><span class="hl" style="left:8%;top:27%;width:84%;height:51%"></span><span class="hl" style="left:8%;top:80%;width:16.5%;height:9%"></span></figure>
+        <div><b>วางข้อความ หรือเลือกไฟล์ .txt</b><span>Paste รายการลงในช่อง หรือกด <em>Choose .txt file</em> เพื่อเลือกไฟล์ที่ Export ไว้</span></div></li>
+      <li><figure class="fig"><img src="help/import-3.jpg" alt="กด Import" loading="lazy" width="562" height="362"><span class="hl" style="left:21.5%;top:78%;width:11.5%;height:11%"></span></figure>
+        <div><b>กด Import</b><span>เด็คจะถูกสร้างใหม่แทนเด็คปัจจุบันทันที</span></div></li>
+    </ol>
+    <figure class="fig result"><img src="help/import-result.jpg" alt="ผลลัพธ์หลัง Import" loading="lazy" width="739" height="356"><figcaption>ผลลัพธ์: การ์ดกลับมาอยู่ในประเภทและลำดับเดิม</figcaption></figure>
+    <div class="fmt">
+      <div><h4>เขียนรายการเองก็ได้</h4>
+        <p>ใส่ชื่อประเภทในวงเล็บ <code>[ ]</code> แล้วตามด้วยการ์ดบรรทัดละใบในรูปแบบ <code>จำนวน x รหัสซีรีส์ เลขการ์ด</code> ชื่อการ์ดท้ายบรรทัดจะใส่หรือไม่ก็ได้ บรรทัดที่อ่านไม่ออกจะถูกข้ามและแจ้งให้ทราบ</p></div>
+      <pre>[Character]
+4 x A3-01 0035  財巫女
+2 x A3-01 0036  赤龍
+
+[Fast]
+3 x A3-01 0022  ピンポイントバリア</pre>
+    </div>
+  </section>
+
+  <section class="hsec" id="h-rules">
+    <div class="hhead"><span class="hk">04</span><div><h3>กฎของเด็คและการแจ้งเตือน</h3><p>ระบบตรวจสอบให้อัตโนมัติขณะใส่การ์ด</p></div></div>
+    <div class="rule">
+      <div class="rtext"><span class="rno">กฎข้อ 1</span><h4>การ์ดชื่อเดียวกันไม่เกิน 4 ใบ</h4>
+        <p>ระบบนับตาม<strong>ชื่อการ์ด</strong> ไม่ใช่รหัส ดังนั้นการ์ดธรรมดากับฟอยล์ที่รหัสต่างกันแต่ชื่อเดียวกัน จะรวมกันได้สูงสุด 4 ใบ</p>
+        <p>ถ้ากดเกิน จะมีข้อความแจ้งเตือนที่ด้านล่างของจอ</p></div>
+      <figure class="fig"><img src="help/rule-copies.jpg" alt="ตัวอย่างการ์ดชื่อเดียวกันครบ 4 ใบ" loading="lazy" width="734" height="562">
+        <span class="hl" style="left:4%;top:20.5%;width:37%;height:35%"></span><span class="hl" style="left:48%;top:92.5%;width:51%;height:6.5%"></span></figure>
+    </div>
+    <div class="rule">
+      <div class="rtext"><span class="rno">กฎข้อ 2</span><h4>จำนวนการ์ดในเด็ค 50–60 ใบ</h4>
+        <ul class="status-list">
+          <li><i class="dot low"></i><span><b>ต่ำกว่า 50 ใบ</b> ตัวเลขเป็นสีเหลือง พร้อมบอกจำนวนที่ยังขาด</span></li>
+          <li><i class="dot ok"></i><span><b>50–60 ใบ</b> ตัวเลขเป็นสีเขียว พร้อมข้อความ Ready</span></li>
+          <li><i class="dot full"></i><span><b>ครบ 60 ใบ</b> ใส่การ์ดเพิ่มไม่ได้ และมีข้อความ “Deck is full (60 cards)”</span></li>
+        </ul></div>
+      <div class="hgrid three">
+        <figure class="fig"><img src="help/rule-under50.jpg" alt="ต่ำกว่า 50 ใบ ตัวเลขสีเหลือง" loading="lazy" width="396" height="330"><span class="hl" style="left:0.5%;top:16.4%;width:64.9%;height:21%"></span><figcaption>ต่ำกว่า 50 ใบ</figcaption></figure>
+        <figure class="fig"><img src="help/rule-ready.jpg" alt="50 ใบขึ้นไป ตัวเลขสีเขียว" loading="lazy" width="409" height="296"><span class="hl" style="left:0.5%;top:21.3%;width:52%;height:19.3%"></span><figcaption>50–60 ใบ</figcaption></figure>
+        <figure class="fig"><img src="help/rule-full.jpg" alt="ครบ 60 ใบ มีข้อความแจ้งเตือน" loading="lazy" width="514" height="400"><span class="hl" style="left:58%;top:6.5%;width:33.8%;height:9.4%"></span><span class="hl" style="left:60.9%;top:88.5%;width:28%;height:9.4%"></span><figcaption>ครบ 60 ใบ</figcaption></figure>
+      </div>
+    </div>
+  </section>
+</template>

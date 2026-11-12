@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aquarian Age Thailand Fan-site</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="assets/app.css?v=@VER">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+</head>
+<body data-tab="home" data-view="pick">
+<canvas id="stars" aria-hidden="true"></canvas>
+<div class="wrap hero"><h1 class="sr">Aquarian Age Thailand Fan-site アクエリアンエイジ タイ ファンサイト</h1><img id="banner" src="@BANNER" alt="Aquarian Age Thailand Fan-site アクエリアンエイジ タイ ファンサイト" width="2800" height="863"></div>
+
+<header id="hdr">
+  <div class="wrap bar">
+    <nav class="tabs" role="tablist" aria-label="Sections">
+      <button type="button" role="tab" data-tab="home" aria-selected="true"><img class="ti ti-img" src="tabicons/home.jpg" alt="" width="22" height="22">Home</button>
+      <button type="button" role="tab" data-tab="cards" aria-selected="false"><img class="ti ti-card" src="tabicons/card.jpg" alt="" width="16" height="22">Card List</button>
+      <button type="button" role="tab" data-tab="rules" aria-selected="false"><svg class="ti" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.8h11.2a1.8 1.8 0 0 1 1.8 1.8v13.6H6.6A1.8 1.8 0 0 0 4.8 20V4A1.2 1.2 0 0 1 6 2.8z" fill="#6fb8ff" stroke="#f4f7ff" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/><path d="M6.6 18.2H19v2.9H6.6a1.45 1.45 0 0 1 0-2.9z" fill="#fff" stroke="#f4f7ff" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/><path d="M14.2 2.8v6.4l1.5-1.2 1.5 1.2V2.8" fill="#ff8fb8" stroke="#f4f7ff" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/><path d="M10.3 9.3l.85 1.75 1.9.27-1.38 1.33.33 1.9-1.7-.9-1.7.9.33-1.9-1.38-1.33 1.9-.27z" fill="#ffd447" stroke="#f4f7ff" stroke-width=".9" stroke-linejoin="round"/></svg>Rulebook</button>
+      <button type="button" role="tab" data-tab="deck" aria-selected="false"><svg class="ti" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="5.6" width="10.5" height="14.5" rx="2" transform="rotate(-14 8.4 12.9)" fill="#b7a6ff" stroke="#f4f7ff" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/><rect x="6.6" y="4.4" width="10.5" height="14.5" rx="2" transform="rotate(-2 11.8 11.6)" fill="#7cc4ff" stroke="#f4f7ff" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/><rect x="10" y="4.6" width="10.5" height="14.5" rx="2" transform="rotate(11 15.2 11.9)" fill="#fff6d8" stroke="#f4f7ff" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/><path d="M15.6 15.2c-2.2-1.4-3.1-2.6-2.7-3.9.3-1 1.6-1.3 2.4-.4.9-.7 2.2-.3 2.4.7.3 1.3-.7 2.4-2.1 3.6z" fill="#ff7aa8" stroke="#f4f7ff" stroke-width=".9" stroke-linejoin="round"/></svg>Deck Builder <span class="badge" id="tabDeck">0</span></button>
+      <button type="button" role="tab" data-tab="table" aria-selected="false"><svg class="ti" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.6 13.6h6.8l1.4 5H7.2z" fill="#ffd447" stroke="#f4f7ff" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/><rect x="5.4" y="18.4" width="13.2" height="3" rx="1.4" fill="#ffb347" stroke="#f4f7ff" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/><rect x="8" y="12.2" width="8" height="2.2" rx="1.1" fill="#ffb347" stroke="#f4f7ff" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="12" cy="7.6" r="4.6" fill="#ffd447" stroke="#f4f7ff" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="10.3" cy="7.3" r=".7" fill="#243078"/><circle cx="13.7" cy="7.3" r=".7" fill="#243078"/><path d="M10.9 9.1q1.1.9 2.2 0" fill="none" stroke="#f4f7ff" stroke-width=".9" stroke-linecap="round"/><circle cx="9.3" cy="8.9" r=".8" fill="#ff8fb8" opacity=".8"/><circle cx="14.7" cy="8.9" r=".8" fill="#ff8fb8" opacity=".8"/></svg>Game Table</button>
+      <button type="button" role="tab" data-tab="changelog" aria-selected="false" class="tab-mini" title="Changelog — what changed on the site"><svg class="ti" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 4.2h11a2.3 2.3 0 0 1 0 4.6H17v9.6a2.4 2.4 0 0 1-2.4 2.4H5.2" fill="#ffe7b0" stroke="#f4f7ff" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/><path d="M6.5 4.2A2.3 2.3 0 0 0 4.2 6.5v11.9a2.4 2.4 0 0 0 4.8 0V6.5A2.3 2.3 0 0 0 6.5 4.2z" fill="#ffd27a" stroke="#f4f7ff" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/><path d="M9 6.5h8.5" fill="none" stroke="#f4f7ff" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/><path d="M11 11.2h3.6M11 14h3.6M11 16.8h2.2" fill="none" stroke="#b5762a" stroke-width="1.2" stroke-linecap="round"/><circle cx="6.6" cy="18.4" r=".9" fill="#ff8fb8"/></svg>Changelog</button>
+    </nav>
+    <div class="searchrow" id="fhome">
+      <div class="srow">
+      <div class="search">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" autocomplete="off" placeholder="カード名 / card name / number (e.g. 巫女, Shrine Maiden, A3-01 0035)" aria-label="Search cards">
+        <button id="clear" type="button" aria-label="Clear search" hidden>×</button>
+      </div>
+      <button id="resetTop" class="resetbtn compact" type="button" hidden title="Reset filters"><span aria-hidden="true">↺</span><span class="rlbl"> Reset</span><span id="resetTopN" class="badge"></span></button>
+      <button id="fToggle" class="chipbtn ftoggle" type="button" aria-expanded="true" aria-controls="fbox"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M3 5h18M6 12h12M10 19h4"/></svg><span class="flbl">Filters &amp; Sort</span><span id="fN" class="badge" hidden></span><span class="caret" aria-hidden="true">▾</span></button>
+      </div>
+      <div id="fbox" class="fbox">
+      <div class="fbhead">
+        <span class="fbtitle">Filters &amp; Sort</span>
+        <span id="fcount" class="status"></span>
+        <div class="seg fmodes" role="group" aria-label="Filter layout">
+          <button type="button" data-fmode="inline" title="Filters above the card list (fold with the Filters button)">Inline</button>
+          <button type="button" data-fmode="side" title="Filters in a sidebar that slides in">Sidebar</button>
+        </div>
+        <button id="fClose" class="close" type="button" aria-label="Close filters">×</button>
+      </div>
+      <div class="filters">
+        <select id="series" aria-label="Series"></select>
+        <button id="factBtn" class="chipbtn" type="button" aria-expanded="false" aria-controls="fpanel" aria-label="Faction"><span class="lbl">All factions</span><span aria-hidden="true">▾</span></button>
+        <select id="ctype" aria-label="Category"></select>
+        <select id="cname" aria-label="Name" title="Name-level cards: a personal name in “…” (e.g. 女帝竜“ィアーリス”)"></select>
+        <button id="klassBtn" class="chipbtn" type="button" aria-expanded="false" aria-controls="kpanel"><span class="lbl">All class icons</span><span aria-hidden="true">▾</span></button>
+        <button id="brBtn" class="chipbtn brbtn" type="button" aria-pressed="false" title="Characters with “▼ このキャラクターをブレイクする場合、≪そのブレイクカードのコスト≫はオーナーの手札に戻る。”">▼ Break-cost return<span id="brN" class="kn"></span></button>
+        <button id="statsToggle" class="chipbtn" type="button" aria-expanded="false" aria-controls="statrow">Stats / Sort<span id="statsN" class="badge" hidden></span><span aria-hidden="true">▾</span></button>
+        <button id="resetF" class="resetbtn" type="button" hidden><span aria-hidden="true">↺</span> Reset filters<span id="resetN" class="badge"></span></button>
+        <span id="status" class="status" aria-live="polite"></span>
+        <div class="top-links">
+          <a href="https://drive.google.com/drive/folders/1q7VxU-Zev4TM2A0QghLu3xBMpoU8OPGW" target="_blank" rel="noopener">📁 AA folder</a>
+          <a href="https://docs.google.com/spreadsheets/d/12kfDbNjVC5azKD2y1KYzs_SSx4ZBJOUN/edit" target="_blank" rel="noopener">Card list sheet</a>
+        </div>
+      </div>
+      <div class="filters skillrow" id="skillrow">
+        <span class="rowlabel">Skills</span>
+        <button id="skillBtn" class="chipbtn" type="button" aria-expanded="false" aria-controls="skpanel"><span class="lbl">All skills</span><span aria-hidden="true">▾</span></button>
+        <div class="sksorts" id="sksorts" role="group" aria-label="Sort by skill value"></div>
+      </div>
+      <div id="fpanel" class="kpanel" hidden></div>
+      <div id="kpanel" class="kpanel" hidden></div>
+      <div id="skpanel" class="kpanel" hidden></div>
+      <div id="statrow" class="filters statrow" hidden></div>
+      <button id="fDone" class="btn primary fdone" type="button">Show cards</button>
+      </div>
+    </div>
+    <div class="deckbar seg" role="group" aria-label="Deck Builder section">
+      <button type="button" data-view="pick" aria-pressed="true">Select cards</button>
+      <button type="button" data-view="deck" aria-pressed="false" id="segDeck">Deck 0 / 60</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="p-home" class="wrap home">
+    <div class="hintro">
+      <h2>Welcome to Aquarian Age Thailand Fan-site <span lang="ja">アクエリアンエイジ タイ ファンサイト</span></h2>
+      <p>A fan-made companion for the trading card game <b>Aquarian Age</b>. Everything is in one place: the full Japanese card list with English names and text, the official rules in Japanese and English, a deck builder, and a game table where you can play your decks, alone to test them or online with a friend.</p>
+      <p class="note">Unofficial fan site. Card images and rules © BROCCOLI. Nothing to install or sign up for: your decks and settings are saved in this browser.</p>
+    </div>
+    <h3 class="hh">How to use</h3>
+    <ol class="hsteps">
+      <li><b>Learn the rules first</b><span>Read the Rulebook in Japanese, English or both.</span></li>
+      <li><b>Find cards</b><span>Search and filter the Card List.</span></li>
+      <li><b>Build a deck</b><span>Add cards in the Deck Builder; it is saved in a deck slot.</span></li>
+      <li><b>Play</b><span>Open the Game Table, choose your deck and play.</span></li>
+    </ol>
+    <a class="hmanual" id="homeManual" href="manual.html"><b>📖 User Manual</b><span>Step-by-step guide to the whole site, in English and Thai (คู่มือการใช้งาน ภาษาไทย / English).</span><i aria-hidden="true">Open</i></a>
+    <div class="hcards">
+      <article class="hcard">
+        <h3>Card List</h3>
+        <p>Every card, in Japanese and English.</p>
+        <ul>
+          <li>Search by Japanese or English name, or by card number (e.g. A3-01 0035).</li>
+          <li>Filter by series, faction, card type, class icon, skill and stats; sort by stats.</li>
+          <li>Click a card for the large image and its text in both languages.</li>
+        </ul>
+        <button class="btn primary" type="button" data-go="cards">Open Card List</button>
+      </article>
+      <article class="hcard">
+        <h3>Rulebook</h3>
+        <p>A Japanese–English guide to the official rulebook (Ver1.1).</p>
+        <ul>
+          <li>Switch between 日本語, Both and English.</li>
+          <li>Use the contents list to jump to a section.</li>
+          <li>For the exact wording, check the official rulebook.</li>
+        </ul>
+        <button class="btn primary" type="button" data-go="rules">Open Rulebook</button>
+      </article>
+      <article class="hcard">
+        <h3>Deck Builder</h3>
+        <p>Build and save your decks.</p>
+        <ul>
+          <li>Tap + on a card to add it, and + again for more copies (up to 4 of a card); − takes one out.</li>
+          <li>Drag a card to reorder it or to move it to another column.</li>
+          <li>Several deck slots; Import / Export as text or an image; Templates to get started; choose a card sleeve.</li>
+        </ul>
+        <button class="btn primary" type="button" data-go="deck">Open Deck Builder</button>
+      </article>
+      <article class="hcard">
+        <h3>Game Table</h3>
+        <p>Play with the decks from your deck slots.</p>
+        <ul>
+          <li><b>Solo:</b> choose Deck 1 and Deck 2 and play both sides, to test a deck.</li>
+          <li><b>Online:</b> create a room and share its code; the other player joins with their own deck.</li>
+          <li>Card rules run by themselves where they are built; the rest is marked ✋ “do by hand” with tools for it. You can Undo your last action.</li>
+        </ul>
+        <button class="btn primary" type="button" data-go="table">Open Game Table</button>
+      </article>
+      <article class="hcard">
+        <h3>Changelog</h3>
+        <p>What changed on the site, newest first.</p>
+        <ul>
+          <li>New cards that became automatic on the Game Table.</li>
+          <li>New features and fixes.</li>
+        </ul>
+        <button class="btn primary" type="button" data-go="changelog">Open Changelog</button>
+      </article>
+    </div>
+    <aside class="hdisclaimer" id="disclaimer" aria-label="Disclaimer"><b>Disclaimer</b>
+      <p>This is an unofficial, non-profit fan project created solely to preserve the memory of Aquarian Age TCG. All card art, logos, and character designs are intellectual property of Broccoli / original illustrators. Not affiliated with or endorsed by the copyright owners.</p>
+    </aside>
+  </section>
+
+  <section id="p-cards" class="wrap" hidden>
+    <div id="grid" class="grid"></div>
+    <div id="empty" class="empty" hidden><b>No cards found</b>Try a shorter name, hiragana instead of katakana works too, or set the series back to All.</div>
+    <div class="more"><button id="more" class="btn" type="button" data-pane="cards" hidden>Show more</button></div>
+  </section>
+
+  <section id="p-deck" class="wrap deckwrap" hidden>
+    <div class="dbs" id="dbs" hidden role="dialog" aria-modal="true" aria-labelledby="dbsTitle">
+      <div class="dbsbox">
+        <div class="dbshead"><b id="dbsTitle">Search cards</b><span class="note" id="dbsDeck"></span><button class="close" id="dbsClose" type="button" aria-label="Close search">×</button></div>
+        <div id="dbsSearch"></div>
+        <div class="picker" id="picker">
+          <p class="note phint">Tap + to add a card (max 4 copies), − to take one out. The card goes to the category of its card type. Tap the picture for details.</p>
+          <div id="plist" class="grid plist"></div>
+          <div id="empty2" class="empty" hidden><b>No cards found</b>Try a shorter name or another series.</div>
+          <div class="more"><button id="more2" class="btn" type="button" data-pane="deck" hidden>Show more</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="deckpane" id="deckpane">
+      <div class="dtools">
+        <div class="namerow"><select id="deckPage" class="dslot dpage" aria-label="Deck page" title="50 deck slots: 5 pages of 10"></select><select id="deckSlot" class="dslot" aria-label="Deck slot"></select><input id="deckName" class="dname" type="text" maxlength="60" aria-label="Deck name" placeholder="Deck name"><button class="btn helpbtn" id="btnHelp" type="button" aria-label="How to use"><i>?</i><span class="full">How to use</span></button></div>
+        <div class="seg" role="group" aria-label="Card size">
+          <button type="button" data-mode="fit" aria-pressed="true"><span class="full">Fit to width</span><span class="short">Fit</span></button>
+          <button type="button" data-mode="original" aria-pressed="false">Original</button>
+        </div>
+        <button class="btn primary" id="btnSearch" type="button">🔍 Search cards</button>
+        <button class="btn" id="btnImport" type="button">Import</button>
+        <button class="btn primary" id="btnExport" type="button">Export</button>
+        <button class="btn" id="btnTemplate" type="button">Template</button>
+        <button class="btn" id="btnSleeve" type="button">Sleeve</button>
+        <button class="btn" id="btnNew" type="button">Clear</button>
+      </div>
+      <div id="summary" class="summary"></div>
+      <div id="cols" class="cols fit"></div>
+      <p class="note">Drag a card to reorder it, or drop it in another column to change its category. Tap a card for details and +/−.</p>
+    </div>
+  </section>
+
+  <section id="p-rules" class="wrap" hidden>
+    <div class="rtop">
+      <p class="note"><span lang="ja">公式ルールブック（Ver1.1・©BROCCOLI）とパートナーシステム試用版ルール（Ver.1.1）の内容を、日本語と英語でまとめたガイドです。正確な文言は公式ルールブックを確認してください。</span><span lang="en"> A Japanese–English guide to the official rulebook (Ver1.1, ©BROCCOLI) and the Partner System trial rules (Ver.1.1). For the exact wording, check the official rulebook.</span></p>
+      <div class="seg" role="group" aria-label="Language">
+        <button type="button" data-rlang="ja" aria-pressed="false">日本語</button>
+        <button type="button" data-rlang="both" aria-pressed="true">両方 Both</button>
+        <button type="button" data-rlang="en" aria-pressed="false">English</button>
+      </div>
+    </div>
+    <div class="rwrap">
+      <nav class="rtoc" aria-label="Rules contents"><!--@RULES_TOC--></nav>
+      <div class="rbody"><!--@RULES_BODY--></div>
+    </div>
+  </section>
+  <section id="p-table" hidden><iframe id="tableFrame" title="Game table (v4)" data-src="table.html"></iframe></section>
+  <section id="p-addoge" class="wrap admin" hidden>   <!-- Revise#302: the owner's tools, only at #addoge (no button leads here) -->
+    <div class="clhead"><h2>Admin</h2><p class="note">The site owner's tools. Deleting needs the owner's Google sign-in (Firebase rules).</p></div>
+    <div class="admgrid">
+      <button class="btn admbtn" type="button" id="openReports"><b>⚑ Card reports</b><span>Problems players reported on card details — tick, copy for Claude, download, delete.</span></button>
+      <button class="btn admbtn" type="button" id="openRooms"><b>🗄 Online rooms</b><span>Saved online games — see when they were used, delete the idle ones.</span></button>
+      <button class="btn admbtn" type="button" id="openCampaign"><b>🤖 Campaign Bot Management</b><span>Campaign decks and their playstyles — Active (move a deck to another difficulty) and Pending (proposals from Campaign Design: export, delete).</span></button>
+    </div>
+  </section>
+  <section id="p-changelog" class="wrap" hidden>
+    <div class="clhead"><h2>Changelog</h2>
+      <div class="seg cltabs" role="tablist" aria-label="Changelog"><button type="button" role="tab" data-cltab="changes" aria-selected="true">Changes</button><button type="button" role="tab" data-cltab="bugs" aria-selected="false">Bug reports <span class="badge">@TICKETS_N</span></button></div></div>
+    <div id="clChanges"><p class="note">What changed on Aquarian Age Thailand Fan-site, newest first.</p>
+    <div class="clist"><!--@CHANGELOG--></div></div>
+    <div id="clBugs" hidden><p class="note">Card reports sent from the site, one ticket each: what was reported, how it was broken down, the cause, the fix, how it was checked, and captures before and after. Done tickets are closed. Card pictures are blank in the captures (outside images were blocked while capturing).</p>
+    <div class="tklist"><!--@TICKETS--></div></div>
+  </section>
+</main>
+
+<div id="fscrim" class="scrim fscrim" hidden></div>
+<div id="scrim" class="scrim" hidden></div>
+<aside id="sheet" class="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="d-jp"></aside>
+<div id="modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="m-title">
+  <div class="mhead"><h2 id="m-title"></h2><button class="close" type="button" id="mclose" aria-label="Close">×</button></div>
+  <div id="mbody" class="mbody"></div>
+</div>
+<div id="toast" class="toast" role="status" hidden></div>
+<!--@HELP-->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.2/Sortable.min.js"></script>
+<script src="assets/img-config.js?v=@VER"></script>
+<script src="assets/firebase-config.js?v=@VER"></script>
+<script src="assets/data.js?v=@VER"></script>
+<script src="assets/app.js?v=@VER"></script>
+</body>
+</html>

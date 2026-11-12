@@ -1,0 +1,45 @@
+{
+  "name": "Solo one deck: characters in faction slots, Break / power / permanent, Special Area, character leaves",
+  "steps": [
+    { "t": "create", "by": "A", "seed": "areas", "mode": "solo1" },
+    { "t": "join", "by": "A", "name": "Pack", "deck": { "repeat": ["T 002", "T 005", "T 101", "T 201", "T 301", "T 401"], "n": 12 } },
+    { "t": "keep", "by": "A" },
+    { "expect": "turn.order", "eq": [0] },
+
+    { "t": "move", "by": "A", "card": "@$free:T 002", "to": { "z": "active" } },
+    { "expect": "players.0.areas.active.arayashiki", "len": 1 },
+    { "expect": "players.0.areas.active.arayashiki.0", "eq": "ch1" },
+    { "expect": "chars.ch1.stack", "keys": ["T 002"] },
+
+    { "t": "move", "by": "A", "card": "@$free:T 005", "to": { "z": "active", "slot": "arayashiki" } },
+    { "expect": "players.0.areas.active.arayashiki", "eq": ["ch1", "ch2"] },
+    { "expect": "chars.ch2.at", "eq": { "area": "active", "slot": "arayashiki" } },
+
+    { "t": "move", "by": "A", "card": "@$free:T 101", "to": { "z": "char", "ch": "ch1", "role": "stack" } },
+    { "expect": "chars.ch1.stack", "keys": ["T 002", "T 101"] },
+    { "t": "moveChar", "by": "A", "ch": "ch1", "to": { "area": "front" } },
+    { "expect": "players.0.areas.front", "eq": ["ch1"] },
+    { "expect": "players.0.areas.active.arayashiki", "eq": ["ch2"] },
+
+    { "t": "move", "by": "A", "card": "@$free:T 201", "to": { "z": "char", "ch": "ch1", "role": "perm" } },
+    { "t": "move", "by": "A", "card": "@$free:T 401", "to": { "z": "char", "ch": "ch1", "role": "power" } },
+    { "expect": "chars.ch1.power", "keys": ["T 401"] },
+    { "expect": "chars.ch1.power.0", "key": "T 401" },
+
+    { "t": "move", "by": "A", "card": "@$free:T 301", "to": { "z": "active" }, "refuse": "can't go there" },
+    { "t": "move", "by": "A", "card": "@$free:T 301", "to": { "z": "special" } },
+    { "expect": "players.0.zones.special", "keys": ["T 301"] },
+
+    { "t": "move", "by": "A", "card": "@$free:T 101", "to": { "z": "front" } },
+    { "expect": "players.0.areas.front", "eq": ["ch1", "ch3"] },
+    { "expect": "chars.ch3.stack", "keys": ["T 101"] },
+
+    { "t": "move", "by": "A", "card": "@chars.ch1.stack.0", "to": { "z": "discard" } },
+    { "expect": "chars.ch1.stack", "keys": ["T 101"] },
+    { "t": "move", "by": "A", "card": "@chars.ch1.stack.0", "to": { "z": "damage" } },
+    { "expect": "chars.ch1", "missing": true },
+    { "expect": "players.0.areas.front", "eq": ["ch3"] },
+    { "expect": "players.0.zones.discard", "keys": ["T 002", "T 201", "T 401"] },
+    { "expect": "players.0.zones.damage", "keys": ["T 101"] }
+  ]
+}

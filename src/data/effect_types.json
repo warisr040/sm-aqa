@@ -1,0 +1,397 @@
+{
+ "_about": "Effect System rules. Each effect (cost：text) is split into sentences; each sentence gets the FIRST rule whose 're' matches (Japanese card text, JS/Python regex). 'action' says what the play table does (see EFFECT_ACTIONS in src/js/06d-effects.js); 'manual' = shown as a reminder only. To support a new kind of effect: add a rule here (and an action in 06d-effects.js if it can be automated).",
+ "groups": [
+  [
+   "cost",
+   "Effect cost"
+  ],
+  [
+   "stat",
+   "Stat change"
+  ],
+  [
+   "damage",
+   "Damage"
+  ],
+  [
+   "remove",
+   "Discard / bounce / deck"
+  ],
+  [
+   "power",
+   "Power cards"
+  ],
+  [
+   "battle",
+   "Attack / guard"
+  ],
+  [
+   "skill",
+   "Gain skills / icons"
+  ],
+  [
+   "negate",
+   "Negate / protect / restrict"
+  ],
+  [
+   "cards",
+   "Draw / search / hand"
+  ],
+  [
+   "move",
+   "Move / swap / set"
+  ],
+  [
+   "other",
+   "Other"
+  ]
+ ],
+ "rules": [
+  {
+   "id": "xdef",
+   "group": "other",
+   "label": "X is defined",
+   "re": "^[XＸ0-9０-９]+は.+(に等しい|の数|枚数)",
+   "action": "xdef"
+  },
+  {
+   "id": "timing",
+   "group": "other",
+   "label": "Timing: only at project-card timing",
+   "re": "(使用宣言可能|使用できる|使用宣言できる)",
+   "action": "note"
+  },
+  {
+   "id": "cost-to-hand",
+   "group": "cost",
+   "label": "Return this effect's cost to hand",
+   "re": "(このエフェクトのコスト≫?を、?(オーナーの|あなたの)?手札に戻す|このエフェクトのコスト≫?は、?(オーナーの|あなたの)?手札に戻る)",
+   "action": "costto",
+   "to": "hand"
+  },
+  {
+   "id": "cost-return",
+   "group": "cost",
+   "label": "Cost returns to hand",
+   "re": "(カード|キャラクター|エフェクト)のコスト≫?は、?(その|あなたの)?(オーナーの)?手札に戻る",
+   "action": "note"
+  },
+  {
+   "id": "cost-as-power",
+   "group": "cost",
+   "label": "Set this effect's cost as power cards",
+   "re": "このエフェクトのコストを(、)?パワーカードとして",
+   "action": "costpower"
+  },
+  {
+   "id": "cost-to-deck",
+   "group": "cost",
+   "label": "Put this effect's cost into the deck",
+   "re": "このエフェクトのコスト.*デッキ",
+   "action": "costto",
+   "to": "deck"
+  },
+  {
+   "id": "cost-to-damage",
+   "group": "cost",
+   "label": "Put this effect's cost into the damage pile",
+   "re": "このエフェクトのコスト.*ダメージ置き場",
+   "action": "costto",
+   "to": "damage"
+  },
+  {
+   "id": "mill",
+   "group": "remove",
+   "label": "Deck top → discard / damage pile",
+   "re": "デッキの(一番|N番|[0-9０-９]+番)?上.*(捨て札|ダメージ置き場に置)",
+   "action": "manual"
+  },
+  {
+   "id": "to-damage",
+   "group": "remove",
+   "label": "Put into the damage pile",
+   "re": "ダメージ置き場に置",
+   "action": "manual"
+  },
+  {
+   "id": "take-hand",
+   "group": "cards",
+   "label": "Take cards from a player's hand",
+   "re": "手札から.*(引く|捨て|選)",
+   "action": "manual"
+  },
+  {
+   "id": "zone-pick",
+   "group": "cards",
+   "label": "Pick cards from a damage zone / discard pile → hand",
+   "re": "(ダメージ置き場|捨て札置き場)[^。]*?(カード|を持つ)[^。]*?手札に(加える|戻す)",
+   "action": "zonepick"
+  },
+  {
+   "id": "cast-ban",
+   "group": "negate",
+   "label": "Cast prevention (cards with that name can't be declared)",
+   "re": "(同じ名称|同名|同じカード名称)のカードを使用宣言(すること)?が?(できない|不可)",
+   "action": "castban"
+  },
+  {
+   "id": "cancel-attack-guard",
+   "group": "battle",
+   "label": "Cancel an attack / guard declaration",
+   "re": "(アタック宣言|ガード宣言).*(取り消す|無効化)",
+   "action": "cancelbattle"
+  },
+  {
+   "id": "guard-for",
+   "group": "battle",
+   "label": "Guard (for another character)",
+   "re": "をガードする",
+   "action": "guardfor"
+  },
+  {
+   "id": "retarget",
+   "group": "battle",
+   "label": "Change the target / attack target",
+   "re": "(目標|対象|アタック目標)を.*変更する",
+   "action": "manual"
+  },
+  {
+   "id": "stat-set",
+   "group": "stat",
+   "label": "Set Mental / Attack / Defense to N",
+   "re": "(攻撃力|耐久力|精神力)を[0-9０-９XＸ]+にする",
+   "action": "statset"
+  },
+  {
+   "id": "stat",
+   "group": "stat",
+   "label": "Mental / Attack / Defense ±",
+   "re": "[±+\\-－＋−]\\(?[0-9０-９XＸ]+\\)?[/／][±+\\-－＋−]\\(?[0-9０-９XＸ]+\\)?[/／][±+\\-－＋−]\\(?[0-9０-９XＸ]+\\)?",
+   "action": "stat"
+  },
+  {
+   "id": "stat-one",
+   "group": "stat",
+   "label": "Attack / Defense / Mental ±",
+   "re": "(攻撃力|耐久力|精神力)(に|を)、?[±+\\-－＋−]",
+   "action": "stat"
+  },
+  {
+   "id": "dmg-player",
+   "group": "damage",
+   "label": "Damage to a player",
+   "re": "(プレイヤ|対戦相手|あなた)[^≫]*≫?に[、]?\\(?[0-9０-９XＸ]+\\)?ダメージ",
+   "action": "pdmg"
+  },
+  {
+   "id": "dmg",
+   "group": "damage",
+   "label": "Damage to a character",
+   "re": "\\(?[0-9０-９XＸ]+\\)?ダメージを与える",
+   "action": "damage"
+  },
+  {
+   "id": "power-steal",
+   "group": "power",
+   "label": "Move power cards to this character",
+   "re": "パワーカード.*を、?このキャラクターに、?パワーカードとして",
+   "action": "powersteal"
+  },
+  {
+   "id": "power-from-deck",
+   "group": "power",
+   "label": "Set power cards from the deck",
+   "re": "デッキの(一番)?上.*パワーカードとして.*セット",
+   "action": "powerdeck"
+  },
+  {
+   "id": "power-discard",
+   "group": "power",
+   "label": "Discard power cards",
+   "re": "パワーカード.*捨て札",
+   "action": "powerdiscard"
+  },
+  {
+   "id": "power-lock",
+   "group": "negate",
+   "label": "Can't set power cards",
+   "re": "パワーカードをセット(することは)?できない",
+   "action": "mark"
+  },
+  {
+   "id": "discard",
+   "group": "remove",
+   "label": "Discard a card / character",
+   "re": "を捨て札(に)?する",
+   "action": "discard"
+  },
+  {
+   "id": "bounce",
+   "group": "remove",
+   "label": "Return to hand",
+   "re": "を[、]?(オーナーの|そのオーナーの|あなたの|目標のオーナーの)?手札に戻す",
+   "action": "bounce"
+  },
+  {
+   "id": "to-deck",
+   "group": "remove",
+   "label": "Return to the deck",
+   "re": "デッキ(の一番(上|下))?に戻",
+   "action": "todeck"
+  },
+  {
+   "id": "remove-game",
+   "group": "remove",
+   "label": "Remove from the game",
+   "re": "ゲームから(取り除|除外)",
+   "action": "manual"
+  },
+  {
+   "id": "make-active",
+   "group": "move",
+   "label": "Make it an active character",
+   "re": "勢力エリアのアクティブキャラクターにする",
+   "action": "makeactive"
+  },
+  {
+   "id": "swap",
+   "group": "move",
+   "label": "Swap",
+   "re": "入れ替える",
+   "action": "manual"
+  },
+  {
+   "id": "token",
+   "group": "move",
+   "label": "Set as a new character (token)",
+   "re": "としてセットする",
+   "action": "manual"
+  },
+  {
+   "id": "set-card",
+   "group": "move",
+   "label": "Set a card (Break / Permanent) here",
+   "re": "(に|へ)、?≪[^≫]*≫?をセットする|をセットする",
+   "action": "manual"
+  },
+  {
+   "id": "dominate",
+   "group": "move",
+   "label": "Dominate / take control",
+   "re": "(支配する|支配エリアに置く|支配下)",
+   "action": "manual"
+  },
+  {
+   "id": "draw",
+   "group": "cards",
+   "label": "Draw",
+   "re": "[0-9０-９XＸ]+(枚)?ドローする",
+   "action": "draw"
+  },
+  {
+   "id": "search",
+   "group": "cards",
+   "label": "Search the deck / discard pile → hand",
+   "re": "(手札に加える|手札に入れる)",
+   "action": "manual"
+  },
+  {
+   "id": "hand-discard",
+   "group": "cards",
+   "label": "Discard from hand",
+   "re": "手札.*捨て",
+   "action": "manual"
+  },
+  {
+   "id": "look",
+   "group": "cards",
+   "label": "Look at / reveal cards",
+   "re": "(見る|公開する|見ても良い)",
+   "action": "manual"
+  },
+  {
+   "id": "shuffle",
+   "group": "cards",
+   "label": "Shuffle the deck",
+   "re": "シャッフル",
+   "action": "manual"
+  },
+  {
+   "id": "gain-skill",
+   "group": "skill",
+   "label": "Gain a skill",
+   "re": "(イニシアチブ|シールド|インターセプト|ペネトレイト|ステルス|ブレイクスルー|オフェンシブ|ディフェンシブ|バインド|ブースト|レジスト|プロテクト|チャージ|ドロー|ガーディアン|インフィニティ|シンクロ|デュアル)[^。]*(を得|を与え)",
+   "action": "grant"
+  },
+  {
+   "id": "gain-class",
+   "group": "skill",
+   "label": "Gain a class icon / faction",
+   "re": "(分類|勢力|ファクター)[^。]*(を得|を与え|として扱う)",
+   "action": "mark"
+  },
+  {
+   "id": "negate",
+   "group": "negate",
+   "label": "Negate skills / effects",
+   "re": "無効化する",
+   "action": "mark"
+  },
+  {
+   "id": "immune",
+   "group": "negate",
+   "label": "Not affected by …",
+   "re": "(効果を受けない|目標にならない|目標にできない|ダメージを受けない)",
+   "action": "mark"
+  },
+  {
+   "id": "restrict",
+   "group": "negate",
+   "label": "Can't attack / guard / do …",
+   "re": "(できない|できなくなる)",
+   "action": "mark"
+  },
+  {
+   "id": "rest",
+   "group": "battle",
+   "label": "Rest / ready a character",
+   "re": "(アタック済み|ガード済み|未行動)",
+   "action": "manual"
+  },
+  {
+   "id": "extra-turn",
+   "group": "other",
+   "label": "Extra turn / phase",
+   "re": "追加の(ターン|メインフェイズ|フェイズ)",
+   "action": "manual"
+  },
+  {
+   "id": "declare",
+   "group": "other",
+   "label": "Declare / choose",
+   "re": "(を指定する|宣言する)",
+   "action": "manual"
+  },
+  {
+   "id": "gain-other",
+   "group": "skill",
+   "label": "Gain something else",
+   "re": "(を得る|を得、|を与える)",
+   "action": "grant"
+  },
+  {
+   "id": "special",
+   "group": "other",
+   "label": "Special",
+   "re": "(?!)",
+   "action": "manual"
+  },
+  {
+   "id": "other",
+   "group": "other",
+   "label": "Other (do it by hand)",
+   "re": ".",
+   "action": "manual"
+  }
+ ]
+}

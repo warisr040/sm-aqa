@@ -1,0 +1,542 @@
+[
+ {
+  "id": "AQ-001",
+  "status": "done",
+  "fixed": "4.89",
+  "key": "A3-20 2673",
+  "name": "Exercise Dancer",
+  "jp": "エクササイズダンサー",
+  "type": "Character",
+  "reported": "4.78",
+  "where": "Card List · Android",
+  "th": "ผล Boost 2 พอใช้จริง ได้แค่ Boost 1",
+  "en": "Boost 2: in play it only works as Boost 1.",
+  "steps": [
+   "The card's skills compile correctly: ▼, Offensive, Boost 2, Charge 1.",
+   "The game rules accept an attack with Boost 2 when the character has the power for it (attack cost 1 + Boost 2 = 3).",
+   "The table's menu only lists the moves the game offers for that character.",
+   "The list of moves offered an attack with Boost 1 only, never 2 or more, so Boost 2 could never be picked."
+  ],
+  "cause": "The list of possible moves had “Boost 1” written in as the only Boost value.",
+  "fix": "Every Boost value from 1 up to the skill's number is offered for each player you can attack. The game still checks you can pay for it.",
+  "check": "Engine test: a Boost 2 character is offered Boost 1 and Boost 2, and Boost 2 asks for 3 power.",
+  "imgs": [
+   [
+    "Before · v4.87",
+    "AQ-001-before.jpg",
+    "The menu has only “Boost 1”."
+   ],
+   [
+    "After · v4.89",
+    "AQ-001-after.jpg",
+    "“Boost 1” and “Boost 2”."
+   ]
+  ],
+  "rid": "-P62h7Dh8VnXmRtOVajE"
+ },
+ {
+  "id": "AQ-002",
+  "status": "done",
+  "fixed": "4.89",
+  "key": "A3-EP EP245",
+  "name": "Dream Demon “Lilith”",
+  "jp": "夢魔“リリス”",
+  "type": "Break",
+  "reported": "4.78",
+  "where": "Game Table · Solo · turn 7",
+  "th": "ตอน Break แล้วค่า Break ไม่ขึ้นมือ",
+  "en": "After breaking with it, the Break cost doesn't come back to the hand.",
+  "steps": [
+   "“≪ブレイクカードのコスト≫は、そのオーナーの手札に戻る” compiled as an ability of the character Lilith makes: the cost of Break cards set on that character returns to the hand.",
+   "An ability starts working only once its card is on the field.",
+   "Lilith's own cost is paid and goes to the Discard Pile before Lilith is on the field, so her ability came too late for it.",
+   "Later Break cards on her got their cost back, but Lilith's own cost did not."
+  ],
+  "cause": "The rule was attached to the character only, not to the card while it is being set.",
+  "fix": "A Break card with this line also returns its own cost to the hand when it breaks a character.",
+  "check": "On the table: hand 4 → 3 in v4.87 (cost lost); 6 → 7 in v4.89 (Lilith leaves the hand, her 2 cost cards come back). The log shows “This card: the cost goes to the hand”.",
+  "imgs": [
+   [
+    "Before · v4.87",
+    "AQ-002-before.jpg",
+    "No line about the cost."
+   ],
+   [
+    "After · v4.89",
+    "AQ-002-after.jpg",
+    "“This card: the cost goes to the hand”."
+   ]
+  ],
+  "rid": "-P62MepBolLf7Rbav7CL"
+ },
+ {
+  "id": "AQ-003",
+  "status": "done",
+  "fixed": "4.89",
+  "key": "A3-07 1167",
+  "name": "Multidimensional Hero",
+  "jp": "多次元英雄",
+  "type": "Permanent",
+  "reported": "4.78",
+  "where": "Game Table · Solo · turn 8",
+  "th": "ตอนมีการ์ด Name เดียวกับกับ Name ที่ติดใบนี้ อยู่ในกอง Damage ไม่ได้ผล +",
+  "en": "With a card of the same Name in a Damage Pile, the + does nothing.",
+  "steps": [
+   "The printed modifiers are +X/+X/+X; the compiler read them.",
+   "X is defined by “Xは全てのプレイヤーのダメージ置き場にある、このキャラクターと同じネームを持つカードの枚数の合計に等しい”.",
+   "In the card list that sentence is on the same line as the other ability, not on its own line.",
+   "The compiler only looked for a Permanent's X on its own line, so X stayed undefined and counted as 0."
+  ],
+  "cause": "X's definition was missed because of where it sits in the text, and that kind of X did not exist yet.",
+  "fix": "A Permanent's X sentence is found anywhere in its text, and the count “cards in the Damage Piles with the same Name as this character” was added.",
+  "check": "On the table with 神代縁 + 1167 and one more 神代縁 in a Damage Pile: 1/2/1 in v4.87, 2/3/2 in v4.89. Engine test added.",
+  "imgs": [
+   [
+    "Before · v4.87",
+    "AQ-003-before.jpg",
+    "Stays 1/2/1."
+   ],
+   [
+    "After · v4.89",
+    "AQ-003-after.jpg",
+    "+1 / +1 / +1 from the Permanent."
+   ]
+  ],
+  "rid": "-P62KiprDtz2_nixT6Jx"
+ },
+ {
+  "id": "AQ-004",
+  "status": "done",
+  "fixed": "4.89",
+  "key": "A3-07 1173",
+  "name": "Ancestral God",
+  "jp": "祖神",
+  "type": "Fast",
+  "reported": "4.78",
+  "where": "Game Table · Solo · turn 8",
+  "th": "ตอนอยู่ใน Damage ไม่สามารถใช้งานแบบ Fast ได้",
+  "en": "In the Damage Pile it can't be used as a Fast card.",
+  "steps": [
+   "“このカードがあなたのダメージ置き場にある場合、…ファストカードのタイミングで、手札にあるカードと同様に使用宣言可能” compiled correctly.",
+   "The game rules allow declaring it from the Damage Pile at Fast timing when its Factor (極極極) is met.",
+   "On the table, clicking the Damage Pile opens a window that only shows card details.",
+   "There was no button there to declare the card, so the allowed move could never be made."
+  ],
+  "cause": "The Damage Pile window had no way to use a card, even when the game allowed it.",
+  "fix": "The Damage and Discard Pile windows mark every card you can declare now with “⚡ Use”; clicking it opens the same menu as a hand card.",
+  "check": "On the table with 3 Polestar Empire characters (極極極): v4.87 shows the card only; v4.89 shows “⚡ Use” and the menu. Without the Factor it is still refused, as the rules say.",
+  "imgs": [
+   [
+    "Before · v4.87",
+    "AQ-004-before.jpg",
+    "Card details only."
+   ],
+   [
+    "After · v4.89",
+    "AQ-004-after.jpg",
+    "“⚡ Use” on the card."
+   ],
+   [
+    "After · the menu",
+    "AQ-004-menu.jpg",
+    "Declare it like a hand card."
+   ]
+  ],
+  "rid": "-P62KN-HhYLaYKSbOkcm"
+ },
+ {
+  "id": "AQ-005",
+  "status": "done",
+  "fixed": "5.28",
+  "key": "A3-24 3549",
+  "name": "Takeda Pegasus Squad Captain “Takeda Shingen”",
+  "jp": "武田ペガサス隊隊長“武田 信玄”",
+  "type": "Break",
+  "reported": "4.94",
+  "where": "Game Table · Solo · turn 20",
+  "th": "ความสามารถ Bind 2 พอติดการ์ดที่ให้ความสามารถ Bind 1 เพิ่มเข้าไป ผลออกมาเป็น Bind 3 แทน",
+  "en": "Bind 2, plus a card that gives Bind 1: the result is Bind 3.",
+  "steps": [
+   "Two Bind skills on one character were added together like Charge or Draw.",
+   "By the rules each Bind X is its own skill: the player chooses which one to use."
+  ],
+  "cause": "Bind was merged by adding the numbers.",
+  "fix": "Each Bind X is kept and offered separately: Bind 2 and Bind 1 let the player pay 2 or 1, never 3.",
+  "check": "Engine test: Bind 1 + Bind 3 offers 1 or 3, not 4. The report arrived after the fix; v5.40 confirmed it.",
+  "imgs": [],
+  "rid": "-P67pYmwjs1Lvw1_YXDf"
+ },
+ {
+  "id": "AQ-006",
+  "status": "done",
+  "key": "A3-PR PR254",
+  "name": "Mage of the Earth “Cassandra Thorne”",
+  "jp": "大地の魔導師“カサンドラ・ソーン”",
+  "type": "Break",
+  "reported": "4.94",
+  "where": "Game Table · Solo · turn 14",
+  "th": "การ์ดที่สามารถสั่งตีแทนการ์ดใบอื่นได้ ถ้าการ์ดที่ต้องการให้ตีแทนไม่มี Power ตัวการ์ดที่สามารถสั่งตีแทนจะไม่สามารถจ่าย Power สั่งตีแทนได้",
+  "en": "A character that may pay the attack cost for another (e.g. A3-12 1833): when the attacking character has no power cards, the attack cannot be declared.",
+  "steps": [
+   "Pack: the report is about the system, not PR254 — texts like “≪このキャラクター≫から、あなたの支配キャラクターのアタックコスト・ガードコストを代わりに支払うことが可能” (82 cards).",
+   "Tested in v5.51 with A3-12 1833: an attacker with 0 power cards is offered the attack, and the cost is paid from 1833. The same for a guard with 0 power cards.",
+   "The problem could not be repeated on v5.51 (the report was made on v4.94)."
+  ],
+  "cause": "Not found: it already worked in the tests of v5.51 (the report was made on v4.94).",
+  "fix": "No change was needed. An engine test now keeps this case working.",
+  "check": "Engine test “Revise#402”. Pack tried it on the table: it works normally.",
+  "imgs": [],
+  "rid": "-P67s_tKbzr6h-cgbf_7",
+  "fixed": "5.51"
+ },
+ {
+  "id": "AQ-007",
+  "status": "done",
+  "fixed": "5.40",
+  "key": "A3-03 0514",
+  "name": "Invisible Mantle",
+  "jp": "インビジブルマント",
+  "type": "Permanent",
+  "reported": "4.94",
+  "where": "Game Table · Solo · turn 16",
+  "th": "Stealth ไม่แสดงผล สีอื่น ๆ ยังการ์ดได้",
+  "en": "Stealth does nothing: other factions can still guard.",
+  "steps": [
+   "The card gives Stealth and goes back to the hand after the attack.",
+   "It went back when the attack was declared.",
+   "So Stealth was already gone when the guard was chosen."
+  ],
+  "cause": "The return to the hand happened at the declaration instead of after the guard step.",
+  "fix": "It goes back when the attack was not guarded and reaches the player (new trigger).",
+  "check": "Engine test: with the Mantle a character of another faction cannot guard; the card returns after the attack reaches the player.",
+  "imgs": [],
+  "rid": "-P67yPAPIyQNLN68jxt6"
+ },
+ {
+  "id": "AQ-008",
+  "status": "done",
+  "fixed": "5.40",
+  "key": "A3-25 3809",
+  "name": "Maiden of Awakening “Fujimiya Mayumi”",
+  "jp": "覚醒の乙女“藤宮 真由美”",
+  "type": "Break",
+  "reported": "5.39",
+  "where": "Game Table · Solo · turn 12",
+  "th": "In this case, 2 of A3-03 0444 are set. But they have the same name so only 1 ability should be counted. So, it should be only +0/+2/+2 in total.",
+  "en": "Two copies of A3-03 0444 are below her; the ability should count once: +0/+2/+2 in total.",
+  "steps": [
+   "She gains the abilities of the Mayumi cards below her.",
+   "A card below could be found twice: once as a card below and once as an inherited card.",
+   "With 2 power cards she showed +4/+4."
+  ],
+  "cause": "The list of cards that give abilities held the same card twice.",
+  "fix": "Each card is counted once. The same double count is gone for every card that gains abilities from the cards below it.",
+  "check": "Engine test: two サイキック・プライマル below and 2 power cards give +2/+2.",
+  "imgs": [],
+  "rid": "-P68Tnx0el4Qruq3aAY-"
+ },
+ {
+  "id": "AQ-009",
+  "status": "done",
+  "fixed": "5.45",
+  "key": "A3-17 2345",
+  "name": "Wisdom King Barrier",
+  "jp": "明王結界",
+  "type": "Fast",
+  "reported": "5.43",
+  "where": "Card List · iPad",
+  "th": "Red warning not automatic in game table",
+  "en": "The card has the red “not automatic” mark.",
+  "steps": [
+   "The card was marked red: “not automatic in the Game Table”.",
+   "Its text takes up to 3 明王 Break cards from the deck and protects one character for the turn."
+  ],
+  "cause": "No rule was written for this text.",
+  "fix": "Up to 3 Arayashiki 明王 Break cards from the deck to the hand; the chosen character gets Defense +3 and cannot be targeted or damaged as the card says, until the end of the turn.",
+  "check": "The card compiles without a warning; the red mark is gone.",
+  "imgs": [],
+  "rid": "-P69wOkdCvPt--bU1ZEh"
+ },
+ {
+  "id": "AQ-010",
+  "status": "done",
+  "fixed": "5.45",
+  "key": "A3-11 1743",
+  "name": "Support Signal",
+  "jp": "サポートシグナル",
+  "type": "Fast",
+  "reported": "5.43",
+  "where": "Card List · iPad",
+  "th": "Red: not automatic",
+  "en": "The card has the red “not automatic” mark.",
+  "steps": [
+   "The card was marked red: “not automatic in the Game Table”."
+  ],
+  "cause": "No rule was written for this text.",
+  "fix": "The chosen character you control guards; if another character already guards, their Attack and Defense are added for the battle. Until the end of the Main Phase the skills of its battle opponent are turned off.",
+  "check": "The card compiles without a warning; the red mark is gone.",
+  "imgs": [],
+  "rid": "-P69wTm3OJupEuW9LUNm"
+ },
+ {
+  "id": "AQ-011",
+  "status": "done",
+  "fixed": "5.45",
+  "key": "A4-05 0950",
+  "name": "Blood Seal",
+  "jp": "ブラッドシール",
+  "type": "Permanent",
+  "reported": "5.43",
+  "where": "Card List · iPad",
+  "th": "suggest implement as <this name level break>",
+  "en": "Suggestion: read “your Partner” as “this Name-level Break”.",
+  "steps": [
+   "The card was marked red: “not automatic in the Game Table”.",
+   "Its text speaks of “your Partner”; the Partner system is not in the Game Table."
+  ],
+  "cause": "A text about the Partner could not be run.",
+  "fix": "“Your Partner” is read as “this Name-level character”: it gains Bind 2 and Charge X.",
+  "check": "The card compiles without a warning; the red mark is gone.",
+  "imgs": [],
+  "rid": "-P6A0Wc2SVEyUzUavVFO"
+ },
+ {
+  "id": "AQ-012",
+  "status": "done",
+  "fixed": "5.50",
+  "key": "A3-11 1711",
+  "name": "Emperor's Mask",
+  "jp": "皇帝の仮面",
+  "type": "Permanent",
+  "reported": "5.43",
+  "where": "Card List · iPad",
+  "th": "red",
+  "en": "The card has the red “not automatic” mark.",
+  "steps": [
+   "The card was marked red: “not automatic in the Game Table”.",
+   "Its text makes every effect cost X more."
+  ],
+  "cause": "Every effect on the field had no way to cost more by a number that follows a character's power cards — the rule for this text was missing.",
+  "fix": "While it is set, every character's effects cost X more, paid from the character that has the effect. X is the number of power cards on the character holding the mask and follows it as it changes.",
+  "check": "Engine test: with 2 power cards on the holder, every character's effect cost is +2; with 3, +3.",
+  "imgs": [],
+  "rid": "-P6A0haUPlRxHmWFVqYJ"
+ },
+ {
+  "id": "AQ-013",
+  "status": "done",
+  "fixed": "5.45",
+  "key": "A3-23 3357",
+  "name": "Sacred Sword: Kusanagi no Tsurugi",
+  "jp": "宝剣・草薙剣",
+  "type": "Permanent",
+  "reported": "5.44",
+  "where": "Card List · desktop",
+  "th": "not implemented",
+  "en": "The card is not automatic.",
+  "steps": [
+   "The card was marked red: “not automatic in the Game Table”."
+  ],
+  "cause": "No rule was written for this text.",
+  "fix": "When this character's attack reaches the player, cards go from the top of that player's deck to the Damage Pile until their number equals this character's Mental, in place of the normal damage.",
+  "check": "The card compiles without a warning; the red mark is gone.",
+  "imgs": [],
+  "rid": "-P6A46pteA6QurdRgAob"
+ },
+ {
+  "id": "AQ-014",
+  "status": "done",
+  "fixed": "5.50",
+  "key": "A3-22 3203",
+  "name": "Candle of Life",
+  "jp": "命の蝋燭",
+  "type": "Fast",
+  "reported": "5.43",
+  "where": "Card List · iPad",
+  "th": "red",
+  "en": "The card has the red “not automatic” mark.",
+  "steps": [
+   "The card was marked red: “not automatic in the Game Table”.",
+   "It works from the Damage Pile at the moment the deck runs out."
+  ],
+  "cause": "The game had no moment “the deck reached 0 cards”, and no way for a card in the Damage Pile to act at that moment.",
+  "fix": "A new moment fires when a deck's last card leaves it. The card in the Damage Pile then checks its required Factor; its owner chooses X characters (X = cards in the owner's Damage Pile) to discard, and the card is discarded.",
+  "check": "Engine test: the card in the Damage Pile, the last deck card leaves → the owner chooses 1 character, it is discarded, then the card.",
+  "imgs": [],
+  "rid": "-P6A9bMaRBrTldZegzT_"
+ },
+ {
+  "id": "AQ-015",
+  "status": "done",
+  "fixed": "5.45",
+  "key": "A3-25 3691",
+  "name": "Gleipnir",
+  "jp": "グレイプニル",
+  "type": "Permanent",
+  "reported": "5.43",
+  "where": "Card List · iPad",
+  "th": "red",
+  "en": "The card has the red “not automatic” mark.",
+  "steps": [
+   "The card was marked red: “not automatic in the Game Table”."
+  ],
+  "cause": "No rule was written for this text.",
+  "fix": "When it is set you choose a character. While that character's Mental is under X (your WIZ-DOM Factor total) it cannot attack, guard, use effects or pay costs.",
+  "check": "The card compiles without a warning; the red mark is gone.",
+  "imgs": [],
+  "rid": "-P6A9dK1pNS7J8jx2HBs"
+ },
+ {
+  "id": "AQ-016",
+  "status": "closed",
+  "key": "A3-12 1763",
+  "name": "Pure Psychic “Itsuki Nina”",
+  "jp": "ピュア・サイキッカー“斎木 新名”",
+  "type": "Break",
+  "reported": "5.44",
+  "where": "Game Table · Solo · turn 11",
+  "th": "Below text does not work: If “Psychic High School Girl \"Itsuki Nina\"” is under this card, ≪this character≫ gains Infinity.",
+  "en": "Infinity is not given when サイキック女子高生“斎木 新名” is under this card.",
+  "steps": [
+   "Tested with each of the four サイキック女子高生“斎木 新名” printings of Saga 3 below it: Infinity was given every time.",
+   "Pack checked the game: the card below was the Saga 4 card A4-PP PP187, not the Saga 3 サイキック女子高生“斎木 新名” (A3-01 0018). The names look alike, but it is a different card."
+  ],
+  "cause": "Not a bug: the wrong card was used below it, so the condition was not met.",
+  "fix": "No change needed.",
+  "check": "Confirmed by Pack.",
+  "imgs": [],
+  "rid": "-P6ACnIl5khvpQKZuNWG"
+ },
+ {
+  "id": "AQ-017",
+  "status": "done",
+  "fixed": "5.50",
+  "key": "A3-25 3660",
+  "name": "Fudo Binding Technique",
+  "jp": "不動金縛りの法",
+  "type": "Fast",
+  "reported": "5.44",
+  "where": "Card List · desktop",
+  "th": "not implemented",
+  "en": "The card is not automatic.",
+  "steps": [
+   "The card was marked red: “not automatic in the Game Table”.",
+   "Its cost is ignored when the target meets a condition."
+  ],
+  "cause": "The cost could only be dropped for a named target, not by the target's Name level or Attack.",
+  "fix": "The target is chosen first. The cost is 0 when the target has no Name, or its Attack is X or less (X = your Arayashiki Factor total); otherwise the printed cost 2.",
+  "check": "Engine test: no Name → 0; Name with Attack ≤ X → 0; Name with higher Attack → 2; the target's Attack becomes 0.",
+  "imgs": [],
+  "rid": "-P6AGOKZooKPx4gfXYzN"
+ },
+ {
+  "id": "AQ-018",
+  "status": "done",
+  "fixed": "5.54",
+  "key": "A3-24 3429",
+  "name": "Grand Master of Kagami-Style Demon-Quelling Kenpo “Kagami Shuko”",
+  "jp": "各務流退魔拳法宗家“各務 柊子”",
+  "type": "Break",
+  "reported": "5.44",
+  "where": "Card List · desktop",
+  "th": "seems like this text does not work If Kagami Shuko is under this card, ≪this character≫ gains Bind 1 and is not dealt damage by normal attack.",
+  "en": "With 各務 柊子 under this card it should gain Bind 1 and take no damage from normal attacks; it does not.",
+  "steps": [
+   "The condition compiled as “a card called 各務柊子 is below this card”.",
+   "The check compared the full card title only. The cards below are titled like 退魔師“各務 柊子”: 各務 柊子 is their Name, not their title.",
+   "So the condition was never true."
+  ],
+  "cause": "“このカードの下に“X”がある場合” looked at card titles only, not at Names.",
+  "fix": "A card below counts when its full title or its Name is X.",
+  "check": "Engine test: 3429 on A3-02 0264 has Bind 1 and takes no normal battle damage; without it, neither.",
+  "imgs": [],
+  "rid": "-P6ALAngSqiEeJD8UbQ_"
+ },
+ {
+  "id": "AQ-019",
+  "status": "open",
+  "key": "A3-25 3619",
+  "name": "Rainbow Bandana",
+  "jp": "虹のバンダナ",
+  "type": "Permanent",
+  "reported": "5.44",
+  "where": "Game Table · Solo · turn 13",
+  "th": "ผล Resist ไม่แสดงผล ยังรับ Damage จาก Battle อยู่",
+  "en": "Resist does nothing: the character still takes damage from the battle.",
+  "steps": [
+   "Tested in v5.54: a guard holding 虹のバンダナ, attacked by a Darklore character. Without the card the guard is defeated; with it the guard takes no battle damage.",
+   "The problem could not be repeated; the game where it happened (a replay, or the two characters) is needed."
+  ],
+  "cause": "Not known yet.",
+  "fix": "Not fixed yet.",
+  "check": "Engine test “Revise#406” keeps the tested case working.",
+  "imgs": [],
+  "rid": "-P6ASv8OmSBrUff6vRXo"
+ },
+ {
+  "id": "AQ-020",
+  "status": "done",
+  "fixed": "5.54",
+  "key": "A3-25 3700",
+  "name": "Dispel",
+  "jp": "ディスペル",
+  "type": "Fast",
+  "reported": "5.48",
+  "where": "Card List · desktop",
+  "th": "please implement",
+  "en": "The card is not automatic.",
+  "steps": [
+   "The card was marked red: “not automatic in the Game Table”.",
+   "Its cost is ignored when its target was declared on your own Project or Fast card."
+  ],
+  "cause": "A cost could depend on a character target only, not on a declared card and what that card is aimed at.",
+  "fix": "The target is chosen first. The cost is 0 when the targeted card was declared on one of your Project or Fast cards; otherwise 2.",
+  "check": "Engine test: against a Dispel aimed at my Fast card, my Dispel is declared without paying; against another card it costs 2.",
+  "imgs": [],
+  "rid": "-P6D-WSu4pWthZt73oJb"
+ },
+ {
+  "id": "AQ-021",
+  "status": "done",
+  "fixed": "5.54",
+  "key": "A3-25 3686",
+  "name": "Twin Angel “Faila” & “Kriola”",
+  "jp": "ツイン・エンジェル“ファイラ”&“クリオラ”",
+  "type": "Break",
+  "reported": "5.48",
+  "where": "Game Table · Solo · turn 11",
+  "th": "≪This character≫ may declare attacks targeting characters.  For this kind of target, the target must declare \"Guard\" or not. If not, deal damage as damage outside battle. If guard, do the battle normally. Other character cannot declare guard instead.",
+  "en": "An attack that targets a character: the target itself chooses to guard or not. No guard: the damage is dealt as damage outside a battle. Guard: a battle as usual. No other character may guard instead.",
+  "steps": [
+   "An attack on another player's character went straight to a battle with that character.",
+   "Its owner was never asked to guard, and the character always fought back."
+  ],
+  "cause": "The guard step was skipped for attacks on a character.",
+  "fix": "An attack on another player's character now has a guard step for that character's owner. Only the attacked character may guard. Guard: a battle as usual. No guard: the attacker's damage is dealt to it as damage outside a battle (the attacker takes none). This holds for every card that lets a character attack characters.",
+  "check": "Engine test: another character is refused as the guard; no guard defeats the target and the attacker takes no damage; with a guard there is a battle.",
+  "imgs": [],
+  "rid": "-P6D2C12yocZb1xDcfSF"
+ },
+ {
+  "id": "AQ-022",
+  "status": "done",
+  "fixed": "5.72",
+  "key": "A3-25 3686",
+  "name": "Twin Angel “Faila” & “Kriola”",
+  "jp": "ツイン・エンジェル“ファイラ”&“クリオラ”",
+  "type": "Break",
+  "reported": "5.54",
+  "where": "Game Table · Solo · turn 8",
+  "th": "≪This character≫ may declare attacks targeting characters. Can you make it a menu like [targetting attack] and let user choose the card on field instead.",
+  "en": "Asks for one menu line, “Targeting attack”, with the target then chosen on the field.",
+  "steps": [
+   "The character's menu listed one “Attack → name” line for every character of the other player.",
+   "With many characters on the field the menu became long, and names alone did not show which character was meant."
+  ],
+  "cause": "Each legal attack was shown as its own menu line.",
+  "fix": "Attacks on characters are now one menu line, “Targeting attack — choose a character on the field”. The characters that may be attacked turn blue; a click on one declares the attack. A hint with Cancel is shown while choosing. “Attack → player” stays as it was. This applies to every card that may attack characters.",
+  "check": "tests/target_attack_ui.js: the menu, the blue targets, Cancel, and the declaration on the clicked character.",
+  "imgs": [],
+  "rid": "-P6DBd_o9DUR5ahXfDKs"
+ }
+]

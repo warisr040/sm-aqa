@@ -1,0 +1,2760 @@
+[
+  {
+    "v": "5.72",
+    "date": "2026-11-12",
+    "title": "User Manual page · Targeting attack",
+    "items": [
+      "New page: User Manual (Pack, Revise#427), opened from the Home page with the “User Manual” bar under “How to use”. Ten chapters: how to use the manual, the site at a glance, Card List, Deck Builder, Import / Export / Print Preview, Account, Game Table, reporting a problem, questions and answers, glossary.",
+      "English and Thai, switched with the buttons at the top right; “Back to the site” returns to the Home page.",
+      "The manual is made by the build (tools/manual/), so its version line follows the site's version.",
+      "Game Table (AQ-022, Revise#428): a character that may attack characters (A3-25 3686 and others) now has one menu line, “Targeting attack”. The characters it may attack turn blue, and a click on one declares the attack; Cancel leaves the choice. “Attack → player” is unchanged."
+    ]
+  },
+  {
+    "v": "5.71",
+    "date": "2026-11-12",
+    "title": "Print Preview: 1 mm between cards, whole pictures",
+    "items": [
+      "Print Preview (Pack, Revise#426): the cards are now 1 mm apart on the page. Each card has its own cut outline, with marks in the margins.",
+      "The card picture is no longer cropped: the whole picture is fitted inside the 59 × 86 mm box. A picture with other proportions leaves a thin white strip on two sides.",
+      "The Landscape layout is removed (Pack). Pages are A4 portrait, 9 cards a page, margins 15.5 / 18.5 mm."
+    ]
+  },
+  {
+    "v": "5.70",
+    "date": "2026-11-12",
+    "title": "Print Preview: for logged-in players only",
+    "items": [
+      "Export → Print Preview now needs a login (Pack, Revise#425). A visitor who is not logged in sees a short notice with a Log in button instead of the card list; the deck is not touched.",
+      "After logging in, open Export again and Print Preview works as before. Image (.jpg) and List (text) stay open to everyone.",
+      "This is a lock in the page itself: it keeps ordinary visitors out, but it is not a server-side protection."
+    ]
+  },
+  {
+    "v": "5.69",
+    "date": "2026-11-12",
+    "title": "Print Preview: cards at real size on A4",
+    "items": [
+      "Deck Builder → Export → Print Preview (Pack, Revise#424): choose the cards of the deck to print. Each chosen card is laid out as many times as it is in the deck, at 59 × 86 mm, on A4 pages with cut lines.",
+      "Two layouts: Portrait, 9 cards a page (margins 16.5 / 19.5 mm — safe on any printer), or Landscape, 10 cards a page (margins 1 / 19 mm — only for printers that print to the edge). A picture that lies on its side is turned to fit.",
+      "Download as one .pdf (A4 pages) or as .png pages (2480 × 3508 px at 300 dpi, with the print size written in the file). 200 dpi makes smaller files. Print at 100% / “Actual size”, not “Fit to page”."
+    ]
+  },
+  {
+    "v": "5.68",
+    "date": "2026-11-12",
+    "title": "Simplified cards are “partly” again",
+    "items": [
+      "Pack's ruling: a card that the Game Table plays with one clause left out, or with a choice made later than printed, is not counted as automatic. 14 cards from v5.56–v5.67 are “partly” again and carry the red mark: A3-18 2436 · A3-20 2730 · 2802 · 2877 · A3-21 3088 · A3-22 3163 · A3-24 3579 · A3-25 3731 · A3-EX02 EX0148 · A3-EX03 EX0326 · A4-02 0248 · A4-03 0413 · A4-04 0710 · 0711. They still play as before; each one records what is different.",
+      "The count is now 8,029 of 8,283 automatic (254 left: 146 by hand, 108 partly).",
+      "A4-04 0609 (Pack's ruling): its ±0/+10/−5 is worked out when the damage is dealt. Attack +10 counts for the damage check and the battle; Defense −5 and the opponent's −5/−5/−5 count in the battle only — as built in v5.65."
+    ]
+  },
+  {
+    "v": "5.67",
+    "date": "2026-11-12",
+    "title": "Cards M5 (12): 3 more cards automatic",
+    "items": [
+      "Card milestone M5, part 12: 8,043 of 8,283 cards are automatic now (240 left).",
+      "Now automatic: A3-21 3088 · A3-EXPR EXPR044 · A4-03 0416. A3-25 3622 moved from “by hand” to “partly”.",
+      "Note: 3088 blocks Project cards, Fast cards and effects; “abilities other than エスケープルーム” are not blocked."
+    ]
+  },
+  {
+    "v": "5.66",
+    "date": "2026-11-12",
+    "title": "Cards M5 (11): 5 more cards automatic",
+    "items": [
+      "Card milestone M5, part 11: 8,040 of 8,283 cards are automatic now (243 left).",
+      "Now automatic: A3-EX02 EX0102 · A4-02 0284 · A4-05 0814 · A4-EP EP421 · A4-PV PV052.",
+      "New in the game: a required Factor that is lower for a certain target (0284, 0814). When the Factor is only met thanks to that reduction, only such targets can be chosen.",
+      "Bug fix for A3-18 2451 of v5.56: a card declared with its “next card needs X less Factor” was checked against the full Factor again when it took effect, and could fail. The reduction is now kept until the card takes effect."
+    ]
+  },
+  {
+    "v": "5.65",
+    "date": "2026-11-12",
+    "title": "Cards M5 (10): 4 more cards automatic",
+    "items": [
+      "Card milestone M5, part 10: 8,035 of 8,283 cards are automatic now (248 left).",
+      "Now automatic: A3-EX03 EX0311 · A4-03 0446 · A4-04 0609 · A4-EX02 EX916.",
+      "A4-04 0609 (±0/+10/−5 with no power cards): the Defense −5 is applied in a battle only. On an attack on a player it would bring its Defense to 0 and the game would defeat it before the damage check — Pack to confirm which is right."
+    ]
+  },
+  {
+    "v": "5.64",
+    "date": "2026-11-12",
+    "title": "Cards M5 (9): 6 more cards automatic",
+    "items": [
+      "Card milestone M5, part 9: 8,031 of 8,283 cards are automatic now (252 left).",
+      "Now automatic: A3-EX03 EX0326 · A3-EX04 EX0484 · A4-04 0711 · A4-04 0774 · A4-EX02 EX810 · A4-PR PR140.",
+      "Notes: 0711 names its class when it takes effect, from the classes of its target. EX0326 uses every Lyrical Nanoha Name, not only the ViVid ones (the card data does not mark ViVid separately)."
+    ]
+  },
+  {
+    "v": "5.63",
+    "date": "2026-11-12",
+    "title": "Cards M5 (8): Partner cards — 6 more automatic",
+    "items": [
+      "Card milestone M5, part 8: 8,025 of 8,283 cards are automatic now (258 left).",
+      "Partner lines are now read the way Pack chose for ブラッドシール: “your Partner” = your Name-level character. Now automatic with that reading: A4-05 0806 · 0842 · 0878 · 0914 · A4-PP PP112 · PP120.",
+      "The same reading replaces yesterday's rule on two cards of v5.62: A4-05 0922 gives its extra ±0/+X/+X when the target is your Name-level character, and A4-05 0850 costs 2 less when you control a Name-level character (or are not first). No card with a Partner line is left by hand."
+    ]
+  },
+  {
+    "v": "5.62",
+    "date": "2026-11-12",
+    "title": "Cards M5 (7): 6 more cards automatic",
+    "items": [
+      "Card milestone M5, part 7 (Saga 4): 8,019 of 8,283 cards are automatic now (264 left).",
+      "Now automatic: A4-04 0710 · A4-05 0850 · A4-05 0922 · A4-PP PP337 · A4-PR PR114 · A4-PR PR151.",
+      "Partner lines: the Game Table has no Partner, so “if it is your Partner …” on 0850 and 0922 never applies (0850 keeps its “you are not first” half).",
+      "0710 discards its target at the end of the Main Phase when it has no タレント class; “when it deals damage outside a battle” is not built."
+    ]
+  },
+  {
+    "v": "5.61",
+    "date": "2026-11-12",
+    "title": "Cards M5 (6): 3 more cards automatic",
+    "items": [
+      "Card milestone M5, part 6: 8,013 of 8,283 cards are automatic now (270 left).",
+      "Now automatic: A3-24 3507 · A3-EX02 EX0158 · A3-EX02 EX0166."
+    ]
+  },
+  {
+    "v": "5.60",
+    "date": "2026-11-12",
+    "title": "Cards M5 (5): 4 more cards automatic",
+    "items": [
+      "Card milestone M5, part 5 (BLAZBLUE extra set): 8,010 of 8,283 cards are automatic now (273 left).",
+      "Now automatic: A3-EX02 EX0131 · EX0148 · EX0156 · EX0184. A3-EX02 EX0158 moved from “by hand” to “partly”.",
+      "New in the game for them: the condition “an opponent has 8 or more cards in the Damage Pile”; a card whose every cost card becomes its own token character (EX0156)."
+    ]
+  },
+  {
+    "v": "5.59",
+    "date": "2026-11-12",
+    "title": "Cards M5 (4): 5 more cards automatic",
+    "items": [
+      "Card milestone M5, part 4 (first Saga 4 cards of the tail): 8,006 of 8,283 cards are automatic now (277 left).",
+      "Now automatic: A4-02 0248 · A4-02 0280 · A4-02 0312 · A4-03 0413 · A4-EP EP511.",
+      "Notes: 0248 names its card type when it takes effect. 0413 changes the characters that are on the field when it takes effect; a character that comes later is not changed."
+    ]
+  },
+  {
+    "v": "5.58",
+    "date": "2026-11-12",
+    "title": "Cards M5 (3): 6 more cards automatic",
+    "items": [
+      "Card milestone M5, part 3: 8,001 of 8,283 cards are automatic now (282 left).",
+      "Now automatic: A3-20 2693 · A3-20 2802 · A3-24 3396 · A3-24 3504 · A3-24 3540 · A3-24 3579.",
+      "Notes: 2802 moves the characters to the Active Area in their current order (no order choice). 3579 lets every player take a card from the deck, but the hands are not shown while it does."
+    ]
+  },
+  {
+    "v": "5.57",
+    "date": "2026-11-12",
+    "title": "Cards M5a (2): 8 more Project / Fast cards automatic",
+    "items": [
+      "Card milestone M5a, part 2: 7,993 of 8,283 cards are automatic now (290 left).",
+      "Now automatic: A3-09 1352 · A3-14 2029 · A3-20 2804 · A3-20 2877 · A3-21 2914 · A3-22 3163 · A3-24 3400 · A3-25 3731.",
+      "Notes: 3731 names its class when it takes effect, not when it is declared. 2877's line “not affected by your own other cards” is not built. 3163's character leaves at the end of the Main Phase; “if this card is removed first” is not built."
+    ]
+  },
+  {
+    "v": "5.56",
+    "date": "2026-11-12",
+    "title": "Cards M5a (1): 11 more Project / Fast cards automatic",
+    "items": [
+      "Card milestone M5a, part 1 (Saga 3 Standard, Project and Fast): 7,985 of 8,283 cards are automatic now (298 left).",
+      "Now automatic: A3-07 1102 · A3-16 2178 · A3-16 2204 · A3-18 2436 · A3-18 2451 · A3-20 2730 · A3-22 3131 · A3-22 3167 · A3-22 3308 · A3-25 3766 · A3-25 3768.",
+      "New in the game for them: cards that grow with every copy on the same character (2204, 3768); a cost that adds the cost of the opponent's card it targets (3131); “your next Project / Fast card needs X less Factor and cost” (2451); a damage check that a card stops when it turns up (2178); damage every player may lower by discarding hand cards or characters (3766).",
+      "Two cards choose a little later than printed: 2436 names the card in the pile, and 2730 names the faction and card type, when the card takes effect — not when it is declared."
+    ]
+  },
+  {
+    "v": "5.55",
+    "date": "2026-11-12",
+    "title": "Bot: at most 2 characters waiting in the Active Area",
+    "items": [
+      "Bot (Pack, Revise#410): it no longer sets a Character card while 2 or more of its characters are already in the Active Area. It charges those first. This also holds on its first turn, so it now sets 2 there, not 3. New parameter: activeMax (2)."
+    ]
+  },
+  {
+    "v": "5.54",
+    "date": "2026-11-12",
+    "title": "Attacks on characters: guard or not · 3 reported cards · new and old reports",
+    "items": [
+      "Rule (Pack, AQ-021 — ツイン・エンジェル“ファイラ”&“クリオラ” A3-25 3686 and every card that lets a character attack characters): when a character of another player is attacked, that player chooses whether the attacked character guards. Guard: a battle as usual. No guard: the damage is dealt to it as damage outside a battle. No other character may guard in its place.",
+      "各務流退魔拳法宗家“各務 柊子” (A3-24 3429, AQ-018): with a 各務 柊子 card below it, it now gains Bind 1 and takes no damage from normal attacks. “A card named X below this card” now also looks at the Name of the cards below, not only their full title.",
+      "ディスペル (A3-25 3700, AQ-020): now automatic. Its cost is ignored when its target was declared on one of your Project or Fast cards.",
+      "虹のバンダナ (A3-25 3619, AQ-019): Resist was tested in a battle and works there; the reported problem could not be repeated yet — the ticket stays open.",
+      "AQ-006 is done: Pack confirmed it works normally.",
+      "Admin → Card reports: every report now shows its ticket ([AQ-018 · done]) or [NEW]. New buttons: “Tick new” (reports with no ticket yet) and “Tick handled”, so only the new ones are copied or downloaded, and the handled ones are easy to delete."
+    ]
+  },
+  {
+    "v": "5.53",
+    "date": "2026-11-12",
+    "title": "Bug report AQ-016 closed",
+    "items": [
+      "Bug reports: AQ-016 (ピュア・サイキッカー“斎木 新名”, A3-12 1763) is closed as not a bug — the card below it was the Saga 4 card A4-PP PP187, not the Saga 3 サイキック女子高生“斎木 新名”. Tickets can now show “Closed · not a bug”."
+    ]
+  },
+  {
+    "v": "5.52",
+    "date": "2026-11-12",
+    "title": "Search cards: just − N +",
+    "items": [
+      "Deck Builder → Search cards (Pack, Revise#404): the five category buttons (Char / Break / Fast / Proj / Perm) are gone. Every card shows − N +; + adds the card under its own card type. A card with no card type goes to the category you last used for it, else Character — it can be moved from its details."
+    ]
+  },
+  {
+    "v": "5.51",
+    "date": "2026-11-12",
+    "title": "Control Area (Front) is one area again",
+    "items": [
+      "Game Table (Pack, Revise#403): Control Area (Front) is no longer split into left / centre / right. It is one row, like Control Area (Back); its Sort button sorts the whole row.",
+      "AQ-006 (paying the attack or guard cost from another character, e.g. A3-12 1833): tested with a character that has no power cards — it can attack and guard, and the cost is paid from the other character. The problem could not be repeated on this version; a test now keeps this case working."
+    ]
+  },
+  {
+    "v": "5.50",
+    "date": "2026-11-12",
+    "title": "Three reported cards now automatic",
+    "items": [
+      "不動金縛りの法 (A3-25 3660, AQ-017): now automatic. You choose the target first; the cost is ignored when the target has no Name or its Attack is X or less (X = your Arayashiki Factor total).",
+      "皇帝の仮面 (A3-11 1711, AQ-012): now automatic. While it is set, every character's effects cost X more (X = the power cards on the character holding it).",
+      "命の蝋燭 (A3-22 3203, AQ-014): now automatic. In your Damage Pile, when your deck reaches 0 cards and you meet its Factor, you choose X characters to discard (X = the cards in your Damage Pile), then the card is discarded.",
+      "Bug reports: AQ-012, AQ-014 and AQ-017 are done. Still open: AQ-006 (カサンドラ・ソーン) and AQ-016 (斎木 新名)."
+    ]
+  },
+  {
+    "v": "5.49",
+    "date": "2026-11-12",
+    "title": "Bug reports list brought up to date",
+    "items": [
+      "Changelog → Bug reports (Pack): the 13 card reports received after AQ-004 are now tickets AQ-005 to AQ-017 — 8 done (fixed in v5.28, v5.40 and v5.45) and 5 open: カサンドラ・ソーン (A3-PR PR254), 皇帝の仮面 (A3-11 1711), 命の蝋燭 (A3-22 3203), 斎木 新名 (A3-12 1763), 不動金縛りの法 (A3-25 3660)."
+    ]
+  },
+  {
+    "v": "5.48",
+    "date": "2026-11-12",
+    "title": "Card pictures from the new pictures site",
+    "items": [
+      "Card pictures now come from the site's own pictures site (aqa-img.pages.dev, Cloudflare) instead of Google Drive: they load faster and the browser keeps them, so a second visit loads almost nothing. A picture that is missing there is still taken from Google Drive."
+    ]
+  },
+  {
+    "v": "5.47",
+    "date": "2026-11-12",
+    "title": "Ready for a faster pictures site",
+    "items": [
+      "Card pictures (Pack, Revise#398): the site can now take card pictures from its own pictures site (Cloudflare Pages) instead of Google Drive. The address goes in assets/img-config.js. While it is empty nothing changes: pictures come from Google Drive as before.",
+      "When the pictures site is set, a picture that is missing there is taken from Google Drive by itself, so new cards show before the pictures site is updated. The deck image export uses the pictures site too."
+    ]
+  },
+  {
+    "v": "5.46",
+    "date": "2026-11-12",
+    "title": "50 deck slots: 5 pages of 10",
+    "items": [
+      "Deck Builder (Pack, Revise#397): 50 deck slots instead of 10, shown as 5 pages of 10. A new “Page” box sits beside the slot box; it also shows how many decks each page holds. Changing the page opens the slot at the same place on that page (slot 3 → slot 13 → slot 23 …). Your 10 decks stay where they are, on page 1.",
+      "Account: all 50 slots are kept in your account. Automatic saving now sends only the slots that changed, so it stays quick. The Save / Load page has page buttons 1–5 for both sides, and its confirmation lists only the slots that hold a deck.",
+      "Game Table, Solo, Campaign, Campaign Design, Basic Decks, Export / Import (“# Slot: N”): all know slots 1–50. Slot lists are grouped by page; on pages 2–5 only slots with a deck are listed."
+    ]
+  },
+  {
+    "v": "5.45",
+    "date": "2026-11-12",
+    "title": "Bot no longer gets stuck · 5 reported cards · the bot builds like the players",
+    "items": [
+      "Bug fix (Pack's two replays, Revise#394): the bot declared 覚醒の乙女“藤宮 真由美”, found nothing it could set it on, cancelled, and declared it again — for ever. It no longer declares a card when the only thing left would be to cancel; and after three cancels in a row it moves on.",
+      "Card reports (Revise#395), now automatic: ブラッドシール (A4-05 0950 — “your Partner” is read as “this Name-level character”: Bind 2 and Charge X), 宝剣・草薙剣 (A3-23 3357), グレイプニル (A3-25 3691), サポートシグナル (A3-11 1743), 明王結界 (A3-17 2345).",
+      "Still not automatic from the reports: 不動金縛りの法 (A3-25 3660), 命の蝋燭 (A3-22 3203), 皇帝の仮面 (A3-11 1711). ピュア・サイキッカー“斎木 新名” (A3-12 1763): Infinity is given in every test with サイキック女子高生 below it — the report could not be repeated yet.",
+      "Bot (Pack, Revise#396): its building rules now come from how the players play (35 saved games, 274 player turns): 3 Character cards on its first turn and up to 2 on a later turn, only what it can charge this turn, Aggressive first; no attack before its 4th turn; one Character card is kept in the hand only while its Draw is under 2. New parameters: setFirstTurn, setPerTurn, reserveUntilDraw, attackTurnMin. New tool: tools/bot_habits.js."
+    ]
+  },
+  {
+    "v": "5.44",
+    "date": "2026-11-11",
+    "title": "Signed in: the account's decks replace the device's",
+    "items": [
+      "Account (Pack, Revise#393): when you sign in, the decks on the device are replaced by the decks of your account — no merge step any more. Every deck you make or change is saved to the account by itself.",
+      "One exception so that nothing is lost: an account that has never held a deck takes the device's decks instead of emptying them."
+    ]
+  },
+  {
+    "v": "5.43",
+    "date": "2026-11-11",
+    "title": "Bot: it charges with every kind of card, one character at a time",
+    "items": [
+      "Bug fix (Pack's replay, Revise#392): the bot kept every named Break card and every card of a Campaign playstyle in its hand, so with its reserved character it could charge nothing and its Active Characters stayed at 0 power. Now it keeps only the one Character card for next turn and the one Break card it plans to set; one copy of each other key card is used last; every other card — Break, Project, Fast, Permanent, and every second copy — is a power card.",
+      "The bot brings one character to the Control Area at a time: the power cards go to the character closest to its Mental, not to the Aggressive character that is there to attack.",
+      "It sets the Aggressive character first and the character for the Control Area after it."
+    ]
+  },
+  {
+    "v": "5.42",
+    "date": "2026-11-11",
+    "title": "Bot: a character kept for the next turn",
+    "items": [
+      "Common bot (Pack, Revise#391): it no longer charges every Character card away. One Character card of its hand is kept for setting next turn — a Draw character while its Draw is under 2, a Charge character while its Charge is under 2, then the Main Factor.",
+      "On its first turn the bot sets one more Aggressive character (two in all)."
+    ]
+  },
+  {
+    "v": "5.41",
+    "date": "2026-11-11",
+    "title": "Your decks belong to your account",
+    "items": [
+      "Account (Pack, Revise#390): while you are logged in, the Deck Builder's 10 slots are your account's decks. Every change is saved to the account by itself, and the account's decks are loaded when you open the site — the same decks on every device you log in on.",
+      "If the decks on a device and in the account are different when you log in (a first login on a device that already has decks, or both were changed), nothing is copied: the Account page shows a notice, you bring the decks together with Save / Load as before, then choose “Use the account's decks” or “Use this device's decks”.",
+      "A first login on a device without decks simply loads the account's decks."
+    ]
+  },
+  {
+    "v": "5.40",
+    "date": "2026-11-11",
+    "title": "Card reports: 覚醒の乙女, Invisible Mantle",
+    "items": [
+      "Bug fix (report, Revise#389): 覚醒の乙女“藤宮 真由美” (A3-25 3809) counted the abilities of the Mayumi cards below it twice — with two copies of サイキック・プライマル and 2 power cards she had +4/+4. Now +2/+2. The same double count is gone for every card that gains abilities from the cards below it.",
+      "Bug fix (report, Revise#389): インビジブルマント (A3-03 0514) went back to the hand when the attack was declared, so its Stealth was gone before the guard and any faction could guard. It now goes back when the attack was not guarded and is on the player.",
+      "Report on 武田 信玄 (Bind 2 + Bind 1 = Bind 3): already fixed in v5.28."
+    ]
+  },
+  {
+    "v": "5.39",
+    "date": "2026-11-11",
+    "title": "Bot rules for Draw / Charge, guarding and break cost; Hard decks: Dina and E.G.O. Mayumi",
+    "items": [
+      "Common bot (Pack, Revise#385): when it chooses a Character card to bring to the Control Area, a character with Draw or Charge goes before one without a skill; among equals, a character of the deck's Main Factor goes first. A card without a skill waits in the hand while a better one could be set.",
+      "Common bot (Pack, Revise#386): while it has not enough Charge or Draw (Charge under 3, or Draw under 2), it does not guard an attack on itself with a character the attacker would defeat — the damage goes to the player. It still guards when the guard survives, or when the hit would end the game.",
+      "Common bot (Pack, Revise#387): a Break card with a cost is set on a character whose break cost returns to the hand (“このキャラクターをブレイクする場合、≪そのブレイクカードのコスト≫は手札に戻る”) when it has one that can take it. A Name-level Break card whose Name is already on its field goes on that character instead.",
+      "Campaign (Pack, Revise#388): new deck in Hard — Dina · Witch of the White Heavens, with a bot made for it: no attack before Selen Elsie is set; Dina herself attacks only when nobody can guard; Grimoire Servant is the first Break card; the Dina cards are stacked on one character; Grand Cross only with Dina out and two or more opposing characters without Shield; Pascha only when the power left pays a Break card. E.G.O. Mayumi moved to Hard. Hard can now be chosen."
+    ]
+  },
+  {
+    "v": "5.38",
+    "date": "2026-11-11",
+    "title": "Playstyle: Supportive Leader",
+    "items": [
+      "New strategy in Campaign Design (Pack, Revise#384): Supportive Leader — the Name-level Break cards support by their effects and abilities. The bot sets every Main Supporter first and makes no attack before that; then it attacks once it has Charge more than 3 and Draw more than 2. A Main Supporter itself attacks only when it is sure to survive. Below the Critical number these conditions are off."
+    ]
+  },
+  {
+    "v": "5.37",
+    "date": "2026-11-11",
+    "title": "Campaign Design page · the deck E.G.O. Mayumi",
+    "items": [
+      "Campaign Design is now its own page (Pack, Revise#382): Game Table → Campaign → Campaign Design, or table.html#campaigndesign. The imported deck is shown as on the Deck Builder page — columns of card pictures with × n. The Playstyle is a sidebar on the right that folds away.",
+      "Main Break, Main Attacker / Supporter / Disabler and the Special Priority cards are chosen in a pop-up of the same deck picture: click the cards, then press Apply. The Permanent card of each entry is chosen as before.",
+      "New Campaign deck (Pack's proposal, Revise#383): E.G.O. Mayumi — Hero Frontal Attack. Only Mayumi attacks, and only when she stays alive; her Break cards are stacked on her and 覚醒の乙女 stays on top. With fewer than 15 deck cards the bot attacks by the common rules. It is in Easy: this bot won 5 of 14 test games (the common bot with the same deck: 10 of 14)."
+    ]
+  },
+  {
+    "v": "5.36",
+    "date": "2026-11-11",
+    "title": "Bot: what a Break card without a Name is for",
+    "items": [
+      "Common bot (Pack, Revise#381): a Break card without a Name is used for a purpose. One that gives Charge or Draw goes on a character in the Active Area only. On a Controlled Character of another faction it is set only when the Factor is really needed — a card in the bot's hand asks for more of that faction than it controls. If there is no such place, the card stays in the hand."
+    ]
+  },
+  {
+    "v": "5.35",
+    "date": "2026-11-11",
+    "title": "Auto Re-shuffle keeps a Main Factor character",
+    "items": [
+      "Auto Re-shuffle (Pack, Revise#380) now also wants at least one Character of the deck's Main Factor in the hand — the faction that the Factors of the deck's Name-level cards ask for most. The opening-hand line shows it: Main Factor (E.G.O.) 1/1. The bot's opening hand follows the same check. Games started before this version replay as they were."
+    ]
+  },
+  {
+    "v": "5.34",
+    "date": "2026-11-11",
+    "title": "Campaign Mode (Beta)",
+    "items": [
+      "Campaign Mode (Pack, Revise#379), on the Game Table under Solo: choose your deck and a difficulty — Easy, Medium, Hard, Hell — and play a bot deck of that difficulty. Random Opponent picks one for you; untick it to choose the opponent. Hard and Hell have no deck yet. A coin toss decides who goes first.",
+      "The first Campaign decks are the bot's 8 training decks. Easy: the common bot wins under 70% with the deck (Astarte, Dina, Iaris, Seraphiel, ブレイブ, Cyborg Rider, Faris - Kuro). Medium: 70% or more (Mayumi).",
+      "Campaign Design, at the bottom of the Campaign box: import one deck from a Deck Builder slot and describe how its bot should play — Strategy (the common bot, or Hero Frontal Attack), Main Factor, Main Break, Main Attacker / Supporter / Disabler (with a description, a Permanent card and “Wait for permanent?”), Special Priority Condition, Critical number. Send it to the admin, or export the file.",
+      "Admin page: Campaign Bot Management — Active decks (move a deck to another difficulty) and Pending proposals (copy or export for Claude, delete).",
+      "Replay moved under Online."
+    ]
+  },
+  {
+    "v": "5.33",
+    "date": "2026-11-11",
+    "title": "Bot: the Charge limit is off",
+    "items": [
+      "Bot (Revise#378): the Charge limit for attacking (attackChargeMin) is set to 0. The bot's own Charge total stays near 1.5 with several decks (Iaris, Cyborg Rider), so the limit of 3 stopped those decks from attacking at all — under one attack per game. The power limit (3 power cards) and the no-suicide rule stay.",
+      "Deck analysis: with the same deck on both sides, the new rules against the old attack style won 25 of 44 decided games (before this change: 40 of 75; Astarte and Faris lost clearly because of the Charge limit)."
+    ]
+  },
+  {
+    "v": "5.32",
+    "date": "2026-11-11",
+    "title": "Bot: attack limits from the players' games",
+    "items": [
+      "Bot (Pack, Revise#376): the attack limits now come from what players did in the saved games — 71 attacks by players. A quarter of them came with 3 or fewer power cards on the field (median 4), and 67 of 71 with Charge 3 or more (median 6). So: no attack below 3 power cards, and (new, attackChargeMin) no attack below Charge 3.",
+      "An attacker with Offensive is not held back by these two limits — the players' Offensive attackers survived 24 of 25 attacks.",
+      "New tool tools/bot_stats.js prints these numbers from a rooms file.",
+      "Bot, “the cost of this effect goes back to the owner’s hand” (Pack, Revise#377): on your turn it uses this only when the Game Situation is Conflict or Engage, not in Build or Interfere. Before using it, it sets aside the power it needs by its next turn — the cost of the card it takes back plus the cost of the best named Break card in its hand — and only takes the card when the power left covers that.",
+      "Bot bug fix (Revise#377): the bot read “is the Factor met?” the wrong way round in two places — it valued the hand cards it could NOT use more, and took a power card back only when it could not use it. Both are corrected."
+    ]
+  },
+  {
+    "v": "5.31",
+    "date": "2026-11-11",
+    "title": "Bot: fewer characters, no suicide attacks",
+    "items": [
+      "Bot, Character cards (Pack, Revise#375): one Aggressive (▼) character is enough — the one with the highest Attack in its hand. Besides it, only one character at a time goes to the Active Area, and only when the bot can charge it fully this turn. Characters of the deck's Main Factor (the faction its Name-level cards ask for most) go first. A Break card with nothing to break may overrule this.",
+      "Bot, attacks (Pack, Revise#375): it charges first — no attack while its Controlled Characters hold fewer than 3 power cards (a hit that can win is always allowed). An attacker that a guard would defeat stays home, unless the strike wins even through every guard. It no longer attacks a character that would defeat it and survive.",
+      "New bot parameters: attackPowerMin (X), attackStrike, attackLoss, setActiveMax."
+    ]
+  },
+  {
+    "v": "5.30",
+    "date": "2026-11-11",
+    "title": "Who goes first",
+    "items": [
+      "Bug fix (Pack, Revise#374): in Solo with two decks and against the Bot, \"Who goes first\" now decides the turn order — Deck 1 (you) or Deck 2 (the Bot). Before, a coin toss decided and the switch did nothing."
+    ]
+  },
+  {
+    "v": "5.29",
+    "date": "2026-11-11",
+    "title": "Hand card size",
+    "items": [
+      "The hand has its own card size (Pack, Revise#373): a slider at the right end of the hand — S 0.5×, M 0.8×, L 1× — the same as Control · Back. The choice is remembered."
+    ]
+  },
+  {
+    "v": "5.28",
+    "date": "2026-11-11",
+    "title": "Bind X given more than once",
+    "items": [
+      "Bug fix (Pack, Revise#372): several Bind X on one character are no longer added up. With Bind 1 and Bind 3 the character pays 1 or 3 power cards (you choose), never 4. The status line shows \"Bind 1 / 3\"."
+    ]
+  },
+  {
+    "v": "5.27",
+    "date": "2026-11-11",
+    "title": "Hand: one height, fixed position",
+    "items": [
+      "The hand no longer moves up and down (Pack, Revise#371): an empty hand keeps the room of one card, the scroll bar always has its place, and the title line stays on one line.",
+      "Fixed hand position: the 📌 button beside Expand puts the hand in a bar at the bottom of the field, as wide as the field. Click it again to let the hand float."
+    ]
+  },
+  {
+    "v": "5.26",
+    "date": "2026-11-11",
+    "title": "Cards: 1 more",
+    "items": [
+      "Card (Revise#370): 強者の戦い (EX0485) — named characters get +1/+1 in battle for each power card of the battle opponent."
+    ]
+  },
+  {
+    "v": "5.25",
+    "date": "2026-11-11",
+    "title": "Cards: 5 more",
+    "items": [
+      "Card batch (Revise#369): every player names a character of the work and takes a card with that name, or with the name in its text, from the deck (EX0480, EX0498); a card in the Damage Pile set on 東條 莉亜 (EP372); EX912, EP423."
+    ]
+  },
+  {
+    "v": "5.24",
+    "date": "2026-11-11",
+    "title": "Cards: 9 more",
+    "items": [
+      "Card batch (Revise#368): power cards for the damage an opponent's card deals (EX865); damage to the side of a character killed in battle (0342); a Break card set from the Damage Pile after a damage check (3799); EX0058, EX0292, EP440, 0785, 0787, 2358."
+    ]
+  },
+  {
+    "v": "5.23",
+    "date": "2026-11-11",
+    "title": "Cards: 9 more",
+    "items": [
+      "Card batch (Revise#367): the cost of a 武蔵 / 英国 / 三征西班牙 Break card comes back and the card is discarded (EX874, EX875, EX876); one Project card at fast timing in each turn, and a lasting bonus for a named character (0876, 0894); EX910, EX911, EP378, 3125."
+    ]
+  },
+  {
+    "v": "5.22",
+    "date": "2026-11-11",
+    "title": "Cards: 10 more",
+    "items": [
+      "Card batch (Revise#366): Factor (and cost) down by cards from the top of your deck (EX0472, 2031, PP277); every player swaps the Damage Pile for cards of the Discard Pile (0445); “マルガ・ナルゼ” and “マルゴット・ナイト” fighting together (EX802, EX803, EX0669, EX0672); EX0595."
+    ]
+  },
+  {
+    "v": "5.21",
+    "date": "2026-11-11",
+    "title": "Cards: 9 more",
+    "items": [
+      "Card batch (Revise#365): damage split in the area a discarded character was in (3694, PR340); every character of a faction is hurt when it attacks or guards (PP085); the power cards of X characters of one faction (0022); damage equal to the cost of your Permanent (EX866); X hand cards as power cards (PP054); EX0183, EX828, 2765."
+    ]
+  },
+  {
+    "v": "5.20",
+    "date": "2026-11-11",
+    "title": "Cards: 10 more",
+    "items": [
+      "Card batch (Revise#364): the owner of a card pays 2 more or loses it (0252); look through a deck and discard four cards (PP270, PP278); damage again when the named card comes up in the damage check (0377, PR054); 金 under a character, discarded for damage (EX806); X characters get a power card, skills and Mental (EXPR043); 2983, EP499, EX887."
+    ]
+  },
+  {
+    "v": "5.19",
+    "date": "2026-11-11",
+    "title": "Cards: 6 more · the bot plays better",
+    "items": [
+      "Card batch (Revise#363): damage split between players and characters (1948); discard your hand for that much damage, twice with eight cards in the Damage Pile (EX0167); a card with the name of a card on the field (0708); EX0130, EX0756.",
+      "Bot: new weights after 105 more minutes of training — 134 of 234 test games won against the bot of v5.07."
+    ]
+  },
+  {
+    "v": "5.18",
+    "date": "2026-11-11",
+    "title": "Cards: 7 more",
+    "items": [
+      "Card batch (Revise#362): ガンバスター from the hand for two characters (EP540); a character loses its declarations and Factor (EX898); the battle opponent loses every card set on it (EX906); damage to the same class in that territory (3544); EX0327, EX0483, PR329.",
+      "Fix: 0310's second effect gave +2/+2/+2 even when no Vampire was discarded."
+    ]
+  },
+  {
+    "v": "5.17",
+    "date": "2026-11-11",
+    "title": "Cards: 6 more",
+    "items": [
+      "Card batch (Revise#361): up to X of your characters attack or guard together (0909, 0993); Erasers join the attack, one per Boost paid (0015, 0030); discard any number from hand and deck for twice that Attack (3805, 3808)."
+    ]
+  },
+  {
+    "v": "5.16",
+    "date": "2026-11-11",
+    "title": "Cards: 9 more",
+    "items": [
+      "Card batch (Revise#360): a character or a Permanent as the target (EP267); cheaper and a draw when the same card is declared already (0743); 10 damage for breaking an opponent's character (0477); a named card among the top ten (EX0069); look at a hand and discard Named cards (0958); 3621, 0465, EX0322, EX900."
+    ]
+  },
+  {
+    "v": "5.15",
+    "date": "2026-11-11",
+    "title": "Cards: 12 more",
+    "items": [
+      "Card batch (Revise#359): a hand card set as チャージエネルギー / ストリームフィールド (0211, 0226, EP424); name a cost your opponents can't use (PP212, PP220); Werewolf Character cards of the cost become characters (PP299); a Fast card that raises Attack and Defense comes back (0907, 0925); 0407, 0422, 0983, 1001."
+    ]
+  },
+  {
+    "v": "5.14",
+    "date": "2026-11-11",
+    "title": "Cards: 9 more",
+    "items": [
+      "Card batch (Revise#358): attacks on you are cancelled for the turn (EX902); effects that need three 英国 characters (EX867); everybody except 英国 Named characters (EX880); a character is made to guard any attack (0469, 0484); no Factor with two characters of one faction (EP385); EX0306, 0679, PP024."
+    ]
+  },
+  {
+    "v": "5.13",
+    "date": "2026-11-11",
+    "title": "Cards: 11 more",
+    "items": [
+      "Card batch (Revise#357): cards that name a character when they are declared (0509, 0573, EX0684); a Permanent or Project and every card with its name in the owner's hand and deck (PP183, PP189); every player orders the top of the deck (EX0735); attack cost to the bottom of the deck and the attack is cancelled (EX0752); 3657, 0310, EX0723, EP419."
+    ]
+  },
+  {
+    "v": "5.12",
+    "date": "2026-11-11",
+    "title": "Cards: 13 more",
+    "items": [
+      "Card batch (Revise#356): character tokens from the top of the deck (EP538, EX850); 「じゃ、行こうか」「皆」「頼りにしてるぜ」 give their bonus when the other two are in effect (EX0757–EX0759); a Break card that comes back from the Damage Pile at the start of a turn (PP240, PP248); 大罪武装 Permanents without Factor (EX0645, EX0774, EX848); the next Break card needs X less Factor (EX0696); EX895, EX903."
+    ]
+  },
+  {
+    "v": "5.11",
+    "date": "2026-11-11",
+    "title": "Cards: 11 more",
+    "items": [
+      "Card batch (Revise#355): a power card or Permanent back to the hand (0220); a Permanent becomes a power card (0676); a declared card goes back into its deck (EX0159); every player discards from an opponent's hand (EP551); the skills of the battle opponent (EP422); +2 to one stat in a battle (0540); a free attack when the Permanent is set (PP359); Talent Break cards at fast timing (0771); EX0177, EX0288, EX0736."
+    ]
+  },
+  {
+    "v": "5.10",
+    "date": "2026-11-11",
+    "title": "Cards: 14 more",
+    "items": [
+      "Card batch (Revise#354): damage to any number of characters you choose (EX0455, EX0120); a card that becomes a guarding character during an attack (0283, PR048); a card that comes back from the Damage Pile (0994); the next Project card at fast timing (EP607); Break or Permanent cards at fast timing for a turn (EX897, EX892); the skills or costs of whole areas (EX894, EX853); EX0299, EX835, EX877, EX886."
+    ]
+  },
+  {
+    "v": "5.09",
+    "date": "2026-11-11",
+    "title": "Cards: 9 more",
+    "items": [
+      "Card batch (Revise#353): damage that somebody else takes — the player of the source (PP245, 1630), the owner of the target (PP114), a Permanent whose character takes your damage once (PP335); the stack below the top card becomes power cards (0574); a 大罪武装 Permanent from the hand (EX794); the cost comes back with five 三征西班牙 characters (EX851); EP447; 0478."
+    ]
+  },
+  {
+    "v": "5.08",
+    "date": "2026-11-11",
+    "title": "Cards: 11 more",
+    "items": [
+      "Card batch (Revise#352): the “next named Break card” Project cards of every faction — a draw, then hand cards with the same Name go under it, plus each card's own extra (0811, 0847, 0883, 0919, 0955, 0991); hand cards with the same Name under it when it is set (0769); cost cards named “渡来 愛花” go under the Break card they paid for (0805, 0823, 1004, 1010)."
+    ]
+  },
+  {
+    "v": "5.07",
+    "date": "2026-11-11",
+    "title": "New bot · cards: 4 more",
+    "items": [
+      "Bot: new weights from tonight's training (110 minutes, 18 decks, 24 games for every comparison). It won 70 of 118 games against the v4.95 bot. An earlier 90-minute run with only 8 games per comparison lost 25 of 60 and was thrown away.",
+      "Card batch (Revise#351): costs that depend on the target — a Project / Fast card that targets “スカジャンタイガー” costs 1 more (0301 / PP101), the opponent's Project cards on your characters cost 1 more (EX0481), free on a broken “ドゥビル” (EX0471). For these cards you choose the target first, then pay."
+    ]
+  },
+  {
+    "v": "5.06",
+    "date": "2026-11-11",
+    "title": "Cards: 8 more",
+    "items": [
+      "Card batch (Revise#350): power cards from the deck up to the target's Mental, at fast timing when the target is “久遠寺みやこ” (0510, 0586, 0588); +X for each of its effects that is in effect on its battle opponent (EP413, EP455, EP458); a card that declares itself for free when a damage check puts it into the Damage Pile (EX0622 / EX0634)."
+    ]
+  },
+  {
+    "v": "5.05",
+    "date": "2026-11-11",
+    "title": "Cards: 12 more",
+    "items": [
+      "Card batch (Revise#349): Break cards that keep working from the Damage Pile (PP140 / PP148, PP241 / PP249); Charge X after your first named Break card of the turn (PP331 / PP339); the top 5 cards of the opponent's deck — Permanent cards go to the Damage Pile (PP334 / PP342); −X Attack for its battle opponent and costs that go to the Damage Pile (0836 / 0854); +1 / +1 for the character it pays the attack or guard cost for (0111 / 0126)."
+    ]
+  },
+  {
+    "v": "5.04",
+    "date": "2026-11-11",
+    "title": "Cards: 15 more, 6 repaired",
+    "items": [
+      "Card batch (Revise#348): Intercept or Initiative, your choice (PP363 / PP371); a Break card at fast timing for an extra cost (PP213 / PP221, 0846); cards of one faction from your Damage Pile once per turn (0982 / 1000); an Active Area character becomes controlled and power cards move to this character (0911 / 0929); three of your Undead for a Break card from the discard pile (0535 / 0550); its top Break card goes to the Damage Pile (0339 / 0354); Permanent −X and Mental −X for everyone else (PP272 / PP280).",
+      "Fixed: 0297, 0299, 0313, PR039, 3201 and EX0141 were marked automatic but did nothing (the card to take back from a pile was never asked for). They now ask for it. 1102 is back to “partly automatic” for the same reason. A new check stops this kind of mistake."
+    ]
+  },
+  {
+    "v": "5.03",
+    "date": "2026-11-11",
+    "title": "Cards: 12 more",
+    "items": [
+      "Card batch (Revise#347): a named Permanent card from the hand when it is set (EX801, EX833); a character that can only be set with another 三征西班牙 card in the hand (EX844); three hits in a battle or an attack (EX807); +1 to the damage of its effects (EX0728); the guard of the target's attack takes X damage, loses power cards or gets −1 (EX0462, EX0465); 2 damage when it next attacks or guards (EX0447); X damage to every character that attacks, guards or uses an effect (0152); 3581; EP438; 0707."
+    ]
+  },
+  {
+    "v": "5.02",
+    "date": "2026-11-11",
+    "title": "Cards: 16 more",
+    "items": [
+      "Card batch (Revise#346): every player discards one unbroken character of each faction (0709); all unbroken characters of one faction of an opponent (0054); cards whose name is on the field twice go back to the decks (PP084); a Break card set at fast timing while the opponent declares a card (PP268); +X from the difference of the Damage Piles (PP330 / PP338); 3 + X cards (PP333 / PP341); Ragnarok: EP504, EP506, EP514; 3503; EX0111; EX0114; PP305; 0183.",
+      "Fixed: 0611's +X (the number of Break cards in the stack) was not read."
+    ]
+  },
+  {
+    "v": "5.01",
+    "date": "2026-11-11",
+    "title": "Cards: 16 more",
+    "items": [
+      "Card batch (Revise#345): Ragnarok cards whose cost was paid by one character of a class — instead / further / then (EP500, EP501, EP502, EP507, EP508, EP513); Eraser cards for free with the four archangels (0981 / 0999); a Factor that can also be paid as WW or イイ (PP209); the opponent's characters can't pay while that player has 8 damage (EX0104); kept in play by discarding the card (0375); a power card for every power-0 Student (EX0761); EP439, EX0332, EX0720, EX0725."
+    ]
+  },
+  {
+    "v": "5.00",
+    "date": "2026-11-11",
+    "title": "Cards: 13 more",
+    "items": [
+      "Card batch (Revise#344): with a named card below — the battle opponent loses its skills (EX914), Bind 1 and attacks on controlled characters (EX915); you take no damage and no effect from the opponent's cards with four named characters (0849); a Break card from the hand onto the target, its cost comes back (EXPR034); 3 damage to an opponent's character that attacks or guards, when you want it (EP446); a draw when the target next attacks the opponent, two for a Thief (EP509); the next attack can't be guarded (EX889); EX0732, EX0740, EX0749, EX0754, EX0764, EX855."
+    ]
+  },
+  {
+    "v": "4.99",
+    "date": "2026-11-11",
+    "title": "Cards: 21 more",
+    "items": [
+      "Card batch (Revise#343): a Factor that can also be paid as ダダ (PP239); free to set with the right factions on the table (PP238, PP329); the cost of the next Break card on a Dragoon / on a Student comes back (PP366, PR144); a power card after a battle with an unbroken character (0916); Permanent cards that discard the damaged character's Permanent or the damaged character (0444, 0674); +X from the cost of the named Break card (0572); the opponent draws as many as your draw phase (0647); Factor −2 for 武蔵 named Break cards of other factions (EX790); EX0724 only on “直政”; PP360 / PP368; PR063; PR137.",
+      "Fixed: the series tags of EX0717 (K.P.A.Italia) and EX919 / EX921 (武蔵, 英国) and their Charge X were not read; EX820's draw never happened (a broken pattern from an earlier batch)."
+    ]
+  },
+  {
+    "v": "4.98",
+    "date": "2026-11-11",
+    "title": "Cards: 23 more",
+    "items": [
+      "Card batch (Revise#342): the next attack on a player can't be guarded (0954); one power card of every character goes back to the decks (0313); a guard of the target's attack takes (X) damage (0612), a guard against a Talent takes (1) (PP216), a guarded attacker gets +X (0740); Factor −N and a bonus with another named Talent (0733 / 0748, 0703 / 0718); a named character gets Resist or Shield while the card stays (0607 / 0622, PP269); discard a mental attacker of the attacked player (0246 / 0260); kept in play after a battle (EX0340 / EXPV023); no damage to characters without ▼ (EX0666); a Permanent that leaves at power 0 (PP075); EX0478, EX0733, EX0739, EX0743, EX0762."
+    ]
+  },
+  {
+    "v": "4.97",
+    "date": "2026-11-11",
+    "title": "Cards: 33 more",
+    "items": [
+      "Card batch (Revise#341): every player reveals the whole deck and sets its Character cards (0570, PP171 / PP179, PR083); Resist / Protect against the factions of the Permanent cards on it (0176 / 0191); a Break card set on this character costs nothing (PP303 / PP311); its battle opponent loses its skills after a Boost of 4 (EX0711 / EX0771); paying the attack and guard cost of “ガンバスター” and others (EP401, EP523, EP526, EP557, EP558); you and your characters are not affected by the opponent's cards (PP243 / PP251); its battle opponent is not affected by cards until the battle ends (PP110 / PP118); Arayashiki Permanent cards for free after it attacks the opponent (0840 / 0858); 0241 / 0256, 0311 / PR051, 0348 / PV070, EP484 / EP517, EX0765 / EXPR064, PP301 / PP309.",
+      "Fixed: “you are not affected by the opponent's cards” (3264) no longer also stopped your own Project / Fast cards from affecting you."
+    ]
+  },
+  {
+    "v": "4.96",
+    "date": "2026-11-11",
+    "title": "Cards: 19 more",
+    "items": [
+      "Card batch (Revise#340): players take no damage from unbroken characters (PP050); a card whose cost drops by the number of your Arayashiki Ghosts (PP244 / PP252) or of your broken Erasers (0565 / 0580 corrected); Bind 0 for characters with three named cards and a free power card when a Name is broken by a named Break card (0768 / 0783); a character with 0 power that takes battle damage from this one is discarded (0305 / 0320); +X for each “バラキエル” / “真代 詠” in the stack (0985, 1003, 1009, 1015); 0213 / 0228, 0307 / 0322, 0536 / 0551, PP058, PR091. Also: an “X” written once on a card now reaches its triggered abilities too (1232, 1971 and reprints)."
+    ]
+  },
+  {
+    "v": "4.95",
+    "date": "2026-11-10",
+    "title": "Cards: 17 more",
+    "items": [
+      "Card batch (Revise#339): “if the target is a … character, further / instead …” for the Ragnarok classes and the Horizon groups (EP497, EP510, EP512, EX888); +10 when the attack reaches its target (0736 / 0751); a card that needs the card named 「武蔵」 or the character “武蔵” (EX0694 / EX0695); damage equal to its Attack when it breaks (0210 / 0225); ignore Factor and cost when the opponent controls characters (2405, PR222); the whole hand as power cards (PR095); three Initiatives (EX0746); effects off and no attack (PR147); EP449; PP053."
+    ]
+  },
+  {
+    "v": "4.94",
+    "date": "2026-11-10",
+    "title": "Admin account",
+    "items": [
+      "Pack: the admin has its own account, “sakhudoge”. The owner's Google sign-in now opens that account (it is made the first time) instead of “This sign-in has no deck account”: Save / Load decks, player name and picture work for the admin too. The login page has “Admin: sign in with Google”, and the account menu has “Admin page” (Revise#337).",
+      "Admin → Registration requests: when the database refuses to show the requests (a rules problem), the page says so instead of “No requests waiting” (Revise#338)."
+    ]
+  },
+  {
+    "v": "4.93",
+    "date": "2026-11-10",
+    "title": "Sort hand · card size on the field",
+    "items": [
+      "Pack: Sort hand — a button beside the hand's fold button (the same icon as the Control Area sort): by faction (the common order), then Mental low → high, cost low → high, Factor low → high, then Character · Break · Permanent · Fast · Project. It can be undone (Revise#336).",
+      "Pack: the card size slider (Lv 1–6) is at the top right of your own field, next to the field colour — no need to open Player options (Revise#335)."
+    ]
+  },
+  {
+    "v": "4.92",
+    "date": "2026-11-10",
+    "title": "Solo games really saved · stronger bot",
+    "items": [
+      "Fix (Pack: “the Solo log does not show in my admin page”): a finished Solo game was sent to the game log in a way the database rules refuse, without any message. It is now added entry by entry like an online room, and a message shows if saving fails (Revise#333).",
+      "Bot: 90 minutes of training on 13 decks (the basic ones and Pack's own): the new bot won 38 of 58 games against the v4.91 bot (Revise#334)."
+    ]
+  },
+  {
+    "v": "4.91",
+    "date": "2026-11-10",
+    "title": "Bot: sets characters and attacks only when it helps",
+    "items": [
+      "Pack's feedback: the bot no longer puts every Character card into the Active Area. It sets one only when it can be brought into the Control Area with the power cards it can give this turn and the next, or when it is Aggressive (▼, its attack on its owner brings characters from the deck). The others stay in the hand as power cards (Revise#330).",
+      "Pack's feedback: the bot waits for a suitable moment to attack a player — when no untapped character there that can pay its guard would defeat the attacker, when it is ready for the finishing strike, or when the hit wins (Revise#331).",
+      "Pack: the bot reads its deck's Break cards with a Name before it plays and gives each a job — attacker, supporter, defender. With one in the hand it keeps enough power cards on the field for its cost, does not spend it as a power card while another card can be, breaks the attacker first while it is still building, and a supporter does not attack before the finishing strike. Bot vs Bot: hover the plan text to see each bot's named cards (Revise#332).",
+      "Fix: the bot no longer repeats a declaration that cancels itself (no valid target)."
+    ]
+  },
+  {
+    "v": "4.90",
+    "date": "2026-11-10",
+    "title": "Bot: more of your style · new Solo box",
+    "items": [
+      "Pack: the bot learned from 3 of Pack's games (196 of his choices): it now makes the same choice as Pack in 96 of them (69 before), and it won 25 of 40 games against the v4.89 bot (Revise#327).",
+      "Pack: the Solo box follows Pack's design — Deck 1, Deck 2, a “Who goes first” switch (Deck 1 / Deck 2), then “Play by yourself” (Player · Player #1 vs Player #2) and “Play with the bot” (Player vs Bot · Bot vs Bot) side by side (Revise#328).",
+      "Pack: the Changelog page has two tabs — Changes and Bug reports. Bug reports shows each card report as a ticket: what was reported, how it was broken down, the cause, the fix, how it was checked, and captures before and after (Revise#329)."
+    ]
+  },
+  {
+    "v": "4.89",
+    "date": "2026-11-10",
+    "title": "Card reports fixed, site move",
+    "items": [
+      "Pack report (A3-20 2673): Boost 2 can be used as Boost 2 — every Boost value is offered (Revise#325).",
+      "Pack report (A3-EP EP245 “Lilith”): the cost paid to break with it comes back to the hand (Revise#325).",
+      "Pack report (A3-07 1167): its +X/+X/+X now counts the cards with the same Name in every Damage Pile (Revise#325).",
+      "Pack report (A3-07 1173): a card that can be used from the Damage Pile shows “⚡ Use” in the Damage Pile window (Revise#325).",
+      "The site moved to sm-aqa.netlify.app: the old address shows a bar that moves your decks, name and picture to the new address (Revise#326)."
+    ]
+  },
+  {
+    "v": "4.88",
+    "date": "2026-11-10",
+    "title": "Accounts: requests, player name, header menu",
+    "items": [
+      "Pack: the login page has “Request an account”: an ID, an optional email and a password the requester chooses. The request waits until the admin approves it in Admin → ✅ Approve registrations (or 👥 Users); then the requester logs in with that ID and password — with or without an email. Reject removes the request. Logging in with a pending ID says it is waiting (Revise#320, #321).",
+      "Pack: each account has a Player Name (Profile). Logging in makes it the Game Table name (and the account's picture the Player image); it can still be changed at the table (Revise#322).",
+      "Pack: the account sits at the right end of the header tabs (after Changelog) with the small player picture and name; it opens a Gmail-like menu — Manage your account, Save / Load decks, Log out — or Log in / Request an account (Revise#322).",
+      "Pack: Game Table — a hand at the bottom (any Size, also expanded) no longer hides the Control Area (Back): the table gets room under it, so the last row scrolls up above the hand (Revise#323).",
+      "Pack: the bot uses “1: return this effect's cost to the hand” only when it wants that card: a Fast card while the opponent threatens, or a Break / Project card it can play now on its Main Phase — and pays with that card (Revise#324).",
+      "Pack: the Changelog tab sits right after Game Table; the account stays at the right end."
+    ]
+  },
+  {
+    "v": "4.87",
+    "date": "2026-11-10",
+    "title": "Cards: 27 more",
+    "items": [
+      "Card batch (Revise#319): new selectors (英国を持たない, あなたの支配キャラクター以外, イレイザー以外の分類, あなたを目標にアタック宣言した, 「…」 by name in a pile, 'A 1人 or B 1人'); a guard trigger that only takes some characters (PP170); no battle damage while in by Synchro (0538); 'if … this card / effect has no effect'; 'ignore this card's cost if …'; set with a factor state; no Break cards this turn; draw at the end of the Charge Phase; class grants to every character; and more."
+    ]
+  },
+  {
+    "v": "4.86",
+    "date": "2026-11-10",
+    "title": "Stronger bot (trained, with your style)",
+    "items": [
+      "Pack: a new bot from the 100-minute anchored training, with Pack's style from v4.85 kept on top — it won 67 of 90 games against the v4.85 bot and deals more damage per game (Revise#318)."
+    ]
+  },
+  {
+    "v": "4.85",
+    "date": "2026-11-10",
+    "title": "Bot: your style, Auto Re-shuffle",
+    "items": [
+      "Pack: the bot opens with Auto Re-shuffle like a player, and plays half-way toward Pack's own style learned from his game (fewer early attacks, more building) (Revise#317)."
+    ]
+  },
+  {
+    "v": "4.84",
+    "date": "2026-11-10",
+    "title": "Factor Cut and A3-13 1896",
+    "items": [
+      "Pack: Auto-pay no longer pays by itself when you could discard Controlled Characters (or hand cards) instead — A3-13 1896's discard payment works again. A card or effect resolving checks its factor and conditions again; a Factor Cut makes the card fail (Revise#316)."
+    ]
+  },
+  {
+    "v": "4.83",
+    "date": "2026-11-10",
+    "title": "Factor checked when declared",
+    "items": [
+      "Pack: Project, Fast and Permanent cards can no longer be declared without their required Factor (like Break cards), unless a card lets you ignore it. Fix: Factors a player gains from cards now count for declaring (Revise#315)."
+    ]
+  },
+  {
+    "v": "4.82",
+    "date": "2026-11-10",
+    "title": "Accounts: decks online",
+    "items": [
+      "Pack: Deck Builder → 👤 Account — log in with an ID and password (accounts are made by the admin), save and load one deck or all 10 slots to your account with an overwrite warning, export either side, change your player image, email and password; forgot password sends a link to your email (Revise#314)."
+    ]
+  },
+  {
+    "v": "4.81",
+    "date": "2026-11-10",
+    "title": "Replay on phones · bot dominates first",
+    "items": [
+      "Pack: on phones the replay controls are a slim bar at the bottom — ⋯ for speed / view / log / close, ▾ folds it to a small Play button (Revise#312).",
+      "Pack: the bot now puts characters into the Active Area and charges them until they are dominated into the Control Area, using its least useful hand cards as power and keeping the important ones (Revise#313).",
+      "Pack: 11 more cards automated — split damage, look at the top card, and more (Revise#312)."
+    ]
+  },
+  {
+    "v": "4.80",
+    "date": "2026-11-10",
+    "title": "Bot: build first, then fight · Bot vs Bot",
+    "items": [
+      "Pack: the bot builds first (Break cards, Controlled Characters, power) and attacks when its attack can finish the job; trained longer by bot-vs-bot games — it beats the v4.79 bot in 36 of 40 games. Solo → “🤖 vs 🤖 Watch two bots”: two bots play, you watch, with Pause and 1× / 2× / 4× speed; the finished game goes to the game log for learning (Revise#311).",
+      "Pack: 16 more cards automated (designated-character damage on set, “A”と“B” together, damage only from named characters, a character with its cards into the deck, and more) (Revise#311)."
+    ]
+  },
+  {
+    "v": "4.79",
+    "date": "2026-11-10",
+    "title": "Cards: 67 more",
+    "items": [
+      "Pack: 67 more cards are automated (61 fully) — deck searches, reveal-and-take, the 冥 (Nether) factor, granted effect lines, turn-long watchers, X from named characters, and more. Fix: 7 cards whose cost should come back to the hand when set now really do it (Revise#310)."
+    ]
+  },
+  {
+    "v": "4.78",
+    "date": "2026-11-10",
+    "title": "Solo games into the log",
+    "items": [
+      "Pack: a finished Solo game (two decks or vs Bot) is saved automatically to the online game log, so the bot can learn from its winner too (Revise#309)."
+    ]
+  },
+  {
+    "v": "4.77",
+    "date": "2026-11-10",
+    "title": "vs Bot",
+    "items": [
+      "Pack: play against a bot — Game Table → Solo → 🤖 vs Bot. It only plays legal moves, is trained by bot-vs-bot games with your decks (the winner's settings survive), and can learn from the winners of real online games (Admin → Online rooms → Download rooms, send the file to Claude) (Revise#308)."
+    ]
+  },
+  {
+    "v": "4.76",
+    "date": "2026-11-09",
+    "title": "Richer graphics",
+    "items": [
+      "Pack: a night-sky play mat with faction emblems, foil sheen on cards, a glowing attack arrow, “+N” damage pops, a gold burst when a Break card is set, ornate pop-up frames, a foil hover on the card list. v4.75 is the version to go back to (Revise#307)."
+    ]
+  },
+  {
+    "v": "4.75",
+    "date": "2026-11-09",
+    "title": "Admin, phone and table tweaks",
+    "items": [
+      "Pack: Admin → Online rooms has Tick all / Untick all (Revise#303).",
+      "Pack: Game Table card size starts at Lv4; on a phone the card sheet's top bar is no longer half hidden; Auto Re-shuffle always re-shuffles at least once (Revise#304).",
+      "Pack: A3-25 3627 / 3614 — each card paid for its cost becomes its own Sunflower (Revise#305).",
+      "Pack: the hand bar shows the factors you control — a small faction icon with a number for each (Revise#306)."
+    ]
+  },
+  {
+    "v": "4.74",
+    "date": "2026-11-09",
+    "title": "Admin page",
+    "items": [
+      "Pack: the owner's tools (Card reports, Online rooms) moved off the Changelog page to an Admin page that only opens from its link (Revise#302)."
+    ]
+  },
+  {
+    "v": "4.73",
+    "date": "2026-11-09",
+    "title": "Report fixes; report manager",
+    "items": [
+      "Pack's reports: A3-24 3471 — “+(1)” is mental Attack and “only mental / only normal Attack” looks at the Attack now (Revise#296); A3-24 3465 — “-X・ー(X)” lowers normal and mental Attack, and X counts for both effects (Revise#297).",
+      "Pack: Card reports is now a manager — tick reports, copy or download them, and (signed in as the owner with Google) delete them (Revise#298).",
+      "Pack: on a phone, characters show their status on the card (stats top-left, power bottom-left) and no skill line beside them — tap a card for its skills (Revise#299).",
+      "Pack: on a phone, game-table card details can be pulled down to close, and Resolve and Field effects share one row (Revise#300).",
+      "Pack: Changelog → 🗄 Online rooms — as the owner, see the saved online games and delete the ones idle for N days (Revise#301)."
+    ]
+  },
+  {
+    "v": "4.72",
+    "date": "2026-11-09",
+    "title": "Card reports; Saga 4 batch",
+    "items": [
+      "Pack: a red ⚑ Report button on card details (card list and game table) — write the problem (up to 250 characters, Thai / English / Japanese); it is saved with the card and game details. Changelog → ⚑ Card reports lists them and copies them as one block for Claude. Needs one Firebase rule (see the docs, Revise#295).",
+      "Saga 4 (A4-EX02): Musashi / England cards — cost back to hand, a draw for breaking with England, England Break cards at Fast timing, area damage, damage −1 to a player, a power card back to hand (Revise#294)."
+    ]
+  },
+  {
+    "v": "4.71",
+    "date": "2026-11-09",
+    "title": "Saga 4 batch",
+    "items": [
+      "Saga 4 (A4-EP): characters that can't pay attack / guard costs, damage to opponents' attackers and guards, Gunbuster cards back from the damage pile, a higher damage-pile limit (Revise#293)."
+    ]
+  },
+  {
+    "v": "4.70",
+    "date": "2026-11-09",
+    "title": "Saga 4 batch",
+    "items": [
+      "Saga 4 (A4-05): Fast timing / factor discount when you are not the first player, draw when the target attacks, discard every character without mental Attack, attackers and guards lose their power cards, Permanents 0808 / 0952 (Revise#292)."
+    ]
+  },
+  {
+    "v": "4.69",
+    "date": "2026-11-09",
+    "title": "Phone: easy close, page through cards",
+    "items": [
+      "Pack: card details close easily on a phone — a ✕ that stays at the top and a tap outside on the game table; on the card list the sheet's ✕ stays at the top and you can pull it down to close (Revise#290).",
+      "Pack: in the card list's details, ‹ › (or swipe left / right, or ← →) go to the previous / next card of the results (Revise#291)."
+    ]
+  },
+  {
+    "v": "4.68",
+    "date": "2026-11-09",
+    "title": "Saga 4 batch; A3-24 3541 fix",
+    "items": [
+      "Pack: A3-24 3541 — setting a named Polestar Empire Break card on its character now lets you set a Permanent from your hand; same fix for A3-24 3433 / 3469 / 3505 (Revise#289).",
+      "Saga 4 (A4-04): discard if it did not attack, Initiative while attacking, Talent factor discounts with an on-set effect, Permanent back to hand, attackers / guards discarded until end of turn (Revise#288)."
+    ]
+  },
+  {
+    "v": "4.67",
+    "date": "2026-11-09",
+    "title": "Saga 4 batch",
+    "items": [
+      "Saga 4 (A4-03): battle opponent's power card back to hand, discard this character to keep another, printed mental Attack targets, +1 to every character of a chosen class (Revise#287)."
+    ]
+  },
+  {
+    "v": "4.66",
+    "date": "2026-11-09",
+    "title": "Modern motion",
+    "items": [
+      "Pack: screens fade between tabs; pop-ups and the card sheet ease in and out; on the game table cards glide when they move, fade in when they arrive and fade out when they leave; buttons and cards react to press / hover. Subtle, and off when your device asks for reduced motion. v4.65 is the version to go back to (Revise#286)."
+    ]
+  },
+  {
+    "v": "4.65",
+    "date": "2026-11-09",
+    "title": "iPhone: small card pictures",
+    "items": [
+      "Pack: on iPhone, Permanent pictures on the field were tall and narrow and in the details only their top part showed — the small picture boxes now hold their card shape on Safari (Revise#285)."
+    ]
+  },
+  {
+    "v": "4.64",
+    "date": "2026-11-09",
+    "title": "Saga 4 batch",
+    "items": [
+      "Saga 4 (A4-03): free Permanents when an opponent controls 3+ of a faction, Bind / Intercept on damage ≥ 6 or deck ≤ 10, immune to opponents' effects, breakable by any class with a draw for the breaker, effect cost back into the deck (Revise#284)."
+    ]
+  },
+  {
+    "v": "4.63",
+    "date": "2026-11-09",
+    "title": "Saga 4 batch; Permanent pictures",
+    "items": [
+      "Pack: Permanent cards (printed sideways) now show whole, in a landscape box, on the field and in the card details (Revise#283).",
+      "Saga 4 (A4-02): cards back from a damage pile / discard pile to their owner's deck, deck card to the top, a player safe from non-attack damage, deck search by card title, discard at end of turn, X-cost Break targets (Revise#282)."
+    ]
+  },
+  {
+    "v": "4.62",
+    "date": "2026-11-09",
+    "title": "Saga 4 batch",
+    "items": [
+      "Saga 4 (A4-01 / A4-02): class-dependent Break bonuses, first-Project cost back to hand, battle-damage immunity except from broken named characters, power-0 turn-start discard, Permanent that leaves when its character fights, Mental-0 discard for every player, Project cost +X (Revise#281)."
+    ]
+  },
+  {
+    "v": "4.61",
+    "date": "2026-11-09",
+    "title": "Phone table layout",
+    "items": [
+      "Pack: roomier table on phones — the field fits the screen width (⤢ Fit button to turn it off), one-row icon toolbar, a shorter side panel and phase banner, compact top tabs and hand. v4.60 is the version to go back to if you prefer the old layout (Revise#280)."
+    ]
+  },
+  {
+    "v": "4.60",
+    "date": "2026-11-09",
+    "title": "Phone details fix",
+    "items": [
+      "Pack: on a phone, the small card pictures in the details screen were cut off — fixed; a Capacity +∞ hand limit shows “∞” (Revise#279)."
+    ]
+  },
+  {
+    "v": "4.59",
+    "date": "2026-11-09",
+    "title": "A3-17 2388 fix; Saga 4 batches",
+    "items": [
+      "Pack: A3-17 2388 — Capacity +∞ and Permanent +∞ now count (shown as ∞); a Permanent card that only gives skills now has its own row in the Status table (Revise#278).",
+      "Saga 4: Horizon Fast-timing sets, Permanent back on leaving, hands shown, back to hand after battle, Permanent from hand, draw on kill, battle opponent loses everything, free attack, damage −(2) while battling, damage taken for you (Revise#275–277)."
+    ]
+  },
+  {
+    "v": "4.58",
+    "date": "2026-11-09",
+    "title": "Saga 4 batch",
+    "items": [
+      "Saga 4: X = Initiatives, class-count condition, guard owner damage, look at hand and discard, discard + draw after a battle kill, area damage to matching characters (Revise#273–274)."
+    ]
+  },
+  {
+    "v": "4.57",
+    "date": "2026-11-09",
+    "title": "Saga 4 batch",
+    "items": [
+      "Saga 4: named cards to the Damage Pile on leaving, Permanent-set bonuses per name card, conditional factor + skills, “another name-level character” condition, break ignoring class for all, unguardable with N Initiatives (Revise#271–272)."
+    ]
+  },
+  {
+    "v": "4.56",
+    "date": "2026-11-09",
+    "title": "Saga 4: Talent rules and more",
+    "items": [
+      "Saga 4: battle-leave and attack-a-player triggers, “opponent controls a name-level character”, Break cost back when set onto this character (Revise#269).",
+      "Saga 4 タレント: factor less and skills with a broken Talent of another name; stats per broken name-level Talent (Revise#270)."
+    ]
+  },
+  {
+    "v": "4.55",
+    "date": "2026-11-09",
+    "title": "Batch 14; Saga 4 Break rules",
+    "items": [
+      "Cards: A4-04 0773, A4-03 0447 / 0543, A4-02 0343 and reprints (Revise#267).",
+      "Saga 4 Break rules: two factions, Active Area characters, your ▼ characters, listed classes, power N (Revise#268)."
+    ]
+  },
+  {
+    "v": "4.54",
+    "date": "2026-11-09",
+    "title": "Batch 13",
+    "items": [
+      "“+X/+X・+(X)/+X” stats read in effects and abilities; A4-04 0739 / A4-PR PR087 mill the attacked player's deck after the damage check (Revise#266)."
+    ]
+  },
+  {
+    "v": "4.53",
+    "date": "2026-11-09",
+    "title": "Batch 11",
+    "items": [
+      "Cards: A3-04 0652, A3-EP EP071, A3-EX02 EX0168 are automatic; A3-EX05 EX0622 / EX0634 mostly (Revise#264).",
+      "Saga 4: “pay N more to use it at Fast timing”, “cannot attack, guard or pay costs” (Revise#265)."
+    ]
+  },
+  {
+    "v": "4.52",
+    "date": "2026-11-09",
+    "title": "Batches 9–10",
+    "items": [
+      "Cards: A3-16 2177, A3-19 2551, A3-22 3130 / 3309, A4-01 0117 (+ reprints) are automatic; the next battle damage +N on a target (Revise#262–263)."
+    ]
+  },
+  {
+    "v": "4.51",
+    "date": "2026-11-09",
+    "title": "Saga 4 patterns, batch 2",
+    "items": [
+      "Saga 4: per-name-card stats and skills, factor ignored for a name, set from the Damage Pile, opponents' hands open, deck picks to the Discard Pile, the first player's extra cost, once per turn, the whole hand as power cards (Revise#260).",
+      "Saga 4: stats per Permanent card, Damage Pile Break cards settable, “X = your Damage Pile” without カード (Revise#261)."
+    ]
+  },
+  {
+    "v": "4.50",
+    "date": "2026-11-09",
+    "title": "Saga 3 P/P/F batch 8; Saga 4 common patterns",
+    "items": [
+      "Cards: A3-23 3335, A3-24 3435 / 3473, A3-25 3696 / 3800 / 3802 are automatic (Revise#258).",
+      "Saga 4: a card's own factor / cost reduction on a condition, a draw at the declaration, “also treated as” a name, X from cards whose name has a given text, and 分類・… targets (Revise#259)."
+    ]
+  },
+  {
+    "v": "4.49",
+    "date": "2026-11-09",
+    "title": "Saga 3 P/P/F: batch 7",
+    "items": [
+      "Cards: A3-11 1662 / 1689 / 1741, A3-14 1974 / 2028, A3-15 2150, A3-20 2695, A3-22 3129 / 3235 are automatic; A3-11 1743 partly (Revise#257)."
+    ]
+  },
+  {
+    "v": "4.48",
+    "date": "2026-11-08",
+    "title": "Saga 3 P/P/F: shikigami and M3b batch 6",
+    "items": [
+      "Cards: A3-04 0654 / 0657 and A3-09 1353 (shikigami), A3-07 1066 / 1073 / 1206, A3-09 1322 / 1488 are automatic (Revise#256)."
+    ]
+  },
+  {
+    "v": "4.47",
+    "date": "2026-11-08",
+    "title": "Saga 3 P/P/F: M3b batch 5",
+    "items": [
+      "Cards: A3-07 1071 / 1106, A3-09 1319 / 1384 / 1484 are automatic (Revise#255)."
+    ]
+  },
+  {
+    "v": "4.46",
+    "date": "2026-11-08",
+    "title": "Saga 3 P/P/F: M3b batch 4; Home disclaimer",
+    "items": [
+      "Cards: A3-08 1255 / 1258, A3-09 1316 / 1453 are automatic (Revise#253).",
+      "Home: a disclaimer — unofficial, non-profit fan project; card art, logos and character designs belong to Broccoli / the original illustrators (Revise#254)."
+    ]
+  },
+  {
+    "v": "4.45",
+    "date": "2026-11-08",
+    "title": "Saga 3 P/P/F: M3b batch 3",
+    "items": [
+      "Cards: A3-09 1417 / 1452 / 1485 are automatic (Revise#252)."
+    ]
+  },
+  {
+    "v": "4.44",
+    "date": "2026-11-08",
+    "title": "Saga 3 P/P/F: M3b batch 2",
+    "items": [
+      "Cards: A3-07 1137, A3-09 1354 / 1385 are automatic (Revise#251)."
+    ]
+  },
+  {
+    "v": "4.43",
+    "date": "2026-11-08",
+    "title": "Saga 3 P/P/F: M3b batch 1",
+    "items": [
+      "Cards: A3-07 1103, A3-09 1349 / 1418 / 1486 are automatic (Revise#250)."
+    ]
+  },
+  {
+    "v": "4.42",
+    "date": "2026-11-08",
+    "title": "Saga 3 P/P/F: M3a batch 2",
+    "items": [
+      "Cards: A3-03 0556, A3-04 0676 / 0690 / 0702 are automatic; A3-05 0843 is partial (factor −X by hand) (Revise#249)."
+    ]
+  },
+  {
+    "v": "4.41",
+    "date": "2026-11-08",
+    "title": "Choices on the field; Saga 3 P/P/F batch",
+    "items": [
+      "Choices of players, characters or areas are made by clicking them on the field (e.g. A3-24 3574) (Revise#245).",
+      "Cards: A3-03 0518 / 0593, A3-04 0653 are automatic (Revise#245).",
+      "A3-24 3574: choose the areas first, then the players — only those are highlighted, any number of each (Revise#246).",
+      "Fix: A3-24 3574’s X is 1 when it is set (one “Xは…” line counts for every ability of the card) (Revise#246).",
+      "Fix: A3-11 1742 lets you choose the Break card from your hand and sets it on the target (Revise#247).",
+      "A3-15 2105: targets a card with a “あなたの任意の…” choice; its choices are made by you, on the field (Revise#248)."
+    ]
+  },
+  {
+    "v": "4.40",
+    "date": "2026-11-08",
+    "title": "Cards: 境界線上のホライゾン batch",
+    "items": [
+      "Cards: A4-EX01 EX0677 / EX0678 / EX0682 / EX0683 / EX0745 / EX0763, A4-EX02 EX804 / EX808 / EX826 / EX827 / EX829 / EX830 / EX831 / EX871 / EX882 / EX907 are automatic (Revise#242).",
+      "Several Permanents on one character pile to the right, overlapping like power cards (Revise#243).",
+      "Card details → Status: the source picture at the size of Structure / Power cards; A3-11 1660’s Permanent +1 shown on each Permanent card (Revise#244)."
+    ]
+  },
+  {
+    "v": "4.39",
+    "date": "2026-11-08",
+    "title": "Response Timing, Auto Re-shuffle, skill values, movable event screens",
+    "items": [
+      "“Respond Together” is now “Response Timing”: 1: By Sequence / 2: Anytime Interrupts (Revise#233).",
+      "New “?” explanations for Response Timing, Game Situation, Auto-Skip and Auto-Pay (Revise#233).",
+      "Opening hand: “Auto Re-shuffle” — up to 10 re-shuffles until the hand has 3 Characters, Draw, and Charge with an effect whose cost returns to the hand (Revise#234).",
+      "Skills show their value with a sign: “Permanent +1”, “Charge -1” (Revise#235).",
+      "Every event screen can be dragged by its title and folded with ▾ / ▸ (Revise#236).",
+      "Card details → Status: the source of each change is shown as the card’s picture; click it for its details (Revise#237).",
+      "Fix: normal and mental Attack are worked out separately, each at least 0 — A3-08 1247’s “-X・+(X)” / “+X・-(X)” now work (Revise#238).",
+      "Fix: a character over its Permanent limit (e.g. when A3-11 1660’s Permanent +1 ends) is dealt with at once (Revise#239).",
+      "Lobby: Auto-pick sits beside the “Player image” title (Revise#240).",
+      "The other players' piles are back on the right; from the top Player · Discard · Deck · Damage (Revise#241)."
+    ]
+  },
+  {
+    "v": "4.38",
+    "date": "2026-11-08",
+    "title": "Wide-scale card abilities in Field effects; cards: Ragnarok Online, Gunbuster, Super Sonico",
+    "items": [
+      "Fix: A3-11 1660 sets every chosen Permanent, one by one — the card shown big with its details, the character clicked on the field; its Permanent +1 now works (Revise#231).",
+      "The Player options / Game options buttons no longer show a summary (Revise#232).",
+      "Field effects lists the always-on abilities of cards on the field that reach players, every card of a kind or every matching character — e.g. “Darklore Project cost + 1” (Revise#230).",
+      "Cards: A4-EP EP466 / EP482 / EP485 / EP494 / EP495 / EP515 / EP518 / EP522 / EP525 / EP528 / EP541 / EP545 / EP554 / EP555 / EP590 / EP601 / EP603 are automatic (Revise#229).",
+      "New works for series rules: Ragnarok Online, Super Sonico (Revise#229)."
+    ]
+  },
+  {
+    "v": "4.37",
+    "date": "2026-11-08",
+    "title": "Defaults ON, Current column, one Player options page, deck name at Finish, ▲ / ▼ counts",
+    "items": [
+      "Respond Together, Game Situation and Global Undo/Redo are ON by default; Game Status pop-up waits 60 s (Revise#225).",
+      "Game options → Skip: a “Current” column you can click row by row; click a situation header to declare it (Revise#225).",
+      "Player options is one page (Options, then Card size); Hold moved to Game options when Game Situation is OFF (Revise#225).",
+      "Deck Builder: Template Finish asks for the deck name — the name-level card with the most copies is suggested (Revise#226).",
+      "Deck Builder: ▲ / ▼ beside each card count on the deck board (Revise#226).",
+      "The other players' Deck, Discard and Damage piles are on the opposite side, as seen from across the table (Revise#227).",
+      "Cards: A3-02 0388, A4-EP EP403 / EP425 / EP436 / EP437 are automatic (Revise#228)."
+    ]
+  },
+  {
+    "v": "4.36",
+    "date": "2026-11-08",
+    "title": "Status table, effect text in Resolve, Charge window in the hand, turn-end fix",
+    "items": [
+      "Card details: Status as a table — one row per card that changes it, a Skill column, the older text in a “?” (Revise#224).",
+      "Resolve shows an Effect's text; the Charge window is inside the hand at the bottom (drag the hand by its title) and lists the cards already charged (face up when you may see them) (Revise#224).",
+      "Fix: “ターン終了時に…” abilities (A3-20 2835) were skipped when a choice was asked right after the turn ended (Revise#224)."
+    ]
+  },
+  {
+    "v": "4.35",
+    "date": "2026-11-08",
+    "title": "More automatic cards",
+    "items": [
+      "Phase box at the top of the panel: 5 pastel blues in your turn, pastel red / orange / pink in an opponent's turn (Revise#223).",
+      "Log: “!” in front of every By hand line (Revise#223).",
+      "EX0295, EX0297, EX0290, 1256, 2579, EP342, EP198 and more; Main Phase / turn start triggers written “…開始時に、” now work (Revise#222)."
+    ]
+  },
+  {
+    "v": "4.34",
+    "date": "2026-11-08",
+    "title": "A3-16 2175 and A3-22 3128",
+    "items": [
+      "A3-16 2175 (Brave Kaiser from the hand with every “ブレイブ” Permanent) and A3-22 3128 (a マシン Break card from your piles, mill X, a power card when it is set) run by themselves (Revise#221)."
+    ]
+  },
+  {
+    "v": "4.33",
+    "date": "2026-11-08",
+    "title": "Import Empty Check, Auto-pick Player image, A4-01 0116 Penetrate, 10 more automatic cards",
+    "items": [
+      "Template: every printing of a card name has its own tile; A3-11 1742 and A3-22 3311 run by themselves (Revise#220).",
+      "Deck Builder Import: “Empty Check” asks “Would you like to overwrite slot number 1, 7 and 10?” (Yes / No) before replacing slots that have cards (Revise#219).",
+      "Player image: “Auto-pick” is first and the default — the picture of the faction with the most name-level Break cards in your deck (Revise#218).",
+      "A4-01 0116: Penetrate while the character's Attack is 10 or more — Pack's Kiriko battle now sends 15 − 7 = 8 to the player (Revise#218).",
+      "Watchers on the target's battles, Attack −1 for both sides, “lost a character in battle this turn”, Protect from the Damage Piles and more — 1918, EX0185, EX0594, EX0600, EX0602, EP387, EP202, EXPR035, EX0467, EX0468 (Revise#217)."
+    ]
+  },
+  {
+    "v": "4.32",
+    "date": "2026-11-08",
+    "title": "More automatic cards",
+    "items": [
+      "Watchers on the target's battle damage and attack, “one of two skills” choice, targets from either pile, open hands for a while — EX0605, EX0613, EX0325, EX0474, EX0150 and more (Revise#216)."
+    ]
+  },
+  {
+    "v": "4.31",
+    "date": "2026-11-08",
+    "title": "The Player on the field, Player image, User → Target",
+    "items": [
+      "The Player sits at the bottom right of each field (the size of the Deck): its picture, skills and the effects on that player; click it for details, or to choose the player as a target (Revise#214).",
+      "Player image: 6 default pictures or your own upload (PC, iPhone / iPad, Android), above Game rules; the Game table explanation is in a “?” (Revise#214).",
+      "Resolve: a character's effect shows User → Target (the target's card, or the target player's picture) (Revise#214).",
+      "A3-18 2466 runs by itself; a skill given to a player (Charge 5) now counts (Revise#214).",
+      "More automatic cards: A3-11 1688 / 1658, PP271, PP090, EX0059, EP390, EP386, EX0342 (Revise#215)."
+    ]
+  },
+  {
+    "v": "4.30",
+    "date": "2026-11-08",
+    "title": "Search asked every time, Skip table in Game options, Deck Builder without card limits, 20 more automatic cards",
+    "items": [
+      "Search: a Search card in your hand is asked at the start of every Main Phase; A3-25 3723 takes 1 card instead of the whole draw (or draws as usual); cards chosen from a deck are always face up for the chooser (Revise#213).",
+      "Game Situation: Build now skips Effect too (Pack's table); a “Skip” table in Game options right before Outlaw when Game Situation is ON; every Game options explanation is in a “?” (Revise#212).",
+      "Deck Builder: no card limit — no 60-card cap and no 4-copies-per-name cap; 50–60 is shown as a guide only (Revise#211).",
+      "Choose 1 skill to negate, “milled from the deck → back to hand”, Permanents for one named character (both sentences), battle with a Controlled Character → back to hand (Revise#210).",
+      "Cost less per different faction, reveal a card to ignore the factor, targets chosen from the card being declared, Capacity ± discard / draw, “pay the cost from one character”, “can't attack you” and more (Revise#209)."
+    ]
+  },
+  {
+    "v": "4.29",
+    "date": "2026-11-08",
+    "title": "9 more automatic cards, cost window size, deck badges",
+    "items": [
+      "Cost window card size S / M / L; Charge / Draw badges at the top inside the deck.",
+      "持続 cards keep a no-duration change while they stay; “Active Phase only”, “no card used this turn”, “target is 「card name」”, “paid only from …” and more (Revise#208)."
+    ]
+  },
+  {
+    "v": "4.28",
+    "date": "2026-11-07",
+    "title": "13 more automatic cards, Game Situation row, Resolve button",
+    "items": [
+      "Initiative: a character kept by Bind (or any keep) still strikes back after the first strike.",
+      "Hold: Fast and Effect are separate switches.",
+      "Battle box: defender info from the top, “vs” on a yellow line; a skill given twice shows twice.",
+      "Game Situation sits under the option buttons; Attack / Guard and Fast / Effect are never skipped by a situation now.",
+      "The last pass a declaration waits for is a green “Resolve” button.",
+      "Choosing a target shows the card being declared.",
+      "Peek at your top card, each player returns a power card, ▼ draw / discard, “cost only from …”, Permanents that work only on their character with an ability, and more."
+    ]
+  },
+  {
+    "v": "4.27",
+    "date": "2026-11-07",
+    "title": "About 30 more automatic cards",
+    "items": [
+      "Solo (one deck) follows Hold / Game Situation; Game Situation is one coloured row (Build · Interfere · Conflict · Engage) at the top of Game options.",
+      "Control · Back has its own card size (S / M / L); the Size bar sits at the top right of your field.",
+      "Sort: by type first (every Draw character leftmost), then faction. Undo / Redo skip option changes.",
+      "Cost window keeps its scroll; “Attack +2” on a (1) character shows 2 (1); Game options “Flip down all power cards”; card details show one row per source.",
+      "Deck searches show the cards face up; the battle in Resolve shows each card with Name · Skill · Status beside it, battle skills highlighted.",
+      "Bind must be paid to survive mental damage; A3-19 2650 returns the Damage Pile card; Resolve shows steps for every declaration; the log has a colour per kind and “!” on warnings.",
+      "Game options: the Game Status box after 30 / 60 / 120 / 180 s.",
+      "Hold starts at a new default (Aggressive and Break / Permanent OFF) with a Default button. All ON / All OFF include Undo. Each switch explains itself under a “?”.",
+      "Options tab in three groups (Phase · Cost · Gameplay); Game Situation help under a “?”.",
+      "The head of each field shows every phase (the current one bright) and Fast / Project Timing.",
+      "Player options / Game options side bars close when you click outside them.",
+      "Designated characters chosen when a card is declared, name-level duels, swapping a Permanent with one from the hand, “free / no factor when …” for Project and Fast cards, N+X damage, and more."
+    ]
+  },
+  {
+    "v": "4.26",
+    "date": "2026-11-07",
+    "title": "About 50 more automatic cards",
+    "items": [
+      "Game table lobby: the game rules are big ON / OFF boxes above Solo / Online, each with a “?” explanation.",
+      "Next card without its factor, attack tax towards a player, Capacity −X, attack from a discarded character, called-off battles, and more.",
+      "“…場合、代わりに、…” lines, and “if this card's cost was paid only from “X””.",
+      "Name lists (“A”、“B”、“C”), cards that keep working after the turn ends, the works of the Extra Packs, and more Permanent abilities that only work on a named character."
+    ]
+  },
+  {
+    "v": "4.25",
+    "date": "2026-11-07",
+    "title": "9 more automatic cards",
+    "items": [
+      "Card-name groups (「冒険者」), “if a broken “X” is in your area” damage, end-the-turn Project cards, battle-opponent skill negation, a Break card from the Damage Pile when the target attacks.",
+      "Deck Builder templates: Setup starts with the main icon and main factor most common on your Main Break cards, sub icon None, sub factor Any.",
+      "Deck Builder templates: click a card picture (ⓘ) to open its details over the template; closing goes back to the template.",
+      "Resolve list: each label (Card, Cost → hand …) on its own row, its cards on the row below.",
+      "Charge X: A3-19 2656 gets its Charge X; the board shows skill values (“Charge 6”).",
+      "Card details: an “X” box — X = N now, and the characters / cards it counts."
+    ]
+  },
+  {
+    "v": "4.24",
+    "date": "2026-11-07",
+    "title": "About 40 more automatic cards (Saga 3 specials)",
+    "items": [
+      "Permanents made for one character, “if the target is “X””, Lyrical Nanoha series selectors and cost-backs, deck searches, and more."
+    ]
+  },
+  {
+    "v": "4.23",
+    "date": "2026-11-07",
+    "title": "Lethal Damage warning; coloured card menu and battle steps",
+    "items": [
+      "When an opponent's attack on you has Attack + your Draw ≥ your Deck, a small red “⚠ Lethal Damage” pop-up shows for 1 s, then fades. It never blocks a click.",
+      "Card menu: Effect pastel yellow, Attack pastel red, Guard pastel blue, Card details pastel green; an effect shows its whole line.",
+      "Resolve: the battle shows Attack › Guard › Response › Resolved in pastel red / blue / yellow / green.",
+      "Breakthrough given after an unbroken character guarded: the guard fails, no battle, the attacker's damage goes to the player.",
+      "A Permanent set at Fast timing waits in Resolve as a Fast card (Hold “Fast / Effect”).",
+      "⚑ Game options: Global Undo/Redo (any player may undo / redo any player's action), Game Situation and Outlaw.",
+      "Attack shows normal and mental apart: “44 (1)”. “+(N)” on Attack is mental Attack (Open-Finger Gloves and similar)."
+    ]
+  },
+  {
+    "v": "4.22",
+    "date": "2026-11-07",
+    "title": "Field effects and log in the card's words; Hold “Aggressive”",
+    "items": [
+      "Field effects: one row per effect — “Gain skill “Shield, Offensive, Defensive” to ≪all Dragoon and Dragoon♂ characters you control≫”.",
+      "Log: “Card” uses Effect “1: …” with the card's English text, instead of one “Effect:” line per change.",
+      "Hold: a new “Aggressive” switch for the ▼ attacks of the Active Phase, above “Attack / Guard” (now Main Phase battles only).",
+      "A Permanent card can be set only on a character with a free Permanent slot (one Permanent per character, more with Permanent +X)."
+    ]
+  },
+  {
+    "v": "4.21",
+    "date": "2026-11-07",
+    "title": "Special Area beside the Active Area; 5 more automatic cards",
+    "items": [
+      "The Special Area is now at the right end of the Active Area row.",
+      "Different-name / different-faction searches from the deck, and Keep choices paid from a deck (3510, 3543)."
+    ]
+  },
+  {
+    "v": "4.20",
+    "date": "2026-11-07",
+    "title": "10 more automatic cards",
+    "items": [
+      "Base mental Attack from a Permanent, Attack / Guard Costs raised by each owner's hand, “paid only from the target”, four separate choices in one card, a Project that comes back to the hand when you don't draw, cost-X Permanents from the deck, and more."
+    ]
+  },
+  {
+    "v": "4.19",
+    "date": "2026-11-07",
+    "title": "Player options side bar",
+    "items": [
+      "⚙ Player options opens a side bar at the right: one tab for the card size and Hold (or the Game Situation), one tab for the other options.",
+      "Log: “Save replay” sits at the right of the Log header; the Replay and Export .txt buttons are gone."
+    ]
+  },
+  {
+    "v": "4.18",
+    "date": "2026-11-07",
+    "title": "8 more automatic cards",
+    "items": [
+      "Power cards back to the decks, same-class Break searches, name-or-text returns from the Damage Pile, a Permanent that cancels the declarations aimed at its character, and more."
+    ]
+  },
+  {
+    "v": "4.17",
+    "date": "2026-11-07",
+    "title": "7 more automatic cards",
+    "items": [
+      "Abilities when you break a character with a named Break card of a faction, Permanents from the damage check onto your character, Ghost characters from the hand at the end of the Main Phase, Permanents protected from the Damage Pile."
+    ]
+  },
+  {
+    "v": "4.16",
+    "date": "2026-11-07",
+    "title": "About 10 more automatic cards",
+    "items": [
+      "Hand-limit trims, power cards back to the hand when a character leaves, faction power returns, “end your Main Phase”, multi-attacks for a turn, and more."
+    ]
+  },
+  {
+    "v": "4.15",
+    "date": "2026-11-07",
+    "title": "Cards that become characters",
+    "items": [
+      "Project cards that set themselves as a character (護法童子, 前鬼 / 後鬼, 式神阿式) and hand cards set as ミラーパネル now run by themselves."
+    ]
+  },
+  {
+    "v": "4.14",
+    "date": "2026-11-07",
+    "title": "About 12 more automatic cards",
+    "items": [
+      "Pay an Attack / Guard Cost with the top 2 cards of your Deck (button in the pay window), Permanents immune to effects, discounts per faction, battle-start power discards, and more."
+    ]
+  },
+  {
+    "v": "4.13",
+    "date": "2026-11-07",
+    "title": "Discount by hand cards · about 17 more automatic cards",
+    "items": [
+      "Cards whose factor and cost go down for each hand card discarded when declared: you choose the hand cards first.",
+      "More automatic cards: conditional Fast timing, chosen X, damage cut, guard without cost, Break with a class anywhere, and more."
+    ]
+  },
+  {
+    "v": "4.12",
+    "date": "2026-11-07",
+    "title": "About 10 more automatic cards",
+    "items": [
+      "A chosen stat (Mental / Attack / Defense), “discard one of its cards to keep it”, keeping a character against opponents' effects, attacking a class, and more."
+    ]
+  },
+  {
+    "v": "4.11",
+    "date": "2026-11-07",
+    "title": "About 24 more automatic cards",
+    "items": [
+      "Permanent / Project / Fast / Break cards of A3-07 … A3-25: Permanents that pay their character's Attack Cost, “discard this card to keep the target”, cards that go back to the hand when removed, one character of each faction, no opponent Break, and more."
+    ]
+  },
+  {
+    "v": "4.10",
+    "date": "2026-11-07",
+    "title": "Game Table: Game Situation — one shared Hold for the whole table",
+    "items": [
+      "Lobby → “Game Situation”: the room creator turns it on before creating the room.",
+      "Situations Building · Interfering · Conflicting · Engaging decide what everyone's Hold skips; anyone declares a new one, with a pop-up “[Player] declares [Situation]” for everyone.",
+      "Rest the cursor on a situation for 1 second to see what it skips. The Undo switch is in Player options."
+    ]
+  },
+  {
+    "v": "4.09",
+    "date": "2026-11-07",
+    "title": "Game Table: Hold by type · more automatic cards",
+    "items": [
+      "Hold is split into types: Attack / Guard, Project, Fast / Effect, Break / Permanent — each ON or OFF for you; the newest declaration decides which one applies. A separate Undo switch decides whether other players' undos wait for you.",
+      "The Hold button opens the switches (All ON / All OFF) and shows ON, OFF or 3/4.",
+      "About 10 more Permanent / Project / Fast cards run by themselves (area damage, attack cancels after a guard, chosen classes, Mental ↔ Defense swap)."
+    ]
+  },
+  {
+    "v": "4.08",
+    "date": "2026-11-07",
+    "title": "Deck Builder: red frame on cards the Game Table can't run by itself · more automatic cards",
+    "items": [
+      "Deck Builder: cards that are not automatic in the Game Table yet have a red frame (deck board and Search cards); the summary shows how many are in the deck.",
+      "About 16 more Permanent / Project / Fast cards run by themselves: hand discards at the declaration, “if … , …” sentences, “対象は…”, cost bans and cost destinations for one character, and more."
+    ]
+  },
+  {
+    "v": "4.07",
+    "date": "2026-11-07",
+    "title": "M3b … M3f: about 27 more Permanent / Project / Fast cards run by themselves",
+    "items": [
+      "Project / Fast cards that keep watching while they last: “if the target battles / deals damage, discard this card”, “characters that pay a cost are discarded”, “when a named Break card with this class is set, its owner …”.",
+      "When such a card is discarded, its lasting effect ends with it.",
+      "New pieces: “can't be kept on the field”, “gains every faction's factor X”, “each player draws as many as their Controlled Characters”, “discard 2 from your deck to return this card to your hand”, and more."
+    ]
+  },
+  {
+    "v": "4.06",
+    "date": "2026-11-07",
+    "title": "Optional abilities ask again · new mental damage rule · Fool text",
+    "items": [
+      "Optional abilities (“…可能”) ask Run / Skip in a pop-up. Player options → “Run optional abilities without asking” runs them at once.",
+      "Mental damage: at most the power → that many power cards are discarded; more → none are discarded and the character is defeated, unless it has Bind.",
+      "Outlaw → “Fool text”: A3-23 joke cards play their フールテキスト; real-world instructions are shown in the log.",
+      "About 40 more Permanent / Project / Fast cards of A3-06 … A3-25 run by themselves."
+    ]
+  },
+  {
+    "v": "4.05",
+    "date": "2026-11-07",
+    "title": "M3b … M3f: about 130 more Permanent / Project / Fast cards run by themselves",
+    "items": [
+      "Cards with modes: the hand menu offers each effect (\"Card — effect 1: …\"); the chosen one is played.",
+      "Cards usable as a Fast card with another factor (\"W4のファストカードとして使用宣言可能\").",
+      "Permanents that move to another character when theirs leaves, Permanents for a named character or a class, Damage Pile triggers, first-Break-of-the-turn triggers and more."
+    ]
+  },
+  {
+    "v": "4.04",
+    "date": "2026-11-07",
+    "title": "Game Table: abilities run at once, clearer Resolve screen, by-hand log highlight · Deck image columns",
+    "items": [
+      "Abilities run at once: no Run / Skip question, not on the Resolve list. One that needs a target asks in a pop-up; click the target on the field.",
+      "Battles: after the attack and the guard, every player may answer or pass in any order.",
+      "Resolve screen: buttons at the top, newest first, keeps its scroll; shows the card played, cost cards going back to the hand, and the attacker / guard pictures with Status and Skills. \"Last battle\" removed.",
+      "Pop-ups: Undo Agree / Refuse, abilities and Changing Target (old target left, new targets right). Pay screen on the right side.",
+      "Project / Fast cards show on the character they target. Power cards: pastel yellow section; Permanents: pastel light blue.",
+      "Click a player's field header to look at their hand (cards open to you by effects such as A3-17 2325).",
+      "Log: lines done by hand have a pastel orange highlight; the .txt export marks them with ✋. Cost back to the hand by Offensive / Defensive / Infinity is shown face down.",
+      "Fix: A3-05 0722 looked at hands again when a Permanent was set on the character.",
+      "Fix: \"all its skills are negated\" (A3-20 2696 …) now also removes skills granted afterwards and the Initiative of the cards under it.",
+      "Deck Builder → Export → Image: the board's columns and order (Character · main factor / other, Break, Fast, Project, Permanent).",
+      "6 more Permanent / Project / Fast cards of A3-01 … A3-05 run by themselves."
+    ]
+  },
+  {
+    "v": "4.03",
+    "date": "2026-11-07",
+    "title": "M2g complete · English ability and target explanations",
+    "items": [
+      "Saga 3 special sets: the last 27 Break cards now run by themselves — M2g is complete.",
+      "Cards used as a Fast card from the hand, forced battles and guards, token raids, damage-replacement prompts, Install Permanents and more.",
+      "Card List and Table card details: Abilities, Targets and Conditions are shown in English (Japanese as the tooltip)."
+    ]
+  },
+  {
+    "v": "4.02",
+    "date": "2026-11-06",
+    "title": "Replay",
+    "items": [
+      "Log → Replay: watch the game again from the start, 0.5× – 3× speed, step back / forward, jump with the slider, choose whose side to see.",
+      "Log → Save replay (.json) and Lobby → Open a replay file.",
+      "Replay log: the in-game log lines in their own window, up to the current step."
+    ]
+  },
+  {
+    "v": "4.01",
+    "date": "2026-11-06",
+    "title": "M3a: about 95 Permanent / Project / Fast cards of A3-01 … A3-05 run by themselves",
+    "items": [
+      "Permanent, Project and Fast cards of A3-01 … A3-05: 95 of 130 cards that needed hands now run by themselves (35 left).",
+      "Permanent abilities work for the character they are set on; more turn-ending, cost-routing, declaration-ban and damage rules."
+    ]
+  },
+  {
+    "v": "4.00",
+    "date": "2026-11-06",
+    "title": "M2g: about 165 more special-set Break cards run by themselves",
+    "items": [
+      "Saga 3 special sets (EP, EX01 – EX05, EXPP, EXPR, PP, PR, SIGN): 258 of 285 Break cards with rules text now run by themselves; 27 are left by hand for now (Q#63).",
+      "A3-PR personality promos (PR326 – PR329) play as the card they name.",
+      "New rules support: extra phases, once-per-turn effects, damage taken for another character or for you, negate the next damage, name-a-type guesses and more."
+    ]
+  },
+  {
+    "v": "3.99",
+    "date": "2026-11-06",
+    "title": "Export Log as .txt; ザラーム (Q#60); M2g: about 95 more special-set Break cards",
+    "items": [
+      "Game Table: the Log has an Export .txt button — the whole log as a text file.",
+      "A3-25 3756 ザラーム runs by itself (Q#60): its extra turn blocks cards from hands and lets only Named characters with power ≥ its power pay costs. M2f is complete.",
+      "About 95 more Break cards of the Saga 3 special sets (EP, EX, PR, PP …) run by themselves."
+    ]
+  },
+  {
+    "v": "3.98",
+    "date": "2026-11-06",
+    "title": "Fix: 2385 ソフィー・ラスタバン gives +2/+2/+2 to the characters it makes Dragoon♂",
+    "items": [
+      "A class given by an ability now counts for the bonuses that look at that class at once."
+    ]
+  },
+  {
+    "v": "3.97",
+    "date": "2026-11-06",
+    "title": "Deck Builder: 2 Character columns, search pop-up, automatic order; Game Table: Outlaw options, Pick from deck",
+    "items": [
+      "Deck Builder: Character cards in two columns (main factor / other factors), Search opens as a pop-up like the Card List, and Character / Break cards are arranged automatically.",
+      "Game Table: Player options → Outlaw (Flip-up Discard Pile, Flip-up all Power Card), shown in red in the log.",
+      "Game Table: By hand → Pick card from deck (numbered from the top) to your hand, Damage Pile or Discard Pile.",
+      "Q#56 – Q#59 cards (3394, 3461, 3537, 3616) run by themselves."
+    ]
+  },
+  {
+    "v": "3.96",
+    "date": "2026-11-06",
+    "title": "Card size: a 6-level bar",
+    "items": [
+      "The S / M / L buttons are now a slider with 6 levels: Lv 1 = the old S, Lv 4 = the old M, Lv 6 = the old L, the others in between."
+    ]
+  },
+  {
+    "v": "3.95",
+    "date": "2026-11-06",
+    "title": "M2e done; M2f: all but 5 cards (Q#56 – Q#60)",
+    "items": [
+      "About 110 more A3-21 … A3-25 Break cards run by themselves (area damage, token Permanents, extra costs, draw changes, partner Break cards and more).",
+      "A3-02 0233, 0373 and 0390 run by themselves too.",
+      "5 cards wait for answers: 3394, 3461, 3537, 3616 (second half) and 3756."
+    ]
+  },
+  {
+    "v": "3.94",
+    "date": "2026-11-06",
+    "title": "Game Status, Pass All, the Kicking Tiger freeze fixed, M2e batches 5–6",
+    "items": [
+      "Fix: after running a triggered ability with a target (e.g. Kicking Tiger), Pass did nothing — the game looked stuck. It resolves again.",
+      "Game Status: after 30 s with no action, a box shows what the game is waiting for, with Copy log (to send us) and Skip (moves the game one step on, logged, can be undone).",
+      "Pass All on the Resolve list: passes on every item now on it.",
+      "About 30 more A3-21 … A3-25 Break cards run by themselves (3759, 3116, 3688, 3121, 3228, 3646 and more)."
+    ]
+  },
+  {
+    "v": "3.93",
+    "date": "2026-11-06",
+    "title": "Q#55 cards: A3-16 … A3-20 Break cards all automatic",
+    "items": [
+      "2199, 2253, 楊戩, 2279, ジリアン, フェンリル, 2418, 2721, 2865 and 2867 run by themselves.",
+      "Fix: バロール's target change and メイ・ウォーデン's hand-to-deck now run their own rules."
+    ]
+  },
+  {
+    "v": "3.92",
+    "date": "2026-11-06",
+    "title": "M2e batch 4: 26 more A3-21 … A3-25 Break cards",
+    "items": [
+      "The faction hand hits of A3-25, guard taxes, power-0 discards, Android keeps and more."
+    ]
+  },
+  {
+    "v": "3.91",
+    "date": "2026-11-06",
+    "title": "M2e batch 3: 22 more A3-21 … A3-25 Break cards",
+    "items": [
+      "Faction recall effects, draw doubling, attack bans for mental attackers, E.G.O. cost / factor cuts, deck peeks and more."
+    ]
+  },
+  {
+    "v": "3.90",
+    "date": "2026-11-06",
+    "title": "M2e batch 2: 21 more A3-21 … A3-25 Break cards",
+    "items": [
+      "Each-player searches, hand / character limits of 2974, bonuses with a broken named character, battle bonuses and more."
+    ]
+  },
+  {
+    "v": "3.89",
+    "date": "2026-11-06",
+    "title": "Q#46 – Q#54 cards",
+    "items": [
+      "2448 turns off pile texts, テミス, バロール, 2521 copies a card, 2686 names face-down cards, 人形使い, メルキオール and メアリー・ピュア run by themselves."
+    ]
+  },
+  {
+    "v": "3.88",
+    "date": "2026-11-06",
+    "title": "Several attacks at once (Q#43) and Q#44 / Q#45 / Q#53",
+    "items": [
+      "Attackers are declared together and resolved one by one, with a “Several attacks” screen; each character guards only once.",
+      "Targeting 2250 costs more, 2540 hits three times, 2794 discards a Break card from the hand."
+    ]
+  },
+  {
+    "v": "3.87",
+    "date": "2026-11-06",
+    "title": "M2e begins: A3-21 … A3-25 Break cards",
+    "items": [
+      "13 Break cards of A3-21 … A3-25 run by themselves, and single lines of many more."
+    ]
+  },
+  {
+    "v": "3.86",
+    "date": "2026-11-06",
+    "title": "M2d batch 6: 18 more Break cards; Q#43 – Q#55",
+    "items": [
+      "Cards that power up with a card below them, 迦陵頻伽 as a character, 芦屋道満's token, Bind paid from the hand and more.",
+      "Questions Q#43 – Q#55 for the last A3-16 … A3-20 cards."
+    ]
+  },
+  {
+    "v": "3.85",
+    "date": "2026-11-06",
+    "title": "Synchro join fixed; Q#38 – Q#42 cards; M2d batch 5",
+    "items": [
+      "Fix: a Synchro character can join a battle again (1562 from the Damage Pile works).",
+      "ソラ・エニシダ, ォミーシス, G-ブレイブカイザー, エラキス and クレア・コラプサー run by themselves (Q#38 – Q#42) — every A3-11 … A3-15 Break card is automatic now.",
+      "17 more A3-16 … A3-20 Break cards."
+    ]
+  },
+  {
+    "v": "3.84",
+    "date": "2026-11-06",
+    "title": "M2d batch 4: 31 more Break cards",
+    "items": [
+      "マッツィヤ names a banned card each turn, 水樹鏡花 bans cheap Project / Fast cards, ギイェルミナ and モンスターハウス play from the Damage Pile, トライアロイド tokens, redraws, and more."
+    ]
+  },
+  {
+    "v": "3.83",
+    "date": "2026-11-06",
+    "title": "M2d batch 3: 35 more Break cards",
+    "items": [
+      "Group bonuses, same-name fast break at power = Mental, 女神, damage picks and guard tax for A3-19 / A3-20 Break cards."
+    ]
+  },
+  {
+    "v": "3.82",
+    "date": "2026-11-06",
+    "title": "M2d batch 2: 9 more Break cards",
+    "items": [
+      "一色真純, 夜羽子, レイナ, ノイベルシュタイン and 2276 run by themselves."
+    ]
+  },
+  {
+    "v": "3.81",
+    "date": "2026-11-06",
+    "title": "M2d batch 1: 40 Break cards of A3-16 … A3-20",
+    "items": [
+      "Damage caps and cuts, fast Break cards, faction-wide factor, keep effects, battle-end discards and more."
+    ]
+  },
+  {
+    "v": "3.80",
+    "date": "2026-11-06",
+    "title": "M2c batch 3: 40 more Break cards",
+    "items": [
+      "Pay by discarding characters or hand cards; fast-timing Permanents; draw peeking; and 30+ more A3-11 … A3-15 Break cards.",
+      "Questions Q#38 – Q#42 for the last 12."
+    ]
+  },
+  {
+    "v": "3.79",
+    "date": "2026-11-06",
+    "title": "M2c batch 2: 21 more Break cards",
+    "items": [
+      "三重野まどか, レックス, 伊雑あざか, Talent double attack, Damage Pile text off, ヘルマ, ケイト, 流菜, リーナ・スピカ, ノーラン (takes damage for allies) and more."
+    ]
+  },
+  {
+    "v": "3.78",
+    "date": "2026-11-06",
+    "title": "A3-06 … A3-10 Break cards: all automatic",
+    "items": [
+      "1053 picks from the matching cards; 1127 / 1143 “Name a card” (cards of this match + Other name); 1515 sets the cost as the face-down Permanent “糸”."
+    ]
+  },
+  {
+    "v": "3.77",
+    "date": "2026-11-06",
+    "title": "M2c batch 1: A3-11 … A3-15 Break cards begin",
+    "items": [
+      "10 Break cards of A3-11 … A3-15 run by themselves: 1683, 優鉢羅, オジマンディアス, 2019, ニーズヘッグ, トラロック."
+    ]
+  },
+  {
+    "v": "3.76",
+    "date": "2026-11-06",
+    "title": "M2b batch 6: almost every A3-06 … A3-10 Break card runs by itself",
+    "items": [
+      "リムノレイア guards by itself; 真理亜・ファウスト, グレース・ディアディム and シルヴァ bring Break cards back from your piles as characters.",
+      "Only 4 cards of A3-06 … A3-10 are still partly by hand (1053, 1127, 1143, 1515)."
+    ]
+  },
+  {
+    "v": "3.75",
+    "date": "2026-11-06",
+    "title": "M2b batch 5: 11 more Break cards",
+    "items": [
+      "クロス・フレイム / なつき / ふぶき, モイライ (ends your turn), ミナ・アグリッパ, 百式“改” (takes targets), 喜多村みかる, カッサンドラ (turned-over decks show their top card), 皆川麗夢."
+    ]
+  },
+  {
+    "v": "3.74",
+    "date": "2026-11-06",
+    "title": "M2b batch 4: extra phases and 14 more Break cards",
+    "items": [
+      "ノルニル: extra Draw / Discard / Active / Main Phases (1129, 1549).",
+      "タミ, 鹿島栞, 飛, モルガン・ル・フェイ, シルマリル, 外園今日子 run by themselves."
+    ]
+  },
+  {
+    "v": "3.73",
+    "date": "2026-11-06",
+    "title": "M2b batches 2–3: 37 more Break cards",
+    "items": [
+      "Effects that make a character attack or take over an attack / guard (1230, 0980, 1444, 1562 …).",
+      "Pay an Attack / Guard Cost with a hand card or a Permanent instead (0944, 0920, 1218 …) — shown under “Or instead” in the pay window.",
+      "Damage Pile name bans (1091 …), K-100, ラファエル, 須藤りのん.",
+      "Batch 3: ラツィエル, one-character payments (0932), ヒルダ, 服部忍, 大海, クララ, キャッツアイ, スフィンクス, モリーアン."
+    ]
+  },
+  {
+    "v": "3.72",
+    "date": "2026-11-05",
+    "title": "Stuck log, Take control on player tabs, hand at Size M",
+    "items": [
+      "Stuck log: after 30 s with no action, a ⚡ button at the top right of the hand shows what the game is waiting for.",
+      "Take control is on each player's tab: dimmed for 30 s, then one press by a watcher or a player; the time restarts after it.",
+      "At Size M the hand shows 8 cards in one row, centred over the table.",
+      "A3-25 3757 / 3770 copy gained skills too (checked with a test). Nozomi's look-only hand closes with OK."
+    ]
+  },
+  {
+    "v": "3.71",
+    "date": "2026-11-05",
+    "title": "M2b batch 1, hand and cost pop-up fixes",
+    "items": [
+      "16 more Break cards of A3-06 … A3-10 run by themselves (ガルム, セギヌス, 女媧, かぐや姫, ヨフィエル …).",
+      "Hand: room for 8 cards at Size M, centred cards, icon-only Fold / Expand at the top right.",
+      "Discard Pile: sleeve in a bold grey frame. Cost back to an opponent's hand: a pop-up shows the cards.",
+      "Sort: faction first. A3-25 3770 copies gained skills too. A look-only hand now closes online."
+    ]
+  },
+  {
+    "v": "3.70",
+    "date": "2026-11-05",
+    "title": "Implemented mark and turn order pop-up",
+    "items": [
+      "Card details show “Implemented” (blue frame) or “Not implemented” (red frame) beside Rules.",
+      "When the game starts, a pop-up shows the turn order with animated arrows; your seat is marked with a star. It shows for 3 s and fades for 1 s."
+    ]
+  },
+  {
+    "v": "3.69",
+    "date": "2026-11-05",
+    "title": "Pack's Deck 1: every card runs by itself",
+    "items": [
+      "3757 / 3770 copy an opponent character's Break skills; 2477 is free against an Eraser.",
+      "PP279 can be played from the Damage Pile; 0742 ends Lasting effects; 3764 needs no factor and is discarded on attack.",
+      "討伐令 (2481): your attacks discard a named-level character of the attacked player, and non-named guards pay 1 more Guard Cost against Polestar Empire named-level attackers."
+    ]
+  },
+  {
+    "v": "3.68",
+    "date": "2026-11-05",
+    "title": "Deck Builder templates: picked cards stay in place",
+    "items": [
+      "Cards you pick on a template page no longer jump to the top; only cards picked before you opened the page are listed first."
+    ]
+  },
+  {
+    "v": "3.67",
+    "date": "2026-11-05",
+    "title": "Game Table: English in boxes and the log",
+    "items": [
+      "Abilities, by-hand steps and effects show their English text; personal names to choose show in English."
+    ]
+  },
+  {
+    "v": "3.66",
+    "date": "2026-11-05",
+    "title": "Game Table: expandable hand",
+    "items": [
+      "Hand: ⤢ Expand shows every card at once.",
+      "The hand no longer jumps back to the left when you pick cards for the Charge window."
+    ]
+  },
+  {
+    "v": "3.65",
+    "date": "2026-11-05",
+    "title": "Game Table: no name under the card",
+    "items": [
+      "Cards show only their picture; the name appears only when the picture can't load."
+    ]
+  },
+  {
+    "v": "3.64",
+    "date": "2026-11-05",
+    "title": "M2b: tokens · Permanent skills",
+    "items": [
+      "Characters made from an effect's cost (アストラル, コウモリ, 炎, フレイム, 死霊, 式神, 光弾) now appear on the field by themselves.",
+      "Fix: the skills of a Permanent now belong to its character and are shown on it."
+    ]
+  },
+  {
+    "v": "3.63",
+    "date": "2026-11-05",
+    "title": "M2a cards · drag and drop",
+    "items": [
+      "7 more Break cards of A3-01 … A3-05 run by themselves.",
+      "Game Table: drag a character and drop it — one move, no extra click."
+    ]
+  },
+  {
+    "v": "3.62",
+    "date": "2026-11-05",
+    "title": "Online: Take control",
+    "items": [
+      "A watcher can take the seat of a player who gave no command for 30 seconds; the first one wins, the next one must wait 30 seconds again."
+    ]
+  },
+  {
+    "v": "3.61",
+    "date": "2026-11-05",
+    "title": "Game Table: By hand power cards",
+    "items": [
+      "Charge from the deck: choose how many (1 to Mental).",
+      "Move power cards: choose them in a box and move them all at once."
+    ]
+  },
+  {
+    "v": "3.60",
+    "date": "2026-11-05",
+    "title": "Pack's deck Sekhmet · Game ID during the game",
+    "items": [
+      "Every card of the Sekhmet deck runs by itself.",
+      "Game Table: the Game ID and the invite link stay at the bottom of the side panel during the game."
+    ]
+  },
+  {
+    "v": "3.59",
+    "date": "2026-11-05",
+    "title": "Game Table: By hand on hidden cards · card sizes",
+    "items": [
+      "Clicking a face-down card of yours (a power card from the deck …) now offers By hand.",
+      "Card sizes: S = the old M, M = twice as large, L = the real card size."
+    ]
+  },
+  {
+    "v": "3.58",
+    "date": "2026-11-05",
+    "title": "Hold OFF · visible costs · character details",
+    "items": [
+      "Hold OFF: no Pass step for that player (the turn player too).",
+      "Paid costs stay visible to everyone as cards until the declaration resolves; the log names them.",
+      "Field: a character's details are to the right of its card, inside one highlight box."
+    ]
+  },
+  {
+    "v": "3.57",
+    "date": "2026-11-05",
+    "title": "Pack's decks · battles · timing · undo agreement · hidden piles",
+    "items": [
+      "Every card of the Iaris-Kuro, Edyaeas-Kuro and Tiamat-Kuro decks runs by itself.",
+      "\"When this character battles\" counts only in a real battle (not an unguarded attack on a player).",
+      "Fast cards and effects: any player, any time in the Active and Main Phase.",
+      "Table setting \"Responses together\"; Hold OFF players are not waited for but may still answer.",
+      "Undo needs the agreement of the other players with Hold ON.",
+      "Power cards are face down for the other players; the Discard Pile is face down for everyone."
+    ]
+  },
+  {
+    "v": "3.56",
+    "date": "2026-11-05",
+    "title": "Cards: Break cards A3-11 … A3-15 — card by card",
+    "items": [
+      "102 more Break cards run by themselves (2,116 now): battle-only bonuses for groups of characters, cost increases, kills that send cards to the Damage Pile, Boost attacks and more.",
+      "Still by hand: M2a 12, M2b 103, M2c 89."
+    ]
+  },
+  {
+    "v": "3.55",
+    "date": "2026-11-05",
+    "title": "Cards: Break cards A3-06 … A3-10 — card by card",
+    "items": [
+      "111 more Break cards run by themselves (2,014 now): more attack / guard abilities, damage rules, cost and factor rules, deck order choices.",
+      "Still by hand: M2a 12, M2b 103, M2c 156."
+    ]
+  },
+  {
+    "v": "3.54",
+    "date": "2026-11-05",
+    "title": "Cards: Break cards A3-01 … A3-15 — card by card",
+    "items": [
+      "183 more Break cards run by themselves (1,903 now): attacks that hit a player, effects when a guard is declared, forced guards, attacking characters, looking at hands, faction party damage, many new character / player / cost rules.",
+      "M2a (A3-01 … A3-05): 12 Break cards still by hand."
+    ]
+  },
+  {
+    "v": "3.53",
+    "date": "2026-11-05",
+    "title": "Cards: Break cards A3-01 … A3-15 — shared rules",
+    "items": [
+      "77 more Break cards run by themselves (faction-specific immunity, cost back to hand rules, Draw / Capacity for players, end-of-turn power, X defined anywhere on the card)."
+    ]
+  },
+  {
+    "v": "3.52",
+    "date": "2026-11-05",
+    "title": "Cards: Break cards — M2a continued",
+    "items": [
+      "A few more Break cards run by themselves (cancel a weak guard / attack, damage to whoever paid a Fast or effect cost, damage equal to the cost paid)."
+    ]
+  },
+  {
+    "v": "3.51",
+    "date": "2026-11-05",
+    "title": "Cards: Break cards — M2a continued",
+    "items": [
+      "32 more Break cards (and a few Permanents) run by themselves: battle bonuses per the opponent's power, “can't attack / guard at power 0”, cancel a weak battle opponent's attack or guard, hand card as power when guarding, cost to the deck top, choose a class icon.",
+      "The banner now fills the full page width (same height; the top and bottom of the picture are trimmed).",
+      "The banner is sharper: upscaled 4× with an AI image model (EDSR) from Pack's image, shown at up to 2,800 px wide.",
+      "Home: “How to use” starts with learning the rules; Changelog is a small button at the right of the tabs."
+    ]
+  },
+  {
+    "v": "3.50",
+    "date": "2026-11-05",
+    "title": "Cards: Break cards — more shared rules",
+    "items": [
+      "19 more Break cards (and some Permanents / Fast cards) run by themselves: skills with X on the next line, end-of-phase abilities, ignore-name breaks, factor reduced by your Damage Pile."
+    ]
+  },
+  {
+    "v": "3.49",
+    "date": "2026-11-05",
+    "title": "Fix: By hand during a choice; PR346; 宇 = Eraser",
+    "items": [
+      "Fixed: using By hand while a choice was open (e.g. putting a hand card on the deck during the Discard Phase) ended the phase and could make you lose. The phase now waits, and the discard choice is asked again with your hand as it is.",
+      "A3-PR PR346: the Permanent is set for free (Pack). 宇 is read as the Eraser mark (Pack)."
+    ]
+  },
+  {
+    "v": "3.48",
+    "date": "2026-11-05",
+    "title": "Cards: Break cards — first shared rules",
+    "items": [
+      "50 more Break cards run by themselves (damage “ただちに” when guarded, “…にガードされない”, cost back to hand rules, X counted from the field)."
+    ]
+  },
+  {
+    "v": "3.47",
+    "date": "2026-11-05",
+    "title": "Cards: M1c — Saga 4 Characters; By hand “Move to” by clicking",
+    "items": [
+      "97 more Character cards of Saga 4 run by themselves (tags like 武蔵, “あなたがEEEを満たしている場合”, “先攻でない場合” …). 7 rare ones stay ✋ by hand.",
+      "By hand: “Move to: Break / Permanent / Power card”, then click the character on the field (shown in blue).",
+      "Player option renamed “Auto Pay after Cost Selection”."
+    ]
+  },
+  {
+    "v": "3.46",
+    "date": "2026-11-05",
+    "title": "Cards: M1b — Saga 3 special Characters",
+    "items": [
+      "23 more Character cards (Best Selection 2, Extra Packs, the Nanoha sets, promos …) now run by themselves on the Game Table. 2 stay ✋ by hand until Pack answers Q#36 / Q#37."
+    ]
+  },
+  {
+    "v": "3.45",
+    "date": "2026-11-05",
+    "title": "Game Table: Player options, charge helpers, effects end with their character",
+    "items": [
+      "⚙ Player options menu: Auto-skip and Auto-pay moved in; new “Auto Pay after Cost Selection” (also a switch in the cost window), “Pick Max Charge” and “Charge exceeds Draw” (both OFF at first).",
+      "Pick Max Charge: one click on your Deck in the Charge Phase picks as many deck charges as you may, keeping Deck ≥ Draw (or down to 0 with Charge exceeds Draw). Without it, a charge that would take the Deck below Draw asks “Deck <= Draw. Will you continue to charge?” — Charge (red) or Stop (green, turns Charge exceeds Draw ON).",
+      "A lasting result of a character's effect (until the end of the turn / Main Phase …) ends when that character leaves the field.",
+      "Changing a target (e.g. A3-15 オルタレイション・マジック): the choice lists the new targets by name, and the log names the new target."
+    ]
+  },
+  {
+    "v": "3.44",
+    "date": "2026-11-05",
+    "title": "Game Table: Control Front in three sections; Sort button",
+    "items": [
+      "Control · Front is shown in three sections — Left (cards lined up to the right), Centre, Right (lined up to the left). For the rules it is still one Control Front; drag a character into the section you want.",
+      "A small ↑↓ Sort button on each Control section of your board (with 2 or more characters): Draw X characters (highest Draw first) → characters whose effect cost returns to the hand → other Charge characters → the rest → Break-cost return characters; inside each group Mental high → low.",
+      "Rest the pointer on the Sort button for 1 second (or hold it for 1 second on a touch screen) to see how it sorts."
+    ]
+  },
+  {
+    "v": "3.43",
+    "date": "2026-11-05",
+    "title": "Name filter and Basic Decks",
+    "items": [
+      "Card List / Deck Builder search: new filter “Name: Yes / No” — cards with a personal name in “…” (name-level cards) or without, with counts.",
+      "Deck Builder → Template: four ready-made decks at the bottom — Basic Deck #1 Astarte, #2 Dina, #3 Iaris, #4 Mayumi (60 cards each). Choose one, then the deck slot; a slot that already holds a deck asks first (OK replaces it, Cancel changes nothing)."
+    ]
+  },
+  {
+    "v": "3.42",
+    "date": "2026-11-05",
+    "title": "New name, Home page and new tabs",
+    "items": [
+      "The site is now called “Aquarian Age Thailand Fan-site” (アクエリアンエイジ タイ ファンサイト): browser tab, Home page, Game Table, home-screen icon name, deck exports.",
+      "New banner (アクエリアンエイジ ファンサイト), half the height of the old one, fading into the starry background.",
+      "New Home page: what this site is for and how to use each part, with a button to open each one. Opening the site without a #tab shows it.",
+      "Each tab has an icon: Home (a card-art picture), Card List (the card back), Rulebook (a book), Deck Builder (a card pile), Game Table (a chess pawn), Changelog (a scroll).",
+      "Tabs are now Home · Card List · Rulebook · Deck Builder · Game Table · Changelog — no numbers, each in a light-blue frame.",
+      "Removed the old Solo Test and Play Online tabs (and the Discussions placeholder): the Game Table does both. Old Play Online links open the Game Table."
+    ]
+  },
+  {
+    "v": "3.41",
+    "date": "2026-11-05",
+    "title": "Game Table v4: every Saga 3 Character (A3-01 … A3-25) is automatic",
+    "items": [
+      "Milestone M1a: the last 132 Character cards of A3-01 … A3-25 that were “✋ do by hand” now run by themselves (and 39 more Characters of later series).",
+      "Some Character cards can be declared as a Break card (“Declare … as a Break card” in the hand menu); some characters can be broken by any Break card, or at fast timing.",
+      "New: abilities that look back when a character is broken or lost in a battle; battle abilities that negate the opponent's skills; Bind X / Draw −X worked out from the card text.",
+      "A lower Permanent limit (e.g. “Permanent −1” in a battle) now makes the owner discard permanents down to the limit — or send them to the hand, deck, Damage Pile or another character when a rule says so (also as a field effect by hand).",
+      "Requirements: a new “Card milestones” sheet shows every milestone with the cards still to do, and a series × card type grid, to choose what comes next."
+    ]
+  },
+  {
+    "v": "3.40",
+    "date": "2026-11-05",
+    "title": "Game Table v4: online rooms work; resolution rules; drag-and-drop",
+    "items": [
+      "Online rooms now reach the database (each entry carries the field the database rules ask for) — create on one device, join on another.",
+      "A declaration whose character left the Control Area fails when it resolves; “cost back to hand” returns the cost only after it resolves; a cancelled guard lets the attack hit its target.",
+      "Drag characters within the Control Area; permanents shown as cards; more By hand tools (skills, ±stats, charge from deck, move power cards, damage X(X)).",
+      "Solo: Deck 1 / Deck 2 with Player 1 / Player 2; faction choices in a fixed order with their marks and colours; a tab icon."
+    ]
+  },
+  {
+    "v": "3.39",
+    "date": "2026-11-04",
+    "title": "Game Table v4: Pack's decks fully automatic",
+    "items": [
+      "Every card of the Astarte, Dina, Iaris and Mayumi decks now runs by itself on the v4 table — no more “✋ do by hand” for them.",
+      "Shield only stops damage outside battles; cost X is either set by the card text or chosen by paying; the phase is shown first and in colour.",
+      "Fixed: abilities that boost “your Controlled Characters” (or another group) boosted every character on the table.",
+      "Online: joining from a device with no saved decks now says so (it used to make you a silent spectator); you can paste a deck list in the lobby instead. Power cards above Mental are discarded after effects resolve (pick them on the board)."
+    ]
+  },
+  {
+    "v": "3.38",
+    "date": "2026-11-04",
+    "title": "Game Table v4: charging, structure, pay pop-up",
+    "items": [
+      "Charge window as in v3: pick hand cards and Deck cards, then click the characters. Every hand card can be charged; from the Deck up to the Charge total (⚡ on the Deck). Hand power cards face up, Deck ones face down, shown as small cards.",
+      "Break cards need their factor to be declared and when they resolve. Paying a cost: no choice when it is all the power cards there are; otherwise a pop-up.",
+      "Stacked cards: Break cards on a character and the faction party in the Active Area peek out to the top right; click a character for the whole structure. Click the Damage / Discard Pile to see it.",
+      "Auto-skip for phases with nothing to do, Undo / Redo at the top, By hand as a drop-down list, English card names and battle details in the log."
+    ]
+  },
+  {
+    "v": "3.37",
+    "date": "2026-11-04",
+    "title": "Game Table (v4) on the main site",
+    "items": [
+      "New tab <b>8. Game Table v4</b>: the new table built on the v4 rules engine — Solo with one or two decks, Online rooms for 2–4 players, test rooms on this computer. It uses your Deck Builder slots.",
+      "Rules handled by the table: phases, declarations with pay → target → Resolve list, strict priority, battles with every skill, Keep / Let it go, triggered abilities, the Event System pop-ups and the field effects. Card text it can't read yet is shown as “✋ do by hand”.",
+      "Solo Test (6) and Play Online (7) are unchanged and stay until the new table can do everything they do.",
+      "New page <b>coverage.html</b> (link in the table's lobby): which cards and which lines the new table runs by itself, with search and filters. More card text is read automatically now: about 1,080 effect lines and 2,218 of 2,521 Characters."
+    ]
+  },
+  {
+    "v": "3.36",
+    "date": "2026-11-03",
+    "title": "Phone layout for the table",
+    "items": [
+      "Phones and narrow screens (≤ 900 px): the table is one column — the field uses the full width, then Field effects · Resolve box · controls (phase, Undo / Redo, Next) · log below it. Before, the control column sat beside the field and squeezed it to a thin strip.",
+      "Phones (≤ 600 px): rows are only as tall as their cards; Damage / Deck / Discard sit in one row under your areas (above the opponent's); empty faction slots are short; the Project / Fast box goes under the Control area (Front).",
+      "The hand panel is docked to the bottom edge of the screen, full width, and the cards scroll sideways (Fold hides it)."
+    ]
+  },
+  {
+    "v": "3.35",
+    "date": "2026-11-03",
+    "title": "Break restrictions · character-or-player targets · Defense 0",
+    "items": [
+      "<b>Break restrictions written on the card</b> are followed (about 500 cards): 【“ィアーリス”のみブレイク可能】 = only on a character with that name (e.g. A3-01 0200 only on a “ィアーリス”; the icon exception can't be used). Also 【分類に関わらず、ダークロアのキャラクターをブレイク可能】 (no shared icon needed for those), 【ブレイクしている“X”のみ…】, 【“X”が場に存在する場合のみ…】, 【あなたの / 他のプレイヤーのテリトリーのキャラクターのみ…】, パワー0, ▼, 支配キャラクター … A wrong target says the rule in a toast.",
+      "Targets ≪キャラクターまたはプレイヤー1人≫ (e.g. the effect A3-17 2400 gains): choose first — click a player's <b>Deck</b> (running blue border) to target that player, or a <b>character</b> on the field.",
+      "Target conditions are checked when choosing and again on resolution: ≪ブレイクしていないキャラクター≫ no longer accepts a character with a Break card (or a Break card itself); also faction, area, icons, ▼, パワー0 …",
+      "<b>Defense ≤ 0 → defeated at once.</b> If the character has <b>Bind X</b> or a “捨て札になる場合、…で場に残す” ability, it waits in the Resolve box (red outline) and its owner chooses <i>Keep</i> (pays Bind / the written cost) or <i>Let it go</i>; Next / End wait for that. When the 0 comes only from this battle, keeping it works (it stays until the battle ends). When the 0 lasts (e.g. until end of turn), the cost can be paid but it is defeated anyway. Damage and “discard” effects use the same save step.",
+      "New timing “バトル終了時まで” (until end of battle) for stat changes.",
+      "Play Online: Firebase project “aqage-online-play” is set up, so Create / Join room works between two computers.",
+      "Fix: Play Online showed “Could not open the room: undefined” right after creating a room — the room is now opened normally. Moves are sent as plain JSON (Firebase refuses empty values), and a real error now says what went wrong (e.g. the database rules).",
+      "Play Online: choose which of your 10 deck slots to play with (Deck select in the lobby, like Solo Test). The choice is remembered; empty slots can't be chosen."
+    ]
+  },
+  {
+    "v": "3.34",
+    "date": "2026-11-02",
+    "title": "Target a card in the Resolve box · Cast prevention",
+    "items": [
+      "Effects that target a card being used (“使用した / 使用宣言中の … カード1枚”, e.g. A3-14 2058) open a pop-up listing the cards <b>declared before it in the Resolve box</b> (filtered by type and by whose: opponent's / yours). When the effect resolves, that card is taken out of the Resolve box without resolving and goes to its owner's hand, discard pile or deck as the text says (A3-10 1498 / 1506, A3-18 2480 / 2485, A3-22 3131, A3-EX EX0159 / EX0185, A4-EX EX905 …).",
+      "New field effect <b>Cast prevention</b>: “…この効果で手札に戻ったカードと同じ名称のカードを使用宣言することができない” records the returned card's name and which players are blocked, until end of main phase (or turn). It shows in the Field effects box as “Cast prevention: 「name」 – can't be declared by any player”; those cards in hand are no longer highlighted as playable and can't be declared. − ends it early.",
+      "Resolve box resolves <b>one at a time</b>: when everyone passes, only the latest declaration (top) resolves. The passes then reset, and everyone may respond again (Fast / effects) before the next one resolves."
+    ]
+  },
+  {
+    "v": "3.33",
+    "date": "2026-11-02",
+    "title": "Choose a faction",
+    "items": [
+      "Effects for “≪あなたの任意の勢力1つの…全て≫” (e.g. A3-01 0206 “Discard all characters of any 1 faction of your choice”) first open a pop-up to <b>choose the faction</b> (with the number of characters of each), then the card is declared and, when it resolves, works on every character of that faction. Works the same for “勢力パーティ1つ” (that faction's party in the Active area). “あなたの任意の…” is now read as “…of your choice” everywhere (it reaches every player's characters unless the text says whose)."
+    ]
+  },
+  {
+    "v": "3.32",
+    "date": "2026-11-02",
+    "title": "Event System (pick from discard / damage pile), template Charge order",
+    "items": [
+      "<b>Event System</b>: texts like A3-23 3359 “このカードがセットされた場合、≪プレイヤー全て≫は自分の捨て札置き場のカード1枚を手札に加える” and A3-09 1318 (a Student card from the damage pile and one from the discard pile) now open a <b>pop-up</b> for each player when the card resolves — the same card list as the discard / damage pile; choose the card(s), then <b>Select</b> to put them into your hand. The damage pile comes first, then the discard pile, as the text says; a pile with no matching card is skipped. The other player sees “Waiting for … to choose” in the Resolve box; Next / End turn wait until everyone has chosen.",
+      "Triggered abilities that must happen and need no choice (like 3359's) now happen at once when the card resolves, instead of waiting for Run.",
+      "Deck Builder templates, Charge steps: inside each icon group the order is Charge 2 → Charge 1 with “1：cost returns to hand” → Charge 1 with Shield → with Bind → with Synchro → other Charge 1."
+    ]
+  },
+  {
+    "v": "3.31",
+    "date": "2026-11-02",
+    "title": "Character menu sections, piles together, cost before resolve",
+    "items": [
+      "Clicking a character: the menu is split into coloured sections — <b>Attack</b> (pastel red), <b>Defense</b> (pastel blue: guard, battle with the attacker, damage), <b>Effect</b> (pastel yellow: card effects, Other effect with an adjustable number of power cards 1–6, stat changes, conditions) and <b>Control</b> (pastel green). Control has <b>Defeated in battle</b> (named Break cards → damage pile, the rest → discard pile), <b>Defeated outside battle</b> (everything → discard pile) and <b>Card details</b>. Move left / right / Front / Back were removed from the menu (drag the cards instead).",
+      "Damage / Deck / Discard sit together in one column at the right edge — at the bottom of your board, at the top of the opponent's.",
+      "<b>Cost first</b>: after paying a cost, the paid cards must be put somewhere (Cost window) before anything resolves or the battle goes on — the Resolve box says so and the Pass / Resolve button waits. When an effect itself says where its cost goes (“≪このエフェクトのコスト≫を手札に戻す”, “…をパワーカードとしてセット” …), that happens right away when it is declared."
+    ]
+  },
+  {
+    "v": "3.30",
+    "date": "2026-11-02",
+    "title": "Hold, hidden power cards, field effects in English, Cost return, Special",
+    "items": [
+      "<b>Field effects box</b>: simpler — who it reaches as icon / faction / name (e.g. “Scholar / Scholar ♂”), then only the stats that change (“+ Attack 2 / − Defense 1”), in English (card abilities use the card's English text). Click an effect to highlight its source card (or, for effects you added, the characters it reaches) with a running pastel-orange border; click again to clear.",
+      "Play Online: power cards set from the hand are seen <b>only by their owner</b> by default (the opponent sees the card back). The game rule can still make them open to both players.",
+      "The opponent now sees the power cards you paid as a cost (face up, in the Resolve box) until you choose where they go.",
+      "<b>Hold</b> (control box, both players, any time): Hold ON — both players must agree (pass) before anything resolves or the battle goes on; when both players have Hold OFF, the turn player alone may resolve. Default: ON.",
+      "<b>Cost returns to hand</b> (new effect type): 110 always-on abilities like A3-25 3680 “≪スカラー・スカラー♂のネームを持つブレイクカードのコスト≫は手札に戻る” now send the cost straight back to the hand when a matching card is played — for every card on the field, cost paid from this character, Break / Permanent cards set on this character, or the card itself.",
+      "<b>Special</b> (new type, written for one wording): A3-24 3459 — when a Scholar in a Control area attacks a player or guards a dominated character's attack, its owner may draw 1 (Run / Skip in the Resolve box).",
+      "“このキャラクター以外の…全て” abilities now reach the other characters (they were read as this character only)."
+    ]
+  },
+  {
+    "v": "3.29",
+    "date": "2026-11-02",
+    "title": "Attack more than once",
+    "items": [
+      "A character can attack <b>several times in one turn</b> — each attack pays its attack cost again (one attack is resolved at a time). It can also guard after attacking. A ⚔ badge on the card shows how many times it attacked this turn (cleared at the start of its owner's next turn); cards are no longer turned sideways.",
+      "Control area (Back) now uses the same card size as the Front row and grows the same way (more cards wrap onto more lines; the three areas keep equal height)."
+    ]
+  },
+  {
+    "v": "3.28",
+    "date": "2026-11-02",
+    "title": "Resolve Box: declarations and responses",
+    "items": [
+      "The Battle box is now the <b>Resolve Box</b>. Break, Fast and Project cards and effects are first <b>declared</b> (cost paid, the card waits in the box) instead of working at once. Every player may respond with a Fast card or an effect (it goes on top) or press <b>No response (pass)</b>. When everyone has passed with nothing new, everything resolves from the top: <b>what was declared last takes effect first</b> (A → B → C resolves C → B → A). A declaration whose target is gone is cancelled — the cost stays paid and the card is discarded. Solo Test: one <b>Resolve</b> click. Next / End turn wait until the box is empty; inside a battle, the battle goes on after the box is resolved.",
+      "Fast and Project cards now <b>do their text</b> when they resolve (targets are chosen when they are declared), using the Effect System — e.g. A3-03 0517 グランドクロス deals (1) damage to every character.",
+      "A character <b>defeated in battle</b>: its named Break cards (“name”) go to their owner's <b>damage pile</b>; the other cards go to the discard pile."
+    ]
+  },
+  {
+    "v": "3.27",
+    "date": "2026-11-02",
+    "title": "Conditions with effects, X values, damage-zone abilities",
+    "items": [
+      "A3-24 3465: conditions that give other characters something first and then “≪このキャラクター≫はエフェクト「…」を持つ” are read too — the effect “1: target's Defense becomes 1” now appears when 「ディーナ・ウィザースプーン」 is under it. New effect type “set Mental / Attack / Defense to N”.",
+      "X: one “Xは…” line now defines X for every effect / ability on the card that uses X, and “cards making up this character with the same name as this card” (or with a given “name”) is counted from the character's stack. A3-24 3465's +X Defense uses it.",
+      "<b>Damage-zone abilities</b> (65 on Fast / Project / Permanent / Break cards): “このカードがあなたのダメージ置き場にある場合、…” works while the card is in your damage zone — stat changes and skills for the characters it names (e.g. A3-25 3695: your mental-attack dominated characters get Intercept and Mental +1), “≪あなた≫はドロー+1を得る”, and cards that may be used / set from the damage zone like from the hand (a Use button in the damage-zone list). Ones with an extra condition (e.g. “必要ファクターを満たした状態で”) are shown as reminders.",
+      "Target qualifiers now count for “all …” effects and abilities: ▼を持たない / ▼を持つ, 精神攻撃力を持つ, ブレイクしている / していない, ネームレベル(でない), パワーが精神力に等しい, パワー0."
+    ]
+  },
+  {
+    "v": "3.26",
+    "date": "2026-11-02",
+    "title": "Battle System, Response phase, Ability System",
+    "items": [
+      "<b>Battle System</b> (rulebook ch.6), the same for faction-check and main-phase attacks: Attack → Guard (guard / no guard) → <b>Response phase</b> → Before battle → Battle → After battle. The steps show in the Battle box.",
+      "<b>Response phase</b>: every player may answer with Fast / Project cards or effects, then presses <b>Pass</b>. The battle starts when everyone has passed; any new action (card, effect, damage, stat change …) lets everyone answer again. Solo Test: one Pass.",
+      "<b>Ability timing</b>: abilities that trigger <b>when it attacks</b>, <b>when guard is declared</b>, <b>before battle</b>, <b>after battle</b>, <b>when this card is set</b> and <b>when it is dominated</b> appear in the Battle box as “Abilities triggered”; their owner presses <b>Run</b> (choosing a target like an effect) or <b>Skip</b>. The battle waits for them. <b>During battle</b> abilities (“…して判定する”) count only while the character is battling — also those that hit the battle opponent.",
+      "<b>Ability System</b>: every non-effect line of every Character / Break / Permanent card (4,533 abilities on 3,108 cards) is read like an effect: trigger, during battle, or always on. Always-on stat changes and skills are applied automatically — on the character itself, or as a <b>Field effect</b> on every character they name (listed in the Field effects box as card abilities). Always-on damage protection (“精神ダメージを受けない”, “ブレイクしていないキャラクターとのバトルによるダメージを受けない” …) is applied too. Other always-on rules are shown on the card and in the Field effects box as reminders.",
+      "Effects and abilities with “Xは…に等しい” now use that X (e.g. this character's power).",
+      "Card details list each card's abilities with their timing. dist/card_rules_audit.xlsx lists every effect, condition and ability of every card and whether the table does it automatically."
+    ]
+  },
+  {
+    "v": "3.25",
+    "date": "2026-11-02",
+    "title": "Auto-skip phases",
+    "items": [
+      "New option <b>Auto-skip phases with nothing to do</b> (Solo start screen, the control box before the game, and a checkbox in the control box during the game; your own setting, remembered). On your turn it moves on by itself: <b>Faction</b> phase once every ▼ attack has been resolved (or there is none); <b>Power card</b> phase when nothing more can be charged (every character is full, or no cards in hand and the deck allowance is used); <b>Discard</b> phase when your hand is within the limit (the turn ends). A short message shows each skip. A phase you come back to with Undo is not skipped again.",
+      "Effects that work on “1 area of your choice” (e.g. A3-24 3500 “2: Discard 1 power card set on each character in 1 area of your choice”): after choosing the effect you first pick the area (any player's Active or Control area, with the number of characters and power cards in each), then pay; each character there loses 1 power card.",
+      "Control area (Front and Back): cards are centred, on the same centre line in both rows; the Project / Fast box stays at the right edge."
+    ]
+  },
+  {
+    "v": "3.24",
+    "date": "2026-11-02",
+    "title": "Field effects box",
+    "items": [
+      "Field effects moved from the bar above the table into a small <b>✦ Field effects N</b> box at the top of the right column, beside the field. It shows only the number of field effects; click it to see each one (what it changes, which characters, how long). <b>−</b> next to an effect ends it; <b>+</b> below the list adds one (stat / cost change, power cards visible, one-time area damage). A request to make power cards visible opens the box on the other player's side with Agree / Decline.",
+      "Solo Test start screen: the Deck and Game rule dropdowns are normal size again.",
+      "Solo Test: choose whether you go <b>first</b> (no draw on turn 1, as the rulebook says for the first player) or <b>second</b> (you draw on turn 1) — on the start screen, or in the control box until you keep your hand. Conditions like “あなたが先攻でない” follow it."
+    ]
+  },
+  {
+    "v": "3.23",
+    "date": "2026-11-02",
+    "title": "Area damage; refactoring",
+    "items": [
+      "<b>💥 Area damage</b> (above the table, next to Field effect): deal X damage and / or mental X to every character in a Control area, an Active area, a whole territory, a faction party or the whole game — optionally only characters with an icon, faction, broken / not broken, name, power ≤ / mental ≤. Shield, Resist and the usual damage rules apply to each character. Effects that hit “all” characters (e.g. ≪対戦相手の支配キャラクター全て≫に1ダメージ) already do this automatically.",
+      "Refactoring: the 1,900-line play file is split into engine / network / rendering / input files; the Field effect and Area damage dialogs share one target form; the table now applies new events directly instead of replaying the whole game each time (faster in long games); 30 unused style rules and the old hand-size code removed. All requirements are collected in docs/requirements.md."
+    ]
+  },
+  {
+    "v": "3.22",
+    "date": "2026-11-02",
+    "title": "Game rule: hand power cards face up / down; Project / Fast box",
+    "items": [
+      "<b>Game rule</b> chosen before the game starts: power cards set from the hand are <b>Face up</b> (default) or <b>Face down</b>. Solo Test: on the start screen. Play Online: in the control box while deciding the first player and the opening hand — either player can change it until the game starts, and the log shows each change. Face down: the opponent sees the card back; you still see your own card (dimmed, dashed edge). Cards charged from the deck stay face down as before; the “power cards visible” field effect still shows everything.",
+      "Project and Fast cards in use now sit in their own <b>Project / Fast</b> box at the right end of the Control area (Front), apart from your characters."
+    ]
+  },
+  {
+    "v": "3.21",
+    "date": "2026-11-02",
+    "title": "Power-card targets, Solo deck / name / End game",
+    "items": [
+      "Effects that target a power card (e.g. A3-24 3500 “1: Discard target ≪1 power card≫”): after choosing the effect, the power cards you can target glow blue — click the one you want (face-down ones too). It goes to its owner's discard pile. If the effect pays from the same character, the targeted card is not used to pay.",
+      "Solo Test start screen: choose which of your 10 deck slots to play and type your name.",
+      "Solo Test: <b>■ End game</b> ends the game and goes back to the start screen; <b>✎ Rename</b> changes your player name during the game (also in Play Online).",
+      "Power card phase: <b>left click</b> a picked hand card again (or a card in the Charge window) to un-pick it. Right click now always shows card details."
+    ]
+  },
+  {
+    "v": "3.20",
+    "date": "2026-11-02",
+    "title": "Condition System, Capacity hand limit",
+    "items": [
+      "<b>Condition System</b>: abilities like “if 「魔人“アシュタルテー”」 is under this card, this character gains Infinity and the effect 2: …” (A3-24 3500) now work. 251 conditions on 245 Character / Break cards are read from the card text. While a condition holds, the character gets its skills, stat change and effects (they appear in its effect menu). A ◆ badge on the card shows a condition is met.",
+      "228 conditions are checked automatically (card under this one, power = N / = mental, permanent set, named character on the field / in your control area, N dominated characters with an icon, damage pile / deck / hand counts, name-level characters …). The other 23 (e.g. “you satisfy 冥冥冥”) are switched on or off by the player in the character's menu (◆ Condition …). Card details list each card's conditions.",
+      "Hand limit = 7 ± <b>Capacity</b> of your dominated characters (e.g. Capacity −1 → 6). The hand panel shows Hand N / limit, and the Discard phase and End turn use it."
+    ]
+  },
+  {
+    "v": "3.19",
+    "date": "2026-11-02",
+    "title": "Attack, Effect System, effect-cost filter, new control column",
+    "items": [
+      "<b>Attack</b> (Main phase only, rulebook p.29): click a dominated character → Attack (with Boost if it has it). The opponent gets a Guard phase (guard or no guard), then Fast cards / effects, then Resolve: battle with the guard, or damage to the player. You can also attack an active character in your own faction area (no guard, straight to battle). One attack at a time; Next / End turn wait until it is resolved. Offensive and Defensive return the attack / guard cost to hand.",
+      "<b>Effect System</b>: all 2,128 effects in the card list are sorted into 41 effect types in 11 groups (cost to hand, stat change, damage, discard, bounce, cancel attack, gain skill, draw …). When you use an effect, the table asks for its target and power cards, then does it automatically. Steps it can't do yet are written in the log as “✋ Do by hand”. Effect types show as coloured chips in card details and in the effect menu.",
+      "Card List / Deck Builder: new <b>Effect cost</b> filter and sort (a card with several effects matches any of its costs; sorting uses the lowest).",
+      "Dominated characters move to <b>Control area (Back)</b>; a character you set a Break card on moves to <b>Control area (Front)</b>.",
+      "Power card phase: only characters whose power is still below their Mental are highlighted.",
+      "The control box (phase, Undo / Redo, Next) moved under the Battle box; together they form one fixed-size column on the right. The hand panel shows only your hand, at one fixed card size, under the field. The Guard button no longer runs over the box edge.",
+      "Field: the three areas (Active, Control Front, Control Back) always have exactly the same height, and each has its pile on the right — Active ↔ Damage, Front ↔ Deck, Back ↔ Discard. The +1 Normal / +1 Special damage buttons moved next to your name."
+    ]
+  },
+  {
+    "v": "3.18",
+    "date": "2026-11-02",
+    "title": "Paying with chosen power cards, Break rules, Battle box",
+    "items": [
+      "Paying a cost: you choose which power card pays. When playing a card, click a power card to pay with it (click again to take it back); clicking the character pays its top one. Attack / guard / effects open a small window to pick the power cards (the top ones are picked first).",
+      "Break cards can be set on any character of a faction party in the Active area, not only the top one.",
+      "Icon exception: breaking a character that shares no class icon asks you to confirm, and the log marks it as an icon exception.",
+      "Break stacks are shown one card at a time in the order they were set: 1 Character → 2 Break #1 → 3 Break #2 (top).",
+      "Clearer highlights: playable hand cards have a thick pastel-yellow border; characters you can click (pay, break, guard, set power) have a running blue border.",
+      "New fixed Battle box on the right, between the field and the log: the attack in progress (Guard → Fast / effects → Resolve), or the last battle / damage."
+    ]
+  },
+  {
+    "v": "3.17",
+    "date": "2026-11-02",
+    "title": "Missing skills fixed in the card list",
+    "items": [
+      "Cause: the Skills columns were only filled when the skills stood on a line of their own. When a skill and an effect share one line (e.g. A3-BS2 2239 少女探偵団 \"▼ チャージ1 1：…\"), the skill was missed.",
+      "Card list revised: 393 cards got their skills (Charge 341, Intercept 50, Shield 44, Capacity 37, Synchro 18, Resist 12 and others). They now show up in the Charge / skill filters, templates and the Charge +X limit in play.",
+      "Effects after skills on the same line are now read too (126 more effects), so these cards can use their effect in Solo / Online play."
+    ]
+  },
+  {
+    "v": "3.16",
+    "date": "2026-11-02",
+    "title": "Faction check order",
+    "items": [
+      "Faction check goes faction by faction (E.G.O. → Arayashiki → WIZ-DOM → Darklore → Polestar Empire → Eraser) and looks at each faction when it gets there: a ▼ character set later (e.g. by damage) attacks if its faction is still ahead, and does not if its faction was already checked."
+    ]
+  },
+  {
+    "v": "3.15",
+    "date": "2026-11-02",
+    "title": "Targeting system, attack / guard costs, damage",
+    "items": [
+      "<b>Targeting system</b>: every ≪target≫ in the card text (9,177 targets, 1,405 wordings) is read as what × how many × whose × where × conditions. Card details list a card's targets.",
+      "Field effects choose a <b>scope</b>: whole game, a player's territory, a specific area (Active area, active characters, Control area, its Front / Back row) or a faction party — plus conditions (class icons, faction, broken, ▼, name, power ≤, mental ≤, in battle). The dialog shows how many characters match now.",
+      "<b>Attack / guard costs</b>: 1 power card plus changes — <b>Intercept</b> guards for 1 less; <b>Boost</b> lets the attacker pay up to X extra and the guard must pay the same extra; field effects can raise or lower attack / guard costs.",
+      "Card list of all targets: targets_catalog.xlsx.",
+      "<b>Damage system</b>: normal damage ≥ Defense discards; <b>mental damage (X)</b> removes power cards from a Control area character (not enough → discarded) or is compared with Mental power for an Active area character; both are checked separately.",
+      "Skills: <b>Shield</b> (only battle damage), <b>Resist ?</b> (no battle damage from that faction / class), <b>Initiative</b> (strikes first; no damage back if it wins).",
+      "<b>💥 Damage…</b> on any character for effects, Fast / Project cards and abilities; <b>⚔ Battle with the attacking character</b> for main-phase guards.",
+      "Player damage: a named character (“ ”) whose name is already on the field goes to the damage pile."
+    ]
+  },
+  {
+    "v": "3.14",
+    "date": "2026-11-02",
+    "title": "Effects and stat calculation",
+    "items": [
+      "Card <b>effects</b> (text starting with a cost, e.g. 1：… / X：…) are read from the card list: 1,455 cards, up to 6 effects each. Card details list every effect with its cost.",
+      "Solo Test / Play Online: click a Control area character to use its effects — and the effects of Permanent cards set on it. The cost is paid from that character's power cards (Cost window). X costs ask for X.",
+      "<b>Stat calculation</b>: each character shows its total Attack / Defense (green when changed) and Mental in P x / mental. Its menu shows the summary: base + Permanent cards + Fast / Project / effect changes + field effects = total.",
+      "<b>± Stat change…</b> on a character (until end of turn, end of main phase, or until removed) and <b>Field effect: stat change…</b> for every matching character (e.g. all Student icon characters Attack / Defense +2).",
+      "Totals are used for domination (Mental), power limits and battles.",
+      "Card list copy with new columns: Effect Count, Effect Costs, and Cost / JP / EN for each effect."
+    ]
+  },
+  {
+    "v": "3.13",
+    "date": "2026-11-01",
+    "title": "Faction check: ▼ attacks, Guard phase, Resolve",
+    "items": [
+      "Faction phase: each top active character with <b>▼ Aggressive</b> attacks you, one at a time (E.G.O. → … → Eraser).",
+      "<b>Guard phase</b>: click a Control area character with power cards to guard (pays 1), or choose No guard.",
+      "Then use Fast cards or effects, and press <b>Resolve</b>: no guard = damage to you (normal damage), guard = battle (damage ≥ defense discards; mental attacks remove power cards).",
+      "You move on to the Main phase after every attack is resolved."
+    ]
+  },
+  {
+    "v": "3.12",
+    "date": "2026-11-01",
+    "title": "Template: picked cards first, pinned counts",
+    "items": [
+      "Templates: cards you have picked move to the top of their list.",
+      "The card counts (characters / non-characters / deck, and this step's count) stay pinned at the top of the template window while you scroll."
+    ]
+  },
+  {
+    "v": "3.11",
+    "date": "2026-11-01",
+    "title": "Visible power cards",
+    "items": [
+      "Power cards now show under their character: charged from the hand <b>face up</b> (click to see), charged from the deck <b>face down</b> in your sleeve — face up while the power card field effect is on."
+    ]
+  },
+  {
+    "v": "3.10",
+    "date": "2026-11-01",
+    "title": "Faction party view, Control area order",
+    "items": [
+      "Active area: characters under the top one in a faction slot peek out above it; click one to see it.",
+      "Control area: <b>◀ Move left</b> / <b>Move right ▶</b> in the card menu, or drag a card onto another card to put it in front of it (also across the front and back rows)."
+    ]
+  },
+  {
+    "v": "3.9",
+    "date": "2026-11-01",
+    "title": "Hand size, movable Charge window",
+    "items": [
+      "User Control Panel: hand size <b>Small</b> / <b>Large</b> / <b>Collapse</b> (Collapse hides the hand and keeps the control box).",
+      "The Charge and Cost windows can be dragged by their title bars, like the panel.",
+      "Floating windows are always drawn above the tab bar."
+    ]
+  },
+  {
+    "v": "3.8",
+    "date": "2026-11-01",
+    "title": "User Control Panel, unlimited re-shuffle",
+    "items": [
+      "Your hand and the control box are merged into the <b>User Control Panel</b>, a pop-up window at the bottom of the screen. Drag it by its title bar, fold it, or send it back to the bottom (⤓).",
+      "Opening hand: <b>Re-shuffle hand</b> can be pressed any number of times until you press <b>Keep hand</b>."
+    ]
+  },
+  {
+    "v": "3.7",
+    "date": "2026-11-01",
+    "title": "Deck sleeves, Charge window, Cost window",
+    "items": [
+      "Deck Builder: <b>Sleeve</b> — choose an image for the deck's card back and adjust its size and position to fit the card. Default: the Aquarian Age card back. Sleeves show in Solo Test and Play Online.",
+      "Power card phase: picked cards open a <b>Charge window</b> (hand cards face up, deck cards as your sleeve). Click a character to set the next card, one at a time.",
+      "Power cards charged from the deck stay hidden (sleeve) even to you.",
+      "Paying power cards opens a <b>Cost window</b> showing the paid cards; put them into the <b>Discard pile</b>, <b>Hand</b>, <b>Damage</b> or <b>Deck</b>."
+    ]
+  },
+  {
+    "v": "3.6",
+    "date": "2026-11-01",
+    "title": "Redo, 10 deck slots",
+    "items": [
+      "<b>↷ Redo</b> next to Undo in the control box.",
+      "Deck Builder: <b>10 deck slots</b> — pick a slot next to the deck name; each slot keeps its own deck.",
+      "Export: <b>This deck</b> or <b>All decks</b> (one text file with every deck, or one image per deck). Importing an “All decks” file restores each deck to its slot."
+    ]
+  },
+  {
+    "v": "3.5",
+    "date": "2026-11-01",
+    "title": "Damage types, control box beside the hand, drag rows",
+    "items": [
+      "Two kinds of damage: <b>+1 Normal</b> — a Character from the top of the deck goes to the Active area, any other card to the damage pile; <b>+1 Special</b> — always the damage pile.",
+      "The control box (phase, buttons) now sits to the right of your hand.",
+      "Drag a card between <b>Control area (Front)</b> and <b>(Back)</b> at any time (the card menu still works on phones).",
+      "<b>↶ Undo</b> moved into the control box."
+    ]
+  },
+  {
+    "v": "3.4",
+    "date": "2026-11-01",
+    "title": "Solo Test tab",
+    "items": [
+      "New <b>6. Solo Test</b> tab: play your Deck Builder deck alone on the same table, with the same phases, power card rules, Undo and card sizes. Every turn is yours. <b>↻ New game</b> starts again with your current deck.",
+      "Play Online moves to tab <b>7</b>."
+    ]
+  },
+  {
+    "v": "3.3",
+    "date": "2026-11-01",
+    "title": "Play Online: phase window, card sizes, Draw/Charge skills",
+    "items": [
+      "Phase controls moved into a small <b>phase window</b> on the right that you can drag anywhere.",
+      "The <b>game log</b> folds into a side tab.",
+      "Card size: <b>Small</b>, <b>Middle</b> (fits the board) or <b>Large</b>.",
+      "Cards under a Break peek out above it; click one to see it.",
+      "Draw phase draws 1 + the <b>Draw ±X</b> of your Control area characters.",
+      "Power cards from the deck are limited each turn to the sum of <b>Charge +X</b> in your Control area.",
+      "Damage, deck and discard piles are now card-sized and stacked down the right edge of each board."
+    ]
+  },
+  {
+    "v": "3.2",
+    "date": "2026-11-01",
+    "title": "Play Online: table layout, power limit",
+    "items": [
+      "Table order from the middle: <b>Active area</b> → <b>Control area (Front)</b> → <b>Control area (Back)</b>. Move your characters between the front and back rows to show which ones you mainly play.",
+      "Project and Fast cards are placed in the Control area (Front).",
+      "Power card phase: setting power cards that would go over a character's <b>Mental</b> is refused with “Power exceeds Mental”."
+    ]
+  },
+  {
+    "v": "3.1",
+    "date": "2026-11-01",
+    "title": "Play Online: phase-based game",
+    "items": [
+      "Game starts with <b>Decide the first player</b> (coin toss or choose), then each player keeps or <b>re-shuffles</b> the opening hand once.",
+      "Turns follow the rulebook: Draw (first player skips turn 1) → Faction → Main → Power card → Discard, with a big <b>[Player] [Phase]</b> banner and one button to move on.",
+      "<b>Left click</b> plays a card for the current phase; <b>right click</b> (long press on phones) shows card details.",
+      "Main phase: characters go to the <b>Active area</b> slot of their faction (6 slots); Break, Permanent, Project and Fast cards ask for their cost and target.",
+      "Power card phase: left click cards in hand or the deck to pick, right click to un-pick, then click a character (top of a faction slot, or any in the Control area). Fully powered characters are dominated automatically.",
+      "Power cards stay face down unless both players agree to a <b>field effect</b>.",
+      "<b>Undo</b> takes back your last action while the other player hasn't acted."
+    ]
+  },
+  {
+    "v": "3.0",
+    "date": "2026-11-01",
+    "title": "Play Online (virtual table)",
+    "items": [
+      "New <b>6. Play Online</b> tab: play your Deck Builder deck against a friend on a shared virtual table. Create a room and send the code or invite link.",
+      "The table shuffles, deals 7, draws, takes damage (deck top → damage zone) and keeps hands hidden on screen; faction area, dominion area and Project / Fast zone; break, power cards, permanents, paying power cards, turning cards sideways; turn and phase tracker; game log with chat.",
+      "Card effects and rule checks are up to the players, like at a real table.",
+      "<b>Test on this computer</b>: try it in two browser tabs. Online rooms need a one-time free Firebase setup (steps in the tab)."
+    ]
+  },
+  {
+    "v": "2.10",
+    "date": "2026-11-01",
+    "title": "Break-cost return filter, bigger Reset button",
+    "items": [
+      "New <b>▼ Break-cost return</b> button in the filters (Card List and Deck Builder) to show only those characters.",
+      "<b>Reset filters</b> is now a bright red button showing how many filters are on, and a second Reset button sits next to the search box whenever filters are active."
+    ]
+  },
+  {
+    "v": "2.9",
+    "date": "2026-11-01",
+    "title": "Break-cost return characters",
+    "items": [
+      "New optional step <b>Break return</b> after the Draw steps (both templates): characters with “▼ このキャラクターをブレイクする場合、≪そのブレイクカードのコスト≫はオーナーの手札に戻る。”, from every icon and faction, grouped by faction. Add 4–8 cards.",
+      "Break return lists characters with your <b>main icon</b> and <b>sub icon</b> first; the rest follow by faction."
+    ]
+  },
+  {
+    "v": "2.8",
+    "date": "2026-11-01",
+    "title": "Break steps use the main factor",
+    "items": [
+      "Full Deck: <b>Break · Charge</b> and <b>Break · Draw</b> only list Break cards from your <b>main factor</b>: main-icon cards first, then sub-icon cards, each section foldable."
+    ]
+  },
+  {
+    "v": "2.7",
+    "date": "2026-11-01",
+    "title": "Template names, split Break steps, foldable sections",
+    "items": [
+      "Templates renamed: <b>Template #1 Full Deck</b> and <b>Template #2 Characters Only</b>.",
+      "Full Deck: <b>Break · Charge</b> and <b>Break · Draw</b> are now separate steps, each listing main-icon cards first, then sub-icon cards.",
+      "Full Deck: Permanent, Fast and Project list your main factor first, then your sub factor.",
+      "Draw steps (both templates) list main-icon characters first, then sub-icon characters.",
+      "Every template section can be folded and unfolded; jump links take you to a section."
+    ]
+  },
+  {
+    "v": "2.6",
+    "date": "2026-11-01",
+    "title": "Rarity filter, Template #2 Full Deck",
+    "items": [
+      "<b>Rarity</b> filter and sort in the Stats / Sort row (★ → ★★★★★, U, R, SR, PF, VF, SVF, WR; the ⇅ button sorts rarest first on the 2nd tap).",
+      "New <b>Template #2 Full Deck</b>: Main Break cards (search) → Setup → Break cards with Charge / Draw (at least 3 of each recommended; Factor 1 Cost 0 → Factor 1 Cost 1 → Factor 2 Cost 2) → Permanent → Fast → Project (search, main + sub factor, rarest first) → the Template #1 character steps.",
+      "Template #2 keeps non-character cards between <b>28 and 32</b>.",
+      "Both templates: <b>★ Recommended</b> class icons and factions in Setup, taken from the Break cards in your deck; the other choices are listed below.",
+      "\"Start from an empty deck\" moved to the template list."
+    ]
+  },
+  {
+    "v": "2.5",
+    "date": "2026-11-01",
+    "title": "Charge · sub limit",
+    "items": [
+      "Template Character #1: <b>Charge · sub</b> now takes up to <b>10 cards</b>."
+    ]
+  },
+  {
+    "v": "2.4",
+    "date": "2026-11-01",
+    "title": "Changelog",
+    "items": [
+      "New <b>5. Changelog</b> tab (this page) listing every update to the site."
+    ]
+  },
+  {
+    "v": "2.3",
+    "date": "2026-11-01",
+    "title": "Foldable filters, sidebar mode, template card targets",
+    "items": [
+      "<b>Filters &amp; Sort</b> button next to the search box, with a badge showing how many filters are active.",
+      "Two filter layouts: <b>Inline</b> (fold the filters away; phones start folded) and <b>Sidebar</b> (filters slide in from the left). The site remembers your choice.",
+      "Template targets now count cards, not card types: Draw · main <b>4 cards</b>, Draw · sub <b>4 cards</b>, Charge · main <b>12 cards</b>.",
+      "Charge steps always show all three icon sections (main + sub, main only, sub only), with jump links at the top."
+    ]
+  },
+  {
+    "v": "2.2",
+    "date": "2026-11-01",
+    "title": "Faction marks, English-first card text",
+    "items": [
+      "Factions in a fixed order: E.G.O. → Arayashiki → WIZ-DOM → Darklore → Polestar Empire → Eraser.",
+      "Faction marks from the rulebook on pastel faction colours: in the faction filter, card lists, card details and the template.",
+      "Card details show the English card text first, then the Japanese text.",
+      "精神力 is now shown as <b>Mental</b> (M in card lists).",
+      "Template: Sub Icon <b>None</b> (main icon only); 0–4 copies per card on every step with a quick ×4 button; Draw uses the main icon; Charge lists main + sub icon, then main icon, then sub icon."
+    ]
+  },
+  {
+    "v": "2.1",
+    "date": "2026-10-31",
+    "title": "Template setup redesign",
+    "items": [
+      "Setup has two rows: Main Icon + Sub Icon, then Main Factor + Sub Factor.",
+      "Icon pickers show the class icon images.",
+      "Sub Icon and Sub Factor can be set to <b>Any</b>.",
+      "The Sub Icon list only shows icons found together with the Main Icon, with counts."
+    ]
+  },
+  {
+    "v": "2.0",
+    "date": "2026-10-31",
+    "title": "Database v03, skills, templates",
+    "items": [
+      "Card database updated to <b>AA_cardlist_completed_v03</b>, with English names and English card text.",
+      "<b>Skills</b> row: skill checklist (has all / any) and sort by skill value (Charge, Draw, Bind, Capacity, Permanent, Boost, Remove).",
+      "Deck Builder: <b>New</b> renamed to <b>Clear</b>.",
+      "Deck Builder: <b>Template</b> button with <b>Template Character #1</b>, a step-by-step guide to a 30-character core."
+    ]
+  },
+  {
+    "v": "1.4",
+    "date": "2026-10-31",
+    "title": "English names, class icon images",
+    "items": [
+      "All card names translated to real English; character names romanised from their readings.",
+      "Class icons split into Female ♀ / Male ♂ / Other groups, each with its icon image."
+    ]
+  },
+  {
+    "v": "1.3",
+    "date": "2026-10-31",
+    "title": "Class icon filter, faceted filters",
+    "items": [
+      "Class icon (分類アイコン) checklist with two modes: multi-icon in one character, or any checked icon.",
+      "Filters update each other instantly: every list only offers values (and counts) that match the other filters.",
+      "Code review and refactor."
+    ]
+  },
+  {
+    "v": "1.2",
+    "date": "2026-10-31",
+    "title": "More filters, multi-sort, Rules",
+    "items": [
+      "Faction and Category filters.",
+      "Stat filters: Factor, Cost, 精神力, Attack, Defense.",
+      "Multi-sort by stats (Small → Large / Large → Small), with a priority order.",
+      "<b>Rules</b> tab: a Japanese / English guide to the rulebook and the Partner System."
+    ]
+  },
+  {
+    "v": "1.1",
+    "date": "2026-10-31",
+    "title": "Deck Builder",
+    "items": [
+      "Tabs: Card List, Deck Builder, Discussions (placeholder).",
+      "Deck Builder: 50–60 cards, up to 4 copies per name, five categories, Fit to width / Original size, drag and drop.",
+      "Export as an image (.jpg) or a text list; import from a text list.",
+      "Thai \"How to use\" guide for the Deck Builder."
+    ]
+  },
+  {
+    "v": "1.0",
+    "date": "2026-10-31",
+    "title": "First release",
+    "items": [
+      "Card List: search by Japanese, English or hiragana; series filter; card details with images from Google Drive.",
+      "Starry-sky theme matching the card back, foil card frames and the banner header.",
+      "Hosted on Netlify as <b>Aquarian Age Helper</b>."
+    ]
+  }
+]

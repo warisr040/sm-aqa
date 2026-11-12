@@ -1,0 +1,108 @@
+{
+ "name": "Undo / Redo: own latest action, chat doesn't block, another player's action does (B has Hold OFF: no agreement needed, Revise#112)",
+ "steps": [
+  {
+   "t": "create",
+   "by": "A",
+   "seed": "undo",
+   "mode": "online",
+   "seats": 2
+  },
+  {
+   "t": "join",
+   "by": "A",
+   "name": "Pack",
+   "deck": {
+    "repeat": [
+     "T 001",
+     "T 101"
+    ],
+    "n": 20
+   }
+  },
+  {
+   "t": "join",
+   "by": "B",
+   "name": "Friend",
+   "deck": {
+    "repeat": [
+     "T 003"
+    ],
+    "n": 20
+   }
+  },
+  {
+   "t": "keep",
+   "by": "A"
+  },
+  {
+   "t": "keep",
+   "by": "B"
+  },
+  {
+   "t": "hold",
+   "by": "B",
+   "on": false
+  },
+  {
+   "t": "draw",
+   "by": "A",
+   "n": 2
+  },
+  {
+   "expect": "players.0.zones.hand",
+   "len": 9
+  },
+  {
+   "t": "chat",
+   "by": "B",
+   "text": "nice"
+  },
+  {
+   "t": "undo",
+   "by": "B",
+   "of": 6,
+   "refuse": "Nothing to undo"
+  },
+  {
+   "t": "undo",
+   "by": "A",
+   "of": "auto"
+  },
+  {
+   "expect": "players.0.zones.hand",
+   "len": 7
+  },
+  {
+   "expect": "players.0.zones.deck",
+   "len": 13
+  },
+  {
+   "t": "redo",
+   "by": "A",
+   "of": "auto"
+  },
+  {
+   "expect": "players.0.zones.hand",
+   "len": 9
+  },
+  {
+   "t": "draw",
+   "by": "B"
+  },
+  {
+   "t": "undo",
+   "by": "A",
+   "of": 6,
+   "refuse": "Nothing to undo"
+  },
+  {
+   "expect": "players.0.zones.hand",
+   "len": 9
+  },
+  {
+   "expect": "players.1.zones.hand",
+   "len": 8
+  }
+ ]
+}
